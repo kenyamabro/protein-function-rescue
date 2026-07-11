@@ -1,0 +1,11 @@
+requests>=2.31
+gemmi>=0.6
+pyyaml>=6.0
+pandas>=2.0
+tqdm>=4.66
+# Native (Windows-friendly) structural-search + pocket backends:
+numpy>=1.24
+scipy>=1.10
+tmtools>=0.2        # TM-align bindings (structural_search.backend: tmalign)
+biopython>=1.81     # sequence baseline + pulled in by tmtools
+matplotlib>=3.7     # benchmark figures (see benchmark/run_benchmark.py)

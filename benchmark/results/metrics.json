@@ -1,0 +1,91 @@
+{
+  "n_proteins": 227,
+  "n_families": 29,
+  "topN_accuracy_by_ec_level": {
+    "structure": {
+      "1": 0.965,
+      "2": 0.965,
+      "3": 0.965,
+      "4": 0.965
+    },
+    "sequence": {
+      "1": 0.965,
+      "2": 0.943,
+      "3": 0.943,
+      "4": 0.938
+    }
+  },
+  "twilight_zone": {
+    "identity_cutoff_pct": 30.0,
+    "n_correct_level3": 219,
+    "n_correct_below_cutoff": 24,
+    "fraction_below_cutoff": 0.11
+  },
+  "precision_vs_tm_threshold": [
+    {
+      "threshold": 0.3,
+      "precision": 0.965,
+      "coverage": 1.0
+    },
+    {
+      "threshold": 0.35,
+      "precision": 0.965,
+      "coverage": 1.0
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.965,
+      "coverage": 1.0
+    },
+    {
+      "threshold": 0.45,
+      "precision": 0.973,
+      "coverage": 0.991
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.982,
+      "coverage": 0.982
+    },
+    {
+      "threshold": 0.55,
+      "precision": 0.982,
+      "coverage": 0.978
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.986,
+      "coverage": 0.974
+    },
+    {
+      "threshold": 0.65,
+      "precision": 0.986,
+      "coverage": 0.974
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.986,
+      "coverage": 0.969
+    },
+    {
+      "threshold": 0.75,
+      "precision": 1.0,
+      "coverage": 0.952
+    },
+    {
+      "threshold": 0.8,
+      "precision": 1.0,
+      "coverage": 0.921
+    },
+    {
+      "threshold": 0.85,
+      "precision": 1.0,
+      "coverage": 0.872
+    },
+    {
+      "threshold": 0.9,
+      "precision": 1.0,
+      "coverage": 0.811
+    }
+  ]
+}

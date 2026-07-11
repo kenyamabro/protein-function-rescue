@@ -1,0 +1,76 @@
+# ------------------------------------------------------------------------------
+# Target organism (an AlphaFold DB reference proteome).
+# To switch organism, replace these with any proteome listed at:
+#   https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/
+# Understudied pathogens / extremophiles have the most unannotated proteins.
+# ------------------------------------------------------------------------------
+organism:
+  name: "Mycobacterium tuberculosis (strain H37Rv)"
+  proteome_id: "UP000001584"
+  taxonomy_id: 83332
+  proteome_tar_url: "https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000001584_83332_MYCTU_v6.tar"
+
+# AlphaFold DB release used for direct file URLs (per-structure downloads and the
+# links written into the results). Currently v6 — bump here if AFDB releases v7.
+afdb:
+  file_version: 6
+
+paths:
+  data_dir: "data"
+  structures_dir: "data/structures"
+  results_dir: "results"
+  web_data: "web/data.js"
+
+filters:
+  # Discard whole structures whose mean pLDDT (0-100 AlphaFold confidence) is below this.
+  min_mean_plddt: 70.0
+  # Substrings (case-insensitive) in the UniProt protein name that mark a protein
+  # as currently "unannotated" — these are the ones worth rescuing.
+  unannotated_markers:
+    - "uncharacterized"
+    - "hypothetical"
+    - "duf"
+    - "putative uncharacterized"
+
+# ------------------------------------------------------------------------------
+# Structural search: which unannotated proteins match a KNOWN fold.
+#   backend: tmalign  -> native, pure-Python (TM-align via tmtools). Works on
+#                        Windows with no external binaries. Searches against an
+#                        auto-built reference library of characterised enzymes.
+#   backend: foldseek -> fast, scales to huge databases, but Linux/macOS only.
+# ------------------------------------------------------------------------------
+structural_search:
+  backend: "tmalign"
+  min_tmscore: 0.5                  # keep hits at least this good (TM-score, 0-1)
+  # --- tmalign backend ---
+  reference_dir: "references"       # cached library of known-function structures
+  reference_count: 120              # how many reference enzymes to search against
+
+foldseek:                           # used only when structural_search.backend == foldseek
+  binary: "foldseek"
+  target_db: "foldseek_db/pdb"      # build once: foldseek databases PDB foldseek_db/pdb tmp
+  max_evalue: 1.0e-3
+
+# ------------------------------------------------------------------------------
+# Binding-pocket detection.
+#   backend: geometry -> native LIGSITE-style detector (NumPy/SciPy). Windows-OK.
+#   backend: fpocket  -> the fpocket tool (Linux/macOS only).
+# ------------------------------------------------------------------------------
+pocket:
+  backend: "geometry"
+  enabled: true                     # set false (or pass --skip-pocket) to omit
+  # --- geometry backend ---
+  grid_spacing: 1.2                 # Angstrom per voxel
+  grid_margin: 5.0                  # Angstrom padding around the protein
+  min_directions: 5                 # PSP directions (of 7) to call a pocket voxel
+  min_voxels: 30                    # discard pockets smaller than this
+  # --- fpocket backend ---
+  binary: "fpocket"
+
+ranking:
+  # Weights for the composite candidate score. Missing components are dropped and
+  # the remaining weights are renormalised, so they need not sum to 1.
+  weights:
+    structural_similarity: 0.5      # confidence of the match to a KNOWN fold (TM-score)
+    model_confidence: 0.2           # mean pLDDT of the AlphaFold model
+    pocket_quality: 0.3             # fpocket druggability of the best cavity

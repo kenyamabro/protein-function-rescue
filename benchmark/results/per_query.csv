@@ -1,0 +1,228 @@
+accession,true_ec,name,length,struct_hit,struct_hit_ec,tm_score,struct_hit_identity,struct_agree,seq_hit,seq_hit_ec,seq_identity,seq_agree
+A5JYX5,1.1.1.1,Protein dhs-3 (Alcohol dehydrogenase dhs-3) (EC 1.1.1.1),309,P00334,1.1.1.1,0.7846,17.58,4,P00334,1.1.1.1,17.58,4
+P00326,1.1.1.1,Alcohol dehydrogenase 1C (EC 1.1.1.1) (Alcohol dehydrogenase subunit gamma),375,P00329,1.1.1.1,0.9995,85.07,4,P00329,1.1.1.1,85.07,4
+P00329,1.1.1.1,Alcohol dehydrogenase 1 (EC 1.1.1.1) (ADH-A2) (Alcohol dehydrogenase A subunit),375,P00326,1.1.1.1,0.9995,85.07,4,P00326,1.1.1.1,85.07,4
+P00330,1.1.1.1,Alcohol dehydrogenase 1 (EC 1.1.1.1) (EC 1.1.1.54) (EC 1.1.1.78) (Alcohol dehydrogenase I) (ADHI) (NADH-dependent methylglyoxal reductase) (YADH-1),348,P00331,1.1.1.1,0.9968,93.1,4,P00331,1.1.1.1,93.1,4
+P00331,1.1.1.1,Alcohol dehydrogenase 2 (EC 1.1.1.1) (Alcohol dehydrogenase II) (ADHII) (YADH-2),348,P00330,1.1.1.1,0.9968,93.1,4,P00330,1.1.1.1,93.1,4
+P00332,1.1.1.1,Alcohol dehydrogenase (EC 1.1.1.1),350,P00330,1.1.1.1,0.9723,52.87,4,P00330,1.1.1.1,52.87,4
+P00334,1.1.1.1,Alcohol dehydrogenase (EC 1.1.1.1),256,A5JYX5,1.1.1.1,0.7846,17.58,4,P00342,1.1.1.27,18.75,3
+P06525,1.1.1.1,Alcohol dehydrogenase class-P (AtADH) (EC 1.1.1.1),379,P00329,1.1.1.1,0.9543,50.67,4,P00326,1.1.1.1,50.67,4
+O32765,1.1.1.27,L-lactate dehydrogenase (L-LDH) (EC 1.1.1.27),323,P00343,1.1.1.27,0.9795,64.71,4,P00343,1.1.1.27,64.71,4
+P00338,1.1.1.27,L-lactate dehydrogenase A chain (LDH-A) (EC 1.1.1.27) (Cell proliferation-inducing gene 19 protein) (LDH muscle subunit) (LDH-M) (Renal carcinoma antigen NY-REN-59),332,P00339,1.1.1.27,0.9982,92.77,4,P04642,1.1.1.27,94.28,4
+P00339,1.1.1.27,L-lactate dehydrogenase A chain (LDH-A) (EC 1.1.1.27) (LDH muscle subunit) (LDH-M),332,P04642,1.1.1.27,0.9984,93.07,4,P04642,1.1.1.27,93.07,4
+P00341,1.1.1.27,L-lactate dehydrogenase A chain (LDH-A) (EC 1.1.1.27) (LDH-M),333,P04642,1.1.1.27,0.9951,79.52,4,P00339,1.1.1.27,80.42,4
+P00342,1.1.1.27,L-lactate dehydrogenase C chain (LDH-C) (EC 1.1.1.27) (LDH testis subunit) (LDH-X),332,P00339,1.1.1.27,0.9954,71.69,4,P00338,1.1.1.27,72.59,4
+P00343,1.1.1.27,L-lactate dehydrogenase (L-LDH) (EC 1.1.1.27),326,O32765,1.1.1.27,0.9795,64.71,4,O32765,1.1.1.27,64.71,4
+P00344,1.1.1.27,L-lactate dehydrogenase (L-LDH) (EC 1.1.1.27),317,P00343,1.1.1.27,0.9731,54.26,4,P00343,1.1.1.27,54.26,4
+P04642,1.1.1.27,L-lactate dehydrogenase A chain (LDH-A) (EC 1.1.1.27) (LDH muscle subunit) (LDH-M),332,P00339,1.1.1.27,0.9984,93.07,4,P00338,1.1.1.27,94.28,4
+F1C7I4,1.1.1.37,"Malate dehydrogenase, cytoplasmic (EC 1.1.1.37) (Cytosolic malate dehydrogenase)",332,P11708,1.1.1.37,0.9895,57.83,4,O88989,1.1.1.37,58.43,4
+O82399,1.1.1.37,"Malate dehydrogenase 1, peroxisomal (EC 1.1.1.37) (Peroxisomal NAD-dependent malate dehydrogenase 1) (pxNAD-MDH1) (Peroxisomal malate dehydrogenase 1) (Peroxisomal MDH1)",354,P17505,1.1.1.37,0.9262,50.0,4,P08249,1.1.1.37,52.37,4
+O88989,1.1.1.37,"Malate dehydrogenase, cytoplasmic (EC 1.1.1.37) (Aromatic alpha-keto acid reductase) (KAR) (Cytosolic malate dehydrogenase)",334,P14152,1.1.1.37,1.0,99.1,4,P14152,1.1.1.37,99.1,4
+P04636,1.1.1.37,"Malate dehydrogenase, mitochondrial (EC 1.1.1.37)",338,P08249,1.1.1.37,0.9851,98.82,4,P08249,1.1.1.37,98.82,4
+P08249,1.1.1.37,"Malate dehydrogenase, mitochondrial (EC 1.1.1.37)",338,P04636,1.1.1.37,0.9851,98.82,4,P04636,1.1.1.37,98.82,4
+P11708,1.1.1.37,"Malate dehydrogenase, cytoplasmic (EC 1.1.1.37) (Aromatic alpha-keto acid reductase) (KAR) (Cytosolic malate dehydrogenase)",334,O88989,1.1.1.37,0.9983,94.91,4,O88989,1.1.1.37,94.91,4
+P14152,1.1.1.37,"Malate dehydrogenase, cytoplasmic (EC 1.1.1.37) (Aromatic alpha-keto acid reductase) (KAR) (Cytosolic malate dehydrogenase)",334,O88989,1.1.1.37,1.0,99.1,4,O88989,1.1.1.37,99.1,4
+P17505,1.1.1.37,"Malate dehydrogenase, mitochondrial (EC 1.1.1.37)",334,P04636,1.1.1.37,0.9434,52.4,4,P04636,1.1.1.37,52.4,4
+P05370,1.1.1.49,Glucose-6-phosphate 1-dehydrogenase (G6PD) (EC 1.-.-.-) (EC 1.1.1.49),515,Q00612,1.1.1.49,0.9985,98.64,4,Q00612,1.1.1.49,98.64,4
+P0AC53,1.1.1.49,Glucose-6-phosphate 1-dehydrogenase (G6PD) (EC 1.1.1.49) [Cleaved into: Extracellular death factor (EDF)],491,P97324,1.1.1.49,0.926,34.22,4,Q9LK23,1.1.1.49,37.27,4
+P11412,1.1.1.49,Glucose-6-phosphate 1-dehydrogenase (G6PD) (EC 1.1.1.49),505,Q9LK23,1.1.1.49,0.9366,49.31,4,Q9FJI5,1.1.1.49,50.1,4
+P11413,1.1.1.49,Glucose-6-phosphate 1-dehydrogenase (G6PD) (EC 1.-.-.-) (EC 1.1.1.49),515,P05370,1.1.1.49,0.9981,93.79,4,P05370,1.1.1.49,93.79,4
+P97324,1.1.1.49,Glucose-6-phosphate 1-dehydrogenase 2 (G6PD) (EC 1.-.-.-) (EC 1.1.1.49),513,P11413,1.1.1.49,0.9877,87.13,4,Q00612,1.1.1.49,92.2,4
+Q00612,1.1.1.49,Glucose-6-phosphate 1-dehydrogenase X (G6PD) (EC 1.-.-.-) (EC 1.1.1.49),515,P05370,1.1.1.49,0.9985,98.64,4,P05370,1.1.1.49,98.64,4
+Q9FJI5,1.1.1.49,"Glucose-6-phosphate 1-dehydrogenase 6, cytoplasmic (AtG6PD6) (G6PDH6) (EC 1.1.1.49)",515,Q9LK23,1.1.1.49,0.9821,89.13,4,Q9LK23,1.1.1.49,89.13,4
+Q9LK23,1.1.1.49,"Glucose-6-phosphate 1-dehydrogenase 5, cytoplasmic (AtG6PD5) (G6PDH5) (EC 1.1.1.49)",516,Q9FJI5,1.1.1.49,0.9821,89.13,4,Q9FJI5,1.1.1.49,89.13,4
+O52762,1.11.1.6,Catalase A (EC 1.11.1.6),482,P42321,1.11.1.6,0.9867,76.14,4,P42321,1.11.1.6,76.14,4
+P15202,1.11.1.6,Peroxisomal catalase A (EC 1.11.1.6),515,P42321,1.11.1.6,0.9668,46.49,4,P26901,1.11.1.6,47.83,4
+P17336,1.11.1.6,Catalase (EC 1.11.1.6),506,P42321,1.11.1.6,0.9819,48.14,4,P26901,1.11.1.6,54.04,4
+P25819,1.11.1.6,Catalase-2 (EC 1.11.1.6),492,Q0D9C4,1.11.1.6,0.9897,83.74,4,Q0D9C4,1.11.1.6,83.74,4
+P26901,1.11.1.6,Vegetative catalase (EC 1.11.1.6),483,O52762,1.11.1.6,0.9842,55.39,4,O52762,1.11.1.6,55.39,4
+P29422,1.11.1.6,Catalase (EC 1.11.1.6),503,P26901,1.11.1.6,0.9627,51.76,4,P26901,1.11.1.6,51.76,4
+P42321,1.11.1.6,Catalase (EC 1.11.1.6),484,O52762,1.11.1.6,0.9867,76.14,4,O52762,1.11.1.6,76.14,4
+Q0D9C4,1.11.1.6,Catalase isozyme B (CAT-B) (EC 1.11.1.6),492,P25819,1.11.1.6,0.9897,83.74,4,P25819,1.11.1.6,83.74,4
+A5H8G4,1.11.1.7,Peroxidase 1 (EC 1.11.1.7) (Plasma membrane-bound peroxidase 1) (pmPOX1),367,P00433,1.11.1.7,0.8619,40.79,4,P00433,1.11.1.7,40.79,4
+B0BK71,1.11.1.7,Dye-decolorizing peroxidase msp1 (EC 1.11.1.19) (EC 1.11.1.7) (Peroxidase 1) (MsP1),513,I2DBY1,1.11.1.7,0.9028,51.28,4,I2DBY1,1.11.1.7,51.28,4
+I2DBY1,1.11.1.7,Dye-decolorizing peroxidase AauDyP1 (EC 1.11.1.19) (EC 1.11.1.7) (AjP I) (Manganese-independent peroxidase I) [Cleaved into: Dye-decolorizing peroxidase AauDyP2 (EC 1.11.1.19) (EC 1.11.1.7) (AjP II) (Manganese-independent peroxidase II)],509,B0BK71,1.11.1.7,0.9028,51.28,4,B0BK71,1.11.1.7,51.28,4
+I6Y4U9,1.11.1.7,Dye-decolorizing peroxidase (DyP) (EC 1.11.1.7),335,B0BK71,1.11.1.7,0.7859,5.37,4,P00441,1.15.1.1,16.23,1
+K7N5M8,1.11.1.7,Multifunctional dye peroxidase DyP2 (EC 1.11.1.16) (EC 1.11.1.19) (EC 1.11.1.7) (Dye decolorizing peroxidase 2) (DyP2) (Manganese peroxidase),464,B0BK71,1.11.1.7,0.8364,30.39,4,B0BK71,1.11.1.7,30.39,4
+O04795,1.11.1.7,Anionic peroxidase (EC 1.11.1.7) (SwPA1),364,O04796,1.11.1.7,0.8122,65.8,4,O04796,1.11.1.7,65.8,4
+O04796,1.11.1.7,Neutral peroxidase (EC 1.11.1.7) (SwPN1),348,O04795,1.11.1.7,0.8122,65.8,4,O04795,1.11.1.7,65.8,4
+P00433,1.11.1.7,Peroxidase C1A (EC 1.11.1.7),353,A5H8G4,1.11.1.7,0.8619,40.79,4,A5H8G4,1.11.1.7,40.79,4
+A0A1D1VU85,1.15.1.1,Superoxide dismutase [Cu-Zn] (CuZnSOD) (EC 1.15.1.1) (RvSOD15),194,P00441,1.15.1.1,0.9695,46.1,4,P00441,1.15.1.1,46.1,4
+J9VLJ9,1.15.1.1,Superoxide dismutase [Cu-Zn] (EC 1.15.1.1) (CnSOD1),154,P00441,1.15.1.1,0.9821,59.74,4,P00441,1.15.1.1,59.74,4
+J9VWW9,1.15.1.1,"Superoxide dismutase [Mn], mitochondrial (EC 1.15.1.1)",225,O81235,1.15.1.1,0.9098,48.0,4,O81235,1.15.1.1,48.0,4
+O09164,1.15.1.1,Extracellular superoxide dismutase [Cu-Zn] (EC-SOD) (EC 1.15.1.1),251,J9VLJ9,1.15.1.1,0.9171,37.66,4,P00441,1.15.1.1,38.31,4
+O78310,1.15.1.1,"Superoxide dismutase [Cu-Zn] 2, chloroplastic (EC 1.15.1.1) (Copper/zinc superoxide dismutase 2)",216,P00441,1.15.1.1,0.9732,57.79,4,P00442,1.15.1.1,57.89,4
+O81235,1.15.1.1,"Superoxide dismutase [Mn] 1, mitochondrial (EC 1.15.1.1) (Protein MANGANESE SUPEROXIDE DISMUTASE 1) (AtMSD1) (Protein MATERNAL EFFECT EMBRYO ARREST 33)",231,J9VWW9,1.15.1.1,0.9098,48.0,4,J9VWW9,1.15.1.1,48.0,4
+P00441,1.15.1.1,Superoxide dismutase [Cu-Zn] (EC 1.15.1.1) (EC 1.8.-.-) (Hydrogen sulfide oxidase) (Superoxide dismutase 1) (hSod1),154,P00442,1.15.1.1,0.9842,82.89,4,P00442,1.15.1.1,82.89,4
+P00442,1.15.1.1,Superoxide dismutase [Cu-Zn] (EC 1.15.1.1) (EC 1.8.-.-) (Hydrogen sulfide oxidase),152,P00441,1.15.1.1,0.9842,82.89,4,P00441,1.15.1.1,82.89,4
+P06715,1.8.1.7,Glutathione reductase (GR) (GRase) (EC 1.8.1.7),450,Q8T137,1.8.1.7,0.9833,52.67,4,Q93379,1.8.1.7,56.67,4
+P41921,1.8.1.7,Glutathione reductase (GR) (GRase) (EC 1.8.1.7),483,P06715,1.8.1.7,0.9769,51.33,4,P78965,1.8.1.7,57.76,4
+P47791,1.8.1.7,"Glutathione reductase, mitochondrial (GR) (GRase) (EC 1.8.1.7)",500,P06715,1.8.1.7,0.9796,56.44,4,Q93379,1.8.1.7,59.41,4
+P78965,1.8.1.7,Glutathione reductase (GR) (GRase) (EC 1.8.1.7),464,P06715,1.8.1.7,0.9772,50.89,4,P41921,1.8.1.7,57.76,4
+Q93379,1.8.1.7,"Glutathione reductase, mitochondrial (GR) (EC 1.8.1.7) (Glutathione disulfide reductase)",473,P06715,1.8.1.7,0.983,56.67,4,P47791,1.8.1.7,59.41,4
+Q94655,1.8.1.7,Glutathione reductase (GRase) (PfGR) (EC 1.8.1.7),500,P06715,1.8.1.7,0.967,46.22,4,P06715,1.8.1.7,46.22,4
+P48641,1.8.1.7,"Glutathione reductase, cytosolic (GR) (GRase) (EC 1.8.1.7) (OBP29)",499,P06715,1.8.1.7,0.9653,40.0,4,P06715,1.8.1.7,40.0,4
+Q8T137,1.8.1.7,Glutathione reductase (GR) (GRase) (GSR) (EC 1.8.1.7),465,P06715,1.8.1.7,0.9833,52.67,4,P47791,1.8.1.7,54.84,4
+E9L7A5,2.6.1.1,Bifunctional aspartate aminotransferase and glutamate/aspartate-prephenate aminotransferase (PhPPA-AT) (EC 2.6.1.1) (EC 2.6.1.78) (EC 2.6.1.79),479,O85746,2.6.1.1,0.8073,13.1,4,P00950,5.4.2.11,17.0,0
+O85746,2.6.1.1,Tyrosine aminotransferase (TyrAT) (EC 2.6.1.5) (Aromatic-amino-acid transaminase) (EC 2.6.1.57) (Aspartate aminotransferase) (EC 2.6.1.1),397,P00504,2.6.1.1,0.9825,39.04,4,P00507,2.6.1.1,39.55,4
+P00503,2.6.1.1,"Aspartate aminotransferase, cytoplasmic (cAspAT) (EC 2.6.1.1) (EC 2.6.1.3) (Cysteine aminotransferase, cytoplasmic) (Cysteine transaminase, cytoplasmic) (cCAT) (Glutamate oxaloacetate transaminase 1) (Transaminase A)",413,P00504,2.6.1.1,0.9979,82.28,4,P00504,2.6.1.1,82.28,4
+P00504,2.6.1.1,"Aspartate aminotransferase, cytoplasmic (cAspAT) (EC 2.6.1.1) (EC 2.6.1.3) (Cysteine aminotransferase, cytoplasmic) (Cysteine transaminase, cytoplasmic) (cCAT) (Glutamate oxaloacetate transaminase 1) (Transaminase A)",412,P00503,2.6.1.1,0.9979,82.28,4,P00503,2.6.1.1,82.28,4
+P00505,2.6.1.1,"Aspartate aminotransferase, mitochondrial (mAspAT) (EC 2.6.1.1) (EC 2.6.1.7) (Fatty acid-binding protein) (FABP-1) (Glutamate oxaloacetate transaminase 2) (Kynurenine aminotransferase 4) (Kynurenine aminotransferase IV) (Kynurenine--oxoglutarate transaminase 4) (Kynurenine--oxoglutarate transaminase IV) (Plasma membrane-associated fatty acid-binding protein) (FABPpm) (Transaminase A)",430,O85746,2.6.1.1,0.981,38.79,4,P00507,2.6.1.1,94.65,4
+P00506,2.6.1.1,"Aspartate aminotransferase, mitochondrial (mAspAT) (EC 2.6.1.1) (EC 2.6.1.7) (Fatty acid-binding protein) (FABP-1) (Glutamate oxaloacetate transaminase 2) (Kynurenine aminotransferase 4) (Kynurenine aminotransferase IV) (Kynurenine--oxoglutarate transaminase 4) (Kynurenine--oxoglutarate transaminase IV) (Plasma membrane-associated fatty acid-binding protein) (FABPpm) (Transaminase A)",430,P00507,2.6.1.1,0.9851,94.19,4,P00507,2.6.1.1,94.19,4
+P00507,2.6.1.1,"Aspartate aminotransferase, mitochondrial (mAspAT) (EC 2.6.1.1) (EC 2.6.1.7) (Fatty acid-binding protein) (FABP-1) (Glutamate oxaloacetate transaminase 2) (Kynurenine aminotransferase 4) (Kynurenine aminotransferase IV) (Kynurenine--oxoglutarate transaminase 4) (Kynurenine--oxoglutarate transaminase IV) (Plasma membrane-associated fatty acid-binding protein) (FABPpm) (Transaminase A)",430,P00506,2.6.1.1,0.9851,94.19,4,P00505,2.6.1.1,94.65,4
+P00508,2.6.1.1,"Aspartate aminotransferase, mitochondrial (mAspAT) (EC 2.6.1.1) (EC 2.6.1.7) (Glutamate oxaloacetate transaminase 2) (Kynurenine aminotransferase 4) (Kynurenine aminotransferase IV) (Kynurenine--oxoglutarate transaminase 4) (Kynurenine--oxoglutarate transaminase IV) (Transaminase A)",423,O85746,2.6.1.1,0.9807,37.78,4,P00506,2.6.1.1,84.87,4
+P04818,2.1.1.45,Thymidylate synthase (TS) (TSase) (EC 2.1.1.45),313,P0A884,2.1.1.45,0.9747,54.92,4,P07607,2.1.1.45,90.55,4
+P06785,2.1.1.45,Thymidylate synthase (TS) (TSase) (EC 2.1.1.45) (Cell division cycle protein 21) (Constitutive RNR3 transcription protein 9),304,P0A884,2.1.1.45,0.9697,56.82,4,O76511,2.1.1.45,65.13,4
+P07607,2.1.1.45,Thymidylate synthase (TS) (TSase) (EC 2.1.1.45),307,P0A884,2.1.1.45,0.9742,54.92,4,P45352,2.1.1.45,97.07,4
+P0A884,2.1.1.45,Thymidylate synthase (TS) (TSase) (EC 2.1.1.45),264,P9WFR9,2.1.1.45,0.9905,65.91,4,P9WFR9,2.1.1.45,65.91,4
+P45352,2.1.1.45,Thymidylate synthase (TS) (TSase) (EC 2.1.1.45),307,P0A884,2.1.1.45,0.9738,54.55,4,P07607,2.1.1.45,97.07,4
+P9WFR9,2.1.1.45,Thymidylate synthase ThyA (TS) (TSase) (EC 2.1.1.45),266,P0A884,2.1.1.45,0.9905,65.91,4,P0A884,2.1.1.45,65.91,4
+Q05762,2.1.1.45,Bifunctional dihydrofolate reductase-thymidylate synthase 1 (DHFR-TS 1) [Includes: Dihydrofolate reductase (EC 1.5.1.3); Thymidylate synthase (EC 2.1.1.45)],519,P9WFR9,2.1.1.45,0.974,47.74,4,P45352,2.1.1.45,61.56,4
+O76511,2.1.1.45,Thymidylate synthase (TS) (TSase) (EC 2.1.1.45),321,P0A884,2.1.1.45,0.9743,55.3,4,P06785,2.1.1.45,65.13,4
+O64390,2.7.1.1,Hexokinase-1 (EC 2.7.1.1) (StHK1),498,P50521,2.7.1.1,0.9144,29.01,4,P35557,2.7.1.1,34.41,4
+P04806,2.7.1.1,Hexokinase-1 (EC 2.7.1.1) (Hexokinase PI) (Hexokinase-A),485,P04807,2.7.1.1,0.9961,77.53,4,P04807,2.7.1.1,77.53,4
+P04807,2.7.1.1,Hexokinase-2 (EC 2.7.1.1) (Hexokinase PII) (Hexokinase-B),486,P04806,2.7.1.1,0.9961,77.53,4,P04806,2.7.1.1,77.53,4
+P17712,2.7.1.1,Hexokinase-4 (HK4) (EC 2.7.1.1) (Glucokinase) (Hexokinase type IV) (HK IV) (Hexokinase-D),465,P52792,2.7.1.1,0.9973,97.85,4,P52792,2.7.1.1,97.85,4
+P33284,2.7.1.1,Hexokinase (EC 2.7.1.1),485,P04807,2.7.1.1,0.9741,73.4,4,P04807,2.7.1.1,73.4,4
+P35557,2.7.1.1,Hexokinase-4 (HK4) (EC 2.7.1.1) (Glucokinase) (Hexokinase type IV) (HK IV) (Hexokinase-D),465,P52792,2.7.1.1,0.9977,95.91,4,P17712,2.7.1.1,96.99,4
+P50521,2.7.1.1,Hexokinase-2 (EC 2.7.1.1),455,P33284,2.7.1.1,0.9322,36.04,4,P04807,2.7.1.1,37.58,4
+P52792,2.7.1.1,Hexokinase-4 (HK4) (EC 2.7.1.1) (Glucokinase) (Hexokinase type IV) (HK IV) (Hexokinase-D),465,P35557,2.7.1.1,0.9977,95.91,4,P17712,2.7.1.1,97.85,4
+P00549,2.7.1.40,Pyruvate kinase 1 (PK 1) (EC 2.7.1.40) (cell division cycle protein 19),500,P46614,2.7.1.40,0.9929,72.4,4,P46614,2.7.1.40,72.4,4
+P0AD61,2.7.1.40,Pyruvate kinase I (EC 2.7.1.40) (PK-1),470,P77983,2.7.1.40,0.9905,95.74,4,P77983,2.7.1.40,95.74,4
+P21599,2.7.1.40,Pyruvate kinase II (EC 2.7.1.40) (PK-2),480,P9WKE5,2.7.1.40,0.952,38.35,4,P46614,2.7.1.40,40.0,4
+P46614,2.7.1.40,Pyruvate kinase (PK) (EC 2.7.1.40),504,P00549,2.7.1.40,0.9929,72.4,4,P00549,2.7.1.40,72.4,4
+P52489,2.7.1.40,Pyruvate kinase 2 (PK 2) (EC 2.7.1.40),506,P00549,2.7.1.40,0.989,70.8,4,P00549,2.7.1.40,70.8,4
+P77983,2.7.1.40,Pyruvate kinase I (EC 2.7.1.40) (PK-1),470,P0AD61,2.7.1.40,0.9905,95.74,4,P0AD61,2.7.1.40,95.74,4
+P78031,2.7.1.40,Pyruvate kinase (PK) (EC 2.7.1.40),508,P9WKE5,2.7.1.40,0.9032,26.48,4,P0AD61,2.7.1.40,34.26,4
+P9WKE5,2.7.1.40,Pyruvate kinase (PK) (EC 2.7.1.40),472,P52489,2.7.1.40,0.9544,35.17,4,P0AD61,2.7.1.40,40.0,4
+A4Q998,2.4.2.1,Purine nucleoside phosphorylase (EC 2.4.2.1) (AgPNP) (Inosine phosphorylase) (Inosine-guanosine phosphorylase),353,P23492,2.4.2.1,0.9699,53.29,4,P00491,2.4.2.1,53.98,4
+A5K9M4,2.4.2.1,Purine nucleoside phosphorylase (EC 2.4.2.1) (PvPNP),245,P0ABP8,2.4.2.1,0.9112,29.71,4,P0ABP8,2.4.2.1,29.71,4
+P00491,2.4.2.1,Purine nucleoside phosphorylase (PNP) (EC 2.4.2.1) (Inosine phosphorylase) (Inosine-guanosine phosphorylase),289,P23492,2.4.2.1,0.9939,84.08,4,P23492,2.4.2.1,84.08,4
+P0ABP8,2.4.2.1,Purine nucleoside phosphorylase DeoD-type (PNP) (EC 2.4.2.1),239,A5K9M4,2.4.2.1,0.9112,29.71,4,A5K9M4,2.4.2.1,29.71,4
+P0C037,2.4.2.1,Pyrimidine/purine nucleoside phosphorylase (EC 2.4.2.1) (EC 2.4.2.2) (Adenosine phosphorylase) (Cytidine phosphorylase) (Guanosine phosphorylase) (Inosine phosphorylase) (Thymidine phosphorylase) (Uridine phosphorylase) (Xanthosine phosphorylase),94,P84140,5.3.1.9,0.7388,17.02,0,O09131,2.5.1.18,26.6,1
+P23492,2.4.2.1,Purine nucleoside phosphorylase (PNP) (EC 2.4.2.1) (Inosine phosphorylase) (Inosine-guanosine phosphorylase),289,P00491,2.4.2.1,0.9939,84.08,4,P00491,2.4.2.1,84.08,4
+P33644,2.4.2.1,Peptidoglycan editing factor PgeF (PG-editing factor) (EC 3.5.-.-) (Adenosine deaminase) (EC 3.5.4.4) (Polyphenol oxidase) (EC 1.10.3.-) (Proofreading amidase PgeF) (Purine nucleoside phosphorylase) (EC 2.4.2.1) (S-methyl-5'-thioadenosine phosphorylase) (EC 2.4.2.28),243,P00334,1.1.1.1,0.4319,2.88,0,P48641,1.8.1.7,14.81,0
+P45563,2.4.2.1,Purine nucleoside phosphorylase 2 (EC 2.4.2.1) (Inosine-guanosine phosphorylase) (Purine nucleoside phosphorylase II) (PNP II) (Xanthosine phosphorylase),277,P23492,2.4.2.1,0.9432,41.16,4,P00491,2.4.2.1,41.16,4
+O09131,2.5.1.18,Glutathione S-transferase omega-1 (GSTO-1) (EC 2.5.1.18) (Glutathione S-transferase omega 1-1) (GSTO 1-1) (Glutathione-dependent dehydroascorbate reductase) (EC 1.8.5.1) (Monomethylarsonic acid reductase) (MMA(V) reductase) (EC 1.20.4.2) (S-(Phenacyl)glutathione reductase) (SPG-R) (p28),240,O73888,2.5.1.18,0.8014,12.06,4,P0C037,2.4.2.1,26.6,1
+O14684,2.5.1.18,Prostaglandin E synthase (EC 5.3.99.3) (Glutathione peroxidase PTGES) (EC 1.11.1.-) (Glutathione transferase PTGES) (EC 2.5.1.18) (Microsomal glutathione S-transferase 1-like 1) (MGST1-L1) (Microsomal prostaglandin E synthase 1) (MPGES-1) (p53-induced gene 12 protein),152,Q9HLI6,4.3.1.3,0.5913,8.55,0,P07478,3.4.21.4,13.82,0
+O15217,2.5.1.18,Glutathione S-transferase A4 (EC 2.5.1.18) (GST class-alpha member 4) (Glutathione S-transferase A4-4),222,O73888,2.5.1.18,0.8667,18.09,4,O60760,2.5.1.18,27.14,4
+O35543,2.5.1.18,Hematopoietic prostaglandin D synthase (H-PGDS) (EC 5.3.99.2) (GST class-sigma) (Glutathione S-transferase) (EC 2.5.1.18) (Glutathione-dependent PGD synthase) (Glutathione-requiring prostaglandin D synthase) (Prostaglandin-H2 D-isomerase),199,O60760,2.5.1.18,0.9973,81.41,4,O60760,2.5.1.18,81.41,4
+O43708,2.5.1.18,Maleylacetoacetate isomerase (MAAI) (EC 5.2.1.2) (GSTZ1-1) (Glutathione S-transferase zeta 1) (EC 2.5.1.18),216,O60760,2.5.1.18,0.8285,19.1,4,O09131,2.5.1.18,21.3,4
+O43813,2.5.1.18,Glutathione S-transferase LANCL1 (EC 2.5.1.18) (40 kDa erythrocyte membrane protein) (p40) (LanC-like protein 1),399,O25001,3.5.2.6,0.4729,8.8,0,P0C037,2.4.2.1,14.89,1
+O60760,2.5.1.18,Hematopoietic prostaglandin D synthase (H-PGDS) (EC 5.3.99.2) (GST class-sigma) (Glutathione S-transferase) (EC 2.5.1.18) (Glutathione-dependent PGD synthase) (Glutathione-requiring prostaglandin D synthase) (Prostaglandin-H2 D-isomerase),199,O35543,2.5.1.18,0.9973,81.41,4,O35543,2.5.1.18,81.41,4
+O73888,2.5.1.18,Hematopoietic prostaglandin D synthase (H-PGDS) (EC 5.3.99.2) (GST class-sigma) (Glutathione S-transferase) (EC 2.5.1.18) (Glutathione-dependent PGD synthase) (Glutathione-requiring prostaglandin D synthase) (Prostaglandin-H2 D-isomerase),199,O35543,2.5.1.18,0.9895,69.85,4,O35543,2.5.1.18,69.85,4
+H2N0D4,3.2.1.1,Alpha-amylase (EC 3.2.1.1),512,P00687,3.2.1.1,0.9877,74.17,4,P00687,3.2.1.1,74.17,4
+P00687,3.2.1.1,"Alpha-amylase 1 (EC 3.2.1.1) (1,4-alpha-D-glucan glucanohydrolase 1) (Salivary and hepatic alpha-amylase)",511,P00688,3.2.1.1,0.9977,88.58,4,P00688,3.2.1.1,88.58,4
+P00688,3.2.1.1,"Pancreatic alpha-amylase 2a5 (PA) (EC 3.2.1.1) (1,4-alpha-D-glucan glucanohydrolase)",508,P00687,3.2.1.1,0.9977,88.58,4,P00687,3.2.1.1,88.58,4
+P00690,3.2.1.1,"Pancreatic alpha-amylase (PA) (EC 3.2.1.1) (1,4-alpha-D-glucan glucanohydrolase)",511,H2N0D4,3.2.1.1,0.9876,74.17,4,P04746,3.2.1.1,86.3,4
+P00693,3.2.1.1,"Alpha-amylase type A isozyme (EC 3.2.1.1) (1,4-alpha-D-glucan glucanohydrolase) (HvAMY1) (Low pI alpha-amylase)",438,P06278,3.2.1.1,0.7963,23.52,4,P06278,3.2.1.1,23.52,4
+P04746,3.2.1.1,"Pancreatic alpha-amylase (PA) (EC 3.2.1.1) (1,4-alpha-D-glucan glucanohydrolase)",511,P00687,3.2.1.1,0.9884,84.93,4,P00690,3.2.1.1,86.3,4
+P06278,3.2.1.1,"Alpha-amylase (EC 3.2.1.1) (1,4-alpha-D-glucan glucanohydrolase) (BLA)",512,P00693,3.2.1.1,0.7963,23.52,4,P00693,3.2.1.1,23.52,4
+P08144,3.2.1.1,"Alpha-amylase A (EC 3.2.1.1) (1,4-alpha-D-glucan glucanohydrolase)",494,P00688,3.2.1.1,0.981,57.09,4,P00688,3.2.1.1,57.09,4
+A0A0F7KYQ8,3.5.2.6,Metallo-beta-lactamase VIM-1 (EC 3.5.2.6),266,O08498,3.5.2.6,0.8415,23.69,4,C7C422,3.5.2.6,34.96,4
+A0A5R8T042,3.5.2.6,Beta-lactamase CTX-M-15 (EC 3.5.2.6) (Cefotaximase 15),291,A0A649V088,3.5.2.6,0.9716,79.73,4,A0A649V088,3.5.2.6,79.73,4
+A0A649V088,3.5.2.6,Beta-lactamase CTX-M-14 (EC 3.5.2.6) (Cefotaximase 14),291,A0A5R8T042,3.5.2.6,0.9716,79.73,4,A0A5R8T042,3.5.2.6,79.73,4
+A5U493,3.5.2.6,Beta-lactamase (EC 3.5.2.6) (Ambler class A beta-lactamase),307,A0A5R8T042,3.5.2.6,0.8686,40.21,4,A0A649V088,3.5.2.6,42.27,4
+C7C422,3.5.2.6,Metallo-beta-lactamase type 2 (EC 3.5.2.6) (B2 metallo-beta-lactamase) (Beta-lactamase type II) (Metallo-beta-lactamase NDM-1) (Metallo-beta-lactamase type II) (New Delhi metallo-beta-lactamase-1) (NDM-1),270,O08498,3.5.2.6,0.8151,25.7,4,A0A0F7KYQ8,3.5.2.6,34.96,4
+O08498,3.5.2.6,Metallo-beta-lactamase type 2 (EC 3.5.2.6) (B2 metallo-beta-lactamase) (Beta-lactamase type II) (Carbapenem-hydrolyzing beta-lactamase BlaB-1) (CHbetaL-1) (Class B carbapenemase BlaB-1) (Metallo-beta-lactamase type II),249,A0A0F7KYQ8,3.5.2.6,0.8415,23.69,4,C7C422,3.5.2.6,25.7,4
+O25001,3.5.2.6,Beta-lactamase HcpA (EC 3.5.2.6) (Cysteine-rich 28 kDa protein),250,O43813,2.5.1.18,0.4729,8.8,0,A8B2U2,4.1.2.13,16.4,0
+O87489,3.5.2.6,Beta-lactamase VEB-1 (EC 3.5.2.6) (Vietnamese extended-spectrum beta-lactamase),299,A0A649V088,3.5.2.6,0.8656,24.05,4,A0A649V088,3.5.2.6,24.05,4
+P00760,3.4.21.4,Serine protease 1 (EC 3.4.21.4) (Anionic trypsin I) (Anionic trypsin-I) (Beta-trypsin) (Cationic trypsin) (Pretrypsinogen I) (Trypsin I) (Trypsin-I) [Cleaved into: Alpha-trypsin chain 1; Alpha-trypsin chain 2],246,P00761,3.4.21.4,0.9948,82.25,4,P00761,3.4.21.4,82.25,4
+P00761,3.4.21.4,Trypsin (EC 3.4.21.4),231,P07146,3.4.21.4,0.9973,79.22,4,P00760,3.4.21.4,82.25,4
+P00762,3.4.21.4,Serine protease 1 (EC 3.4.21.4) (Anionic trypsin I) (Anionic trypsin-1) (Beta-trypsin) (Cationic trypsinogen) (Pretrypsinogen I) (Trypsin I) (Trypsin-1),246,P00761,3.4.21.4,0.9936,78.79,4,P00763,3.4.21.4,89.02,4
+P00763,3.4.21.4,Anionic trypsin-2 (EC 3.4.21.4) (Anionic trypsin II) (Pretrypsinogen II) (Serine protease 2),246,P00761,3.4.21.4,0.9973,81.39,4,P00762,3.4.21.4,89.02,4
+P07146,3.4.21.4,Anionic trypsin-2 (EC 3.4.21.4) (Anionic trypsin II) (Pretrypsinogen II) (Serine protease 2),246,P00761,3.4.21.4,0.9973,79.22,4,P00763,3.4.21.4,88.21,4
+P07477,3.4.21.4,Serine protease 1 (EC 3.4.21.4) (Anionic trypsin I) (Anionic trypsin-I) (Beta-trypsin) (Cationic trypsinogen) (Pretrypsinogen I) (Trypsin I) (Trypsin-1) [Cleaved into: Alpha-trypsin chain 1; Alpha-trypsin chain 2],247,P00761,3.4.21.4,0.9953,78.79,4,P07478,3.4.21.4,89.47,4
+P07478,3.4.21.4,Trypsin-2 (EC 3.4.21.4) (Anionic trypsinogen) (Serine protease 2) (Trypsin II),247,P00761,3.4.21.4,0.997,79.22,4,P07477,3.4.21.4,89.47,4
+P35030,3.4.21.4,Trypsin-3 (EC 3.4.21.4) (Brain trypsinogen) (Mesotrypsin) (Mesotrypsinogen) (Serine protease 3) (Serine protease 4) (Trypsin III) (Trypsin IV),304,P00761,3.4.21.4,0.995,78.79,4,P07478,3.4.21.4,84.62,4
+P00634,3.1.3.1,Alkaline phosphatase (APase) (EC 3.1.3.1),471,P35483,3.1.3.1,0.9744,69.85,4,P35483,3.1.3.1,69.85,4
+P35482,3.1.3.1,Alkaline phosphatase L (L-AP) (EC 3.1.3.1) (Low-molecular-weight alkaline phosphatase A) (Protein DING),368,K4LAH1,3.1.3.1,0.8894,49.73,4,K4LAH1,3.1.3.1,49.73,4
+Q92058,3.1.3.1,"Alkaline phosphatase, tissue-nonspecific isozyme (AP-TNAP) (TNSALP) (EC 3.1.3.1) (Phosphoamidase)",519,P83456,3.1.3.1,0.9898,73.17,4,P83456,3.1.3.1,73.17,4
+K4LAH1,3.1.3.1,Alkaline phosphatase L (L-AP) (EC 3.1.3.1) (Low molecular weight phosphatase) (Protein DING),392,P35482,3.1.3.1,0.8894,49.73,4,P35482,3.1.3.1,49.73,4
+P35483,3.1.3.1,Alkaline phosphatase H (EC 3.1.3.1) (High molecular weight phosphatase) (H-AP),476,Q02QC9,3.1.3.1,0.9924,99.58,4,Q02QC9,3.1.3.1,99.58,4
+P83456,3.1.3.1,Alkaline phosphatase (AP) (EC 3.1.3.1),477,Q92058,3.1.3.1,0.9898,73.17,4,Q92058,3.1.3.1,73.17,4
+Q02QC9,3.1.3.1,Alkaline phosphatase H (EC 3.1.3.1) (High molecular weight phosphatase) (H-AP),476,P35483,3.1.3.1,0.9924,99.58,4,P35483,3.1.3.1,99.58,4
+P19405,3.1.3.1,Alkaline phosphatase 3 (EC 3.1.3.1) (Alkaline phosphatase III) (APase III),462,P83456,3.1.3.1,0.7381,28.14,4,P35483,3.1.3.1,31.17,4
+B3A003,3.2.1.17,"Lysozyme 3 (EC 3.2.1.17) (1,4-beta-N-acetylmuramidase 3) (Invertebrate-type lysozyme 3) (cv-lysozyme 3)",187,O76357,3.2.1.17,0.7705,46.76,4,O76357,3.2.1.17,46.76,4
+O75951,3.2.1.17,Lysozyme-like protein 6 (EC 3.2.1.17),148,P00702,3.2.1.17,0.8602,46.94,4,P00702,3.2.1.17,46.94,4
+O76357,3.2.1.17,"Invertebrate-type lysozyme 3 (EC 3.2.1.17) (1,4-beta-N-acetylmuramidase)",139,B3A003,3.2.1.17,0.7705,46.76,4,B3A003,3.2.1.17,46.76,4
+P00697,3.2.1.17,"Lysozyme C-1 (EC 3.2.1.17) (1,4-beta-N-acetylmuramidase C)",148,P00701,3.2.1.17,0.8996,53.74,4,P00701,3.2.1.17,53.74,4
+P00698,3.2.1.17,"Lysozyme C (EC 3.2.1.17) (1,4-beta-N-acetylmuramidase C) (Allergen Gal d IV) (allergen Gal d 4)",147,P00701,3.2.1.17,0.9908,95.24,4,P00701,3.2.1.17,95.24,4
+P00701,3.2.1.17,"Lysozyme C (EC 3.2.1.17) (1,4-beta-N-acetylmuramidase C)",147,P00698,3.2.1.17,0.9908,95.24,4,P00698,3.2.1.17,95.24,4
+P00702,3.2.1.17,"Lysozyme C (EC 3.2.1.17) (1,4-beta-N-acetylmuramidase C)",147,P00698,3.2.1.17,0.9653,93.2,4,P00698,3.2.1.17,93.2,4
+P00703,3.2.1.17,"Lysozyme C (EC 3.2.1.17) (1,4-beta-N-acetylmuramidase C)",147,P00701,3.2.1.17,0.9814,92.52,4,P00698,3.2.1.17,95.24,4
+D7EZN2,3.1.1.3,Pancreatic lipase-related protein 2 (PL-RP2) (Cytotoxic T lymphocyte lipase) (Galactolipase) (EC 3.1.1.26) (Triacylglycerol lipase) (EC 3.1.1.3),471,P00591,3.1.1.3,0.9855,62.67,4,P00591,3.1.1.3,62.67,4
+I6Y2J4,3.1.1.3,Triacylglycerol lipase (EC 3.1.1.3) (Esterase/lipase) (Triolein hydrolase) [Cleaved into: Cytosolic triacylglycerol lipase; Extracellular triacylglycerol lipase],437,P04634,3.1.1.3,0.5202,2.78,4,P00331,1.1.1.1,16.95,0
+O46559,3.1.1.3,Hepatic triacylglycerol lipase (HL) (Hepatic lipase) (EC 3.1.1.3) (Lipase member C) (Lysophospholipase) (EC 3.1.1.5) (Phospholipase A1) (EC 3.1.1.32),499,P07867,3.1.1.3,0.915,74.49,4,P07867,3.1.1.3,74.49,4
+O88354,3.1.1.3,Pancreatic triacylglycerol lipase (PL) (PTL) (Pancreatic lipase) (EC 3.1.1.3) (Heart pancreatic lipase) (PL-h),465,P00591,3.1.1.3,0.9968,82.89,4,P00591,3.1.1.3,82.89,4
+P00591,3.1.1.3,Pancreatic triacylglycerol lipase (PL) (PTL) (Pancreatic lipase) (EC 3.1.1.3),450,O88354,3.1.1.3,0.9968,82.89,4,O88354,3.1.1.3,82.89,4
+P04634,3.1.1.3,Gastric triacylglycerol lipase (GL) (Gastric lipase) (EC 3.1.1.3) (Lingual lipase),395,P07098,3.1.1.3,0.9421,76.2,4,P07098,3.1.1.3,76.2,4
+P07098,3.1.1.3,Gastric triacylglycerol lipase (GL) (Gastric lipase) (EC 3.1.1.3),398,P04634,3.1.1.3,0.9421,76.2,4,P04634,3.1.1.3,76.2,4
+P07867,3.1.1.3,Hepatic triacylglycerol lipase (HL) (Hepatic lipase) (EC 3.1.1.3) (Lipase member C) (Lysophospholipase) (EC 3.1.1.5) (Phospholipase A1) (EC 3.1.1.32),494,O46559,3.1.1.3,0.915,74.49,4,O46559,3.1.1.3,74.49,4
+A7MAQ2,4.2.1.1,Dioscorin dioA3 (EC 1.6.5.4) (EC 4.2.1.1) (Dj-dio5) (Dj-dioA3) (Tuber storage protein dioA3),271,O04846,4.2.1.1,0.8614,32.1,4,O04846,4.2.1.1,32.1,4
+O04846,4.2.1.1,"Alpha carbonic anhydrase 1, chloroplastic (AtaCA1) (AtalphaCA1) (EC 4.2.1.1) (Alpha carbonate dehydratase 1)",284,A7MAQ2,4.2.1.1,0.8614,32.1,4,A7MAQ2,4.2.1.1,32.1,4
+O43570,4.2.1.1,Carbonic anhydrase 12 (EC 4.2.1.1) (Carbonate dehydratase XII) (Carbonic anhydrase XII) (CA-XII) (Tumor antigen HOM-RCC-3.1.3),354,P00915,4.2.1.1,0.9384,36.4,4,P00915,4.2.1.1,36.4,4
+O85042,4.2.1.1,Carboxysome shell carbonic anhydrase (CsoSCA) (EC 4.2.1.1) (Carbonic anhydrase) (CA) (Carboxysome shell protein CsoS3),514,P00940,5.3.1.1,0.4176,4.03,0,P00697,3.2.1.17,14.19,0
+P00915,4.2.1.1,Carbonic anhydrase 1 (EC 4.2.1.1) (Carbonate dehydratase I) (Carbonic anhydrase B) (CAB) (Carbonic anhydrase I) (CA-I) (Cyanamide hydratase CA1) (EC 4.2.1.69),261,P00920,4.2.1.1,0.9808,58.85,4,P00918,4.2.1.1,60.0,4
+P00918,4.2.1.1,Carbonic anhydrase 2 (EC 4.2.1.1) (Carbonate dehydratase II) (Carbonic anhydrase C) (CAC) (Carbonic anhydrase II) (CA-II) (Cyanamide hydratase CA2) (EC 4.2.1.69),260,P00919,4.2.1.1,0.9978,85.38,4,P00919,4.2.1.1,85.38,4
+P00919,4.2.1.1,Carbonic anhydrase 2 (EC 4.2.1.1) (Carbonate dehydratase II) (Carbonic anhydrase II) (CA-II) (Cyanamide hydratase CA2) (EC 4.2.1.69),260,P00920,4.2.1.1,0.9978,77.69,4,P00918,4.2.1.1,85.38,4
+P00920,4.2.1.1,Carbonic anhydrase 2 (EC 4.2.1.1) (Carbonate dehydratase II) (Carbonic anhydrase II) (CA-II) (Cyanamide hydratase CA2) (EC 4.2.1.69),260,P00919,4.2.1.1,0.9978,77.69,4,P00918,4.2.1.1,81.15,4
+A0RV30,4.1.2.13,"Fructose-1,6-bisphosphate aldolase/phosphatase (FBP A/P) (FBP aldolase/phosphatase) (EC 3.1.3.11) (EC 4.1.2.13)",376,F9VMT6,4.1.2.13,0.9457,39.89,4,B1YAL1,4.1.2.13,44.15,4
+A8B2U2,4.1.2.13,"Fructose-bisphosphate aldolase (Glfba) (glFBPA) (EC 4.1.2.13) (Fructose-1,6-bisphosphate aldolase)",323,D4GYE0,4.1.2.13,0.8409,29.41,4,D4GYE0,4.1.2.13,29.41,4
+B1YAL1,4.1.2.13,"Fructose-1,6-bisphosphate aldolase/phosphatase (FBP A/P) (FBP aldolase/phosphatase) (EC 3.1.3.11) (EC 4.1.2.13)",399,F9VMT6,4.1.2.13,0.9385,59.64,4,F9VMT6,4.1.2.13,59.64,4
+D4GYE0,4.1.2.13,"Fructose-bisphosphate aldolase class 2 (FBP aldolase) (FBPA) (EC 4.1.2.13) (Fructose-1,6-bisphosphate aldolase) (Fructose-bisphosphate aldolase class II)",330,A8B2U2,4.1.2.13,0.8409,29.41,4,A8B2U2,4.1.2.13,29.41,4
+F4KGQ0,4.1.2.13,"Fructose-bisphosphate aldolase 4, cytosolic (AtFBA4) (EC 4.1.2.13) (Cytosolic aldolase 3) (cAld3)",393,P00884,4.1.2.13,0.9754,56.32,4,P00883,4.1.2.13,60.71,4
+F9VMT6,4.1.2.13,"Fructose-1,6-bisphosphate aldolase/phosphatase (FBP A/P) (FBP aldolase/phosphatase) (EC 3.1.3.11) (EC 4.1.2.13) (Fructose-1,6-bisphosphatase) (FBPase)",384,A0RV30,4.1.2.13,0.9457,39.89,4,B1YAL1,4.1.2.13,59.64,4
+P00883,4.1.2.13,Fructose-bisphosphate aldolase A (EC 4.1.2.13) (Muscle-type aldolase),364,P00884,4.1.2.13,0.9902,69.51,4,P00884,4.1.2.13,69.51,4
+P00884,4.1.2.13,Fructose-bisphosphate aldolase B (EC 4.1.2.13) (Liver-type aldolase),364,P00883,4.1.2.13,0.9902,69.51,4,P00883,4.1.2.13,69.51,4
+A0A509AQ68,4.2.1.11,Enolase (EC 4.2.1.11),446,P04764,4.2.1.11,0.9831,66.13,4,P04764,4.2.1.11,66.13,4
+A9WCM4,4.2.1.11,Enolase (EC 4.2.1.11) (2-phospho-D-glycerate hydro-lyase) (2-phosphoglycerate dehydratase),426,O32513,4.2.1.11,0.9892,59.86,4,O69174,4.2.1.11,60.56,4
+B4EUF7,4.2.1.11,Enolase (EC 4.2.1.11) (2-phospho-D-glycerate hydro-lyase) (2-phosphoglycerate dehydratase),433,A9WCM4,4.2.1.11,0.9886,58.22,4,O32513,4.2.1.11,58.89,4
+O32513,4.2.1.11,Enolase (EC 4.2.1.11) (2-phospho-D-glycerate hydro-lyase) (2-phosphoglycerate dehydratase),434,A9WCM4,4.2.1.11,0.9892,59.86,4,A9WCM4,4.2.1.11,59.86,4
+O69174,4.2.1.11,Enolase (EC 4.2.1.11) (2-phospho-D-glycerate hydro-lyase) (2-phosphoglycerate dehydratase) (Laminin-binding protein),434,A9WCM4,4.2.1.11,0.9861,60.56,4,A9WCM4,4.2.1.11,60.56,4
+P00924,4.2.1.11,Enolase 1 (EC 4.2.1.11) (2-phospho-D-glycerate hydro-lyase 1) (2-phosphoglycerate dehydratase 1),437,P00925,4.2.1.11,0.9999,95.19,4,P00925,4.2.1.11,95.19,4
+P00925,4.2.1.11,Enolase 2 (EC 4.2.1.11) (2-phospho-D-glycerate hydro-lyase 2) (2-phosphoglycerate dehydratase 2),437,P00924,4.2.1.11,0.9999,95.19,4,P00924,4.2.1.11,95.19,4
+P04764,4.2.1.11,Alpha-enolase (EC 4.2.1.11) (2-phospho-D-glycerate hydro-lyase) (Enolase 1) (Non-neural enolase) (NNE),434,P00925,4.2.1.11,0.9908,61.75,4,A0A509AQ68,4.2.1.11,66.13,4
+P21310,4.3.1.3,Histidine ammonia-lyase (HAL) (Histidase) (EC 4.3.1.3) (PpHAL),510,Q9HLI6,4.3.1.3,0.9626,40.12,4,Q9HLI6,4.3.1.3,40.12,4
+P64416,4.3.1.3,Histidine ammonia-lyase (Histidase) (EC 4.3.1.3),504,Q9HLI6,4.3.1.3,0.9675,40.93,4,Q9HLI6,4.3.1.3,40.93,4
+Q9HLI6,4.3.1.3,Probable histidine ammonia-lyase (Histidase) (EC 4.3.1.3),496,P64416,4.3.1.3,0.9675,40.93,4,P64416,4.3.1.3,40.93,4
+A0A1L5YRA2,5.3.1.1,Triosephosphate isomerase (TIM) (EC 5.3.1.1) (Allergen Scy p 8) (Methylglyoxal synthase) (EC 4.2.3.3) (Triose-phosphate isomerase) (allergen Scy p 8.0101),248,F5A6E9,5.3.1.1,0.9993,92.34,4,F5A6E9,5.3.1.1,92.34,4
+F5A6E9,5.3.1.1,Triosephosphate isomerase (TIM) (EC 5.3.1.1) (Methylglyoxal synthase) (EC 4.2.3.3) (Triose-phosphate isomerase) (allergen Pro c 8.0101),248,A0A1L5YRA2,5.3.1.1,0.9993,92.34,4,A0A1L5YRA2,5.3.1.1,92.34,4
+P00939,5.3.1.1,Triosephosphate isomerase (TIM) (EC 5.3.1.1) (Methylglyoxal synthase) (EC 4.2.3.3) (Triose-phosphate isomerase),249,P00940,5.3.1.1,0.998,89.52,4,P00940,5.3.1.1,89.52,4
+P00940,5.3.1.1,Triosephosphate isomerase (TIM) (EC 5.3.1.1) (Methylglyoxal synthase) (EC 4.2.3.3) (Triose-phosphate isomerase),248,P00939,5.3.1.1,0.998,89.52,4,P00939,5.3.1.1,89.52,4
+P00942,5.3.1.1,Triosephosphate isomerase (TIM) (EC 5.3.1.1) (Triose-phosphate isomerase),248,P00940,5.3.1.1,0.9827,52.82,4,P07669,5.3.1.1,56.05,4
+P00943,5.3.1.1,Triosephosphate isomerase (TIM) (TPI) (EC 5.3.1.1) (Triose-phosphate isomerase),253,P00942,5.3.1.1,0.9563,39.52,4,P00939,5.3.1.1,43.37,4
+P04789,5.3.1.1,"Triosephosphate isomerase, glycosomal (TIM) (Triose-phosphate isomerase) (EC 5.3.1.1)",250,P00942,5.3.1.1,0.9708,49.6,4,P00940,5.3.1.1,52.02,4
+P07669,5.3.1.1,Triosephosphate isomerase (TIM) (EC 5.3.1.1) (Triose-phosphate isomerase),249,P00940,5.3.1.1,0.9732,54.84,4,P00942,5.3.1.1,56.05,4
+A3MTR6,5.3.1.9,Bifunctional phosphoglucose/phosphomannose isomerase (Bifunctional PGI/PMI) (EC 5.3.1.8) (EC 5.3.1.9) (Glucose-6-phosphate isomerase) (GPI) (Mannose-6-phosphate isomerase),299,Q8ZWV0,5.3.1.9,0.9938,79.26,4,Q8ZWV0,5.3.1.9,79.26,4
+P84140,5.3.1.9,Glucose-6-phosphate isomerase (GPI) (EC 5.3.1.9) (Phosphoglucose isomerase) (PGI) (Phosphohexose isomerase) (PHI),190,P0C037,2.4.2.1,0.7388,17.02,0,P00591,3.1.1.3,18.42,0
+Q59000,5.3.1.9,Glucose-6-phosphate isomerase (GPI) (EC 5.3.1.9) (Phosphoglucose isomerase) (PGI) (Phosphohexose isomerase) (PHI),401,Q9X1A5,5.3.1.9,0.9507,36.41,4,Q9X1A5,5.3.1.9,36.41,4
+Q8ZWV0,5.3.1.9,Bifunctional phosphoglucose/phosphomannose isomerase (Bifunctional PGI/PMI) (EC 5.3.1.8) (EC 5.3.1.9) (Glucose-6-phosphate isomerase) (GPI) (Mannose-6-phosphate isomerase) (PaPGI/PMI),302,A3MTR6,5.3.1.9,0.9938,79.26,4,A3MTR6,5.3.1.9,79.26,4
+Q9HIC2,5.3.1.9,Bifunctional phosphoglucose/phosphomannose isomerase (Bifunctional PGI/PMI) (EC 5.3.1.8) (EC 5.3.1.9) (Glucose-6-phosphate isomerase) (GPI) (Mannose-6-phosphate isomerase),310,Q9YE01,5.3.1.9,0.8846,25.81,4,A3MTR6,5.3.1.9,32.44,4
+Q9X1A5,5.3.1.9,Glucose-6-phosphate isomerase (GPI) (EC 5.3.1.9) (Phosphoglucose isomerase) (PGI) (Phosphohexose isomerase) (PHI) (TmPGI),448,Q59000,5.3.1.9,0.9507,36.41,4,Q59000,5.3.1.9,36.41,4
+Q9YE01,5.3.1.9,Bifunctional phosphoglucose/phosphomannose isomerase (Bifunctional PGI/PMI) (EC 5.3.1.8) (EC 5.3.1.9) (Glucose-6-phosphate isomerase) (GPI) (Mannose-6-phosphate isomerase),333,A3MTR6,5.3.1.9,0.8903,34.45,4,A3MTR6,5.3.1.9,34.45,4
+P0A0T1,5.3.1.9,Glucose-6-phosphate isomerase (GPI) (EC 5.3.1.9) (Phosphoglucose isomerase) (PGI) (Phosphohexose isomerase) (PHI),504,Q59000,5.3.1.9,0.8939,22.44,4,Q9X1A5,5.3.1.9,24.33,4
+G4VJD5,5.4.2.11,"2,3-bisphosphoglycerate-dependent phosphoglycerate mutase (2,3-BPG-dependent PGM) (dPGM) (EC 5.4.2.11) (Phosphoglycerate mutase) (PGM) (SmPGM)",250,P00950,5.4.2.11,0.9772,49.8,4,P18669,5.4.2.11,58.4,4
+O70250,5.4.2.11,Phosphoglycerate mutase 2 (EC 5.4.2.11) (EC 5.4.2.4) (BPG-dependent PGAM 2) (Muscle-specific phosphoglycerate mutase) (Phosphoglycerate mutase isozyme M) (PGAM-M),253,P16290,5.4.2.11,0.9999,97.63,4,P16290,5.4.2.11,97.63,4
+P00950,5.4.2.11,Phosphoglycerate mutase 1 (PGAM 1) (EC 5.4.2.11) (BPG-dependent PGAM 1) (MPGM 1) (Phosphoglyceromutase 1),247,G4VJD5,5.4.2.11,0.9772,49.8,4,O70250,5.4.2.11,53.04,4
+P07738,5.4.2.11,"Bisphosphoglycerate mutase (BPGM) (EC 5.4.2.4) (2,3-bisphosphoglycerate mutase, erythrocyte) (2,3-bisphosphoglycerate synthase) (EC 5.4.2.11) (2,3-diphosphoglycerate mutase) (DPGM) (BPG-dependent PGAM)",259,P15327,5.4.2.11,0.9939,92.28,4,P15327,5.4.2.11,92.28,4
+P15259,5.4.2.11,Phosphoglycerate mutase 2 (EC 5.4.2.11) (EC 5.4.2.4) (BPG-dependent PGAM 2) (Muscle-specific phosphoglycerate mutase) (Phosphoglycerate mutase isozyme M) (PGAM-M),253,P16290,5.4.2.11,0.9985,93.68,4,P16290,5.4.2.11,93.68,4
+P15327,5.4.2.11,"Bisphosphoglycerate mutase (BPGM) (EC 5.4.2.4) (2,3-bisphosphoglycerate mutase, erythrocyte) (2,3-bisphosphoglycerate synthase) (EC 5.4.2.11) (BPG-dependent PGAM)",259,P07738,5.4.2.11,0.9939,92.28,4,P07738,5.4.2.11,92.28,4
+P16290,5.4.2.11,Phosphoglycerate mutase 2 (EC 5.4.2.11) (EC 5.4.2.4) (BPG-dependent PGAM 2) (Muscle-specific phosphoglycerate mutase) (Phosphoglycerate mutase isozyme M) (PGAM-M),253,O70250,5.4.2.11,0.9999,97.63,4,O70250,5.4.2.11,97.63,4
+P18669,5.4.2.11,Phosphoglycerate mutase 1 (EC 5.4.2.11) (EC 5.4.2.4) (BPG-dependent PGAM 1) (Phosphoglycerate mutase isozyme B) (PGAM-B),254,P15259,5.4.2.11,0.9895,81.03,4,P15259,5.4.2.11,81.03,4
+O58478,5.1.1.1,Alanine/serine racemase (ASR) (Ala/Ser racemase) (EC 5.1.1.-) (EC 5.1.1.1),474,O85746,2.6.1.1,0.7003,6.05,0,P0C037,2.4.2.1,19.15,0
+P06191,5.1.1.1,"Alanine racemase, catabolic (EC 5.1.1.1)",356,B9WZ64,5.1.1.1,0.9624,46.63,4,B9WZ64,5.1.1.1,46.63,4
+P0A6B4,5.1.1.1,"Alanine racemase, biosynthetic (EC 5.1.1.1)",359,O59828,5.1.1.1,0.9654,45.68,4,B9WZ64,5.1.1.1,48.18,4
+P10724,5.1.1.1,Alanine racemase (EC 5.1.1.1),388,P0A6B4,5.1.1.1,0.9039,33.7,4,P9WQA9,5.1.1.1,36.98,4
+P9WQA9,5.1.1.1,Alanine racemase (EC 5.1.1.1),384,P0A6B4,5.1.1.1,0.9331,37.05,4,B9WZ64,5.1.1.1,38.38,4
+Q9X0Z7,5.1.1.1,L-alanine/L-glutamate racemase (EC 5.1.1.1) (EC 5.1.1.3),379,O58478,5.1.1.1,0.6803,3.69,4,G4VJD5,5.4.2.11,12.8,1
+B9WZ64,5.1.1.1,Alanine racemase (EC 5.1.1.1),357,O59828,5.1.1.1,0.9758,42.86,4,P0A6B4,5.1.1.1,48.18,4
+O59828,5.1.1.1,"Alanine racemase, catabolic (EC 5.1.1.1)",375,B9WZ64,5.1.1.1,0.9758,42.86,4,P0A6B4,5.1.1.1,45.68,4
+O08467,6.3.1.2,Glutamine synthetase (GS) (EC 6.3.1.2) (Glutamate--ammonia ligase) (Glutamine synthetase I alpha) (GSI alpha),443,P12425,6.3.1.2,0.9043,46.28,4,P12425,6.3.1.2,46.28,4
+P09606,6.3.1.2,Glutamine synthetase (GS) (EC 6.3.1.2) (Glutamate--ammonia ligase) (Palmitoyltransferase GLUL) (EC 2.3.1.225),373,P15103,6.3.1.2,0.9997,93.3,4,P15103,6.3.1.2,93.3,4
+P0A1P6,6.3.1.2,Glutamine synthetase (GS) (EC 6.3.1.2) (Glutamate--ammonia ligase) (Glutamine synthetase I beta) (GSI beta),469,P0A9C5,6.3.1.2,1.0,98.08,4,P0A9C5,6.3.1.2,98.08,4
+P0A9C5,6.3.1.2,Glutamine synthetase (GS) (EC 6.3.1.2) (Glutamate--ammonia ligase) (Glutamine synthetase I beta) (GSI beta),469,P0A1P6,6.3.1.2,1.0,98.08,4,P0A1P6,6.3.1.2,98.08,4
+P12425,6.3.1.2,Glutamine synthetase (GS) (EC 6.3.1.2) (Glutamate--ammonia ligase) (Glutamine synthetase I alpha) (GSI alpha),444,P0A1P6,6.3.1.2,0.9446,44.37,4,O08467,6.3.1.2,46.28,4
+P14654,6.3.1.2,Glutamine synthetase cytosolic isozyme 1-2 (EC 6.3.1.2) (Glutamate--ammonia ligase GLN1;2) (OsGLN1;2) (Glutamine synthetase root isozyme) (OsGS1;2),357,P14656,6.3.1.2,0.9987,85.67,4,P14656,6.3.1.2,85.67,4
+P14656,6.3.1.2,Glutamine synthetase cytosolic isozyme 1-1 (EC 6.3.1.2) (Glutamate--ammonia ligase GLN1;1) (OsGLN1;1) (Glutamine synthetase shoot isozyme) (OsGS1;1),356,P14654,6.3.1.2,0.9987,85.67,4,P14654,6.3.1.2,85.67,4
+P15103,6.3.1.2,Glutamine synthetase (GS) (EC 6.3.1.2) (Glutamate--ammonia ligase) (Palmitoyltransferase GLUL) (EC 2.3.1.225),373,P09606,6.3.1.2,0.9997,93.3,4,P09606,6.3.1.2,93.3,4

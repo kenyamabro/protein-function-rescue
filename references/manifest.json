@@ -1,0 +1,716 @@
+[
+  {
+    "accession": "A0A009IHW8",
+    "name": "2' cyclic ADP-D-ribose synthase AbTIR (2'cADPR synthase AbTIR) (EC 3.2.2.-) (NAD(+) hydrolase AbTIR) (EC 3.2.2.6) (TIR domain-containing protein in A.baumannii) (AbTIR)",
+    "ec": "3.2.2.-; 3.2.2.6",
+    "path": "references\\AF-A0A009IHW8.cif"
+  },
+  {
+    "accession": "A0A023I7E1",
+    "name": "Glucan endo-1,3-beta-D-glucosidase 1 (Endo-1,3-beta-glucanase 1) (EC 3.2.1.39) (Laminarinase) (RmLam81A)",
+    "ec": "3.2.1.39",
+    "path": "references\\AF-A0A023I7E1.cif"
+  },
+  {
+    "accession": "A0A024B7W1",
+    "name": "Genome polyprotein [Cleaved into: Capsid protein C (Capsid protein) (Core protein); Protein prM (Precursor membrane protein); Peptide pr (Peptide precursor); Small envelope protein M (Matrix protein); Envelope protein E; Non-structural protein 1 (NS1); Non-structural protein 2A (NS2A); Serine protease subunit NS2B (Flavivirin protease NS2B regulatory subunit) (Non-structural protein 2B); Serine protease NS3 (EC 3.4.21.91) (EC 3.6.1.15) (EC 3.6.4.13) (Flavivirin protease NS3 catalytic subunit) (Non-structural protein 3); Non-structural protein 4A (NS4A); Peptide 2k; Non-structural protein 4B (NS4B); RNA-directed RNA polymerase/Methyltransferase NS5 (EC 2.1.1.56) (EC 2.1.1.57) (EC 2.7.7.48) (NS5)]",
+    "ec": "2.1.1.56; 2.1.1.57; 2.7.7.48; 3.4.21.91; 3.6.1.15; 3.6.4.13",
+    "path": "references\\AF-A0A024B7W1.cif"
+  },
+  {
+    "accession": "A0A024SC78",
+    "name": "Cutinase (EC 3.1.1.74)",
+    "ec": "3.1.1.74",
+    "path": "references\\AF-A0A024SC78.cif"
+  },
+  {
+    "accession": "A0A024SH76",
+    "name": "Exoglucanase 2 (EC 3.2.1.91) (1,4-beta-cellobiohydrolase) (Cellobiohydrolase 6A) (Cel6A) (Exocellobiohydrolase II) (CBHII) (Exoglucanase II)",
+    "ec": "3.2.1.91",
+    "path": "references\\AF-A0A024SH76.cif"
+  },
+  {
+    "accession": "A0A044RE18",
+    "name": "Endoprotease bli (EC 3.4.21.75) (Blisterase)",
+    "ec": "3.4.21.75",
+    "path": "references\\AF-A0A044RE18.cif"
+  },
+  {
+    "accession": "A0A059TC02",
+    "name": "Cinnamoyl-CoA reductase 1 (Ph-CCR1) (EC 1.2.1.44) (Coniferylaldehyde synthase) (Coumaroyl-CoA reductase) (Feruloyl-CoA reductase) (Sinapoyl-CoA reductase)",
+    "ec": "1.2.1.44",
+    "path": "references\\AF-A0A059TC02.cif"
+  },
+  {
+    "accession": "A0A059WI14",
+    "name": "Trivalent organoarsenical cleaving enzyme (EC 1.13.11.-) (Arsenic inducible gene ArsI) (C-As lyase) (Methylarsonous acid demethylase) (MAs(III) demethylase)",
+    "ec": "1.13.11.-",
+    "path": "references\\AF-A0A059WI14.cif"
+  },
+  {
+    "accession": "A0A061I403",
+    "name": "Protein adenylyltransferase FICD (EC 2.7.7.108) (AMPylator FICD) (De-AMPylase FICD) (EC 3.1.4.-) (FIC domain-containing protein) (Huntingtin-interacting protein E)",
+    "ec": "2.7.7.108; 3.1.4.-",
+    "path": "references\\AF-A0A061I403.cif"
+  },
+  {
+    "accession": "A0A067CMC7",
+    "name": "Endonuclease Htp3 (EC 3.1.31.-) (Host targeting protein 3) (RxLR effector protein Htp3)",
+    "ec": "3.1.31.-",
+    "path": "references\\AF-A0A067CMC7.cif"
+  },
+  {
+    "accession": "A0A067XR63",
+    "name": "Xyloglucan endotransglucosylase protein 7 (XET protein 7) (EC 2.4.1.207) (DkXTH7) (Xyloglucan endotransglucosylase/hydrolase protein 7) (XTH protein 7)",
+    "ec": "2.4.1.207",
+    "path": "references\\AF-A0A067XR63.cif"
+  },
+  {
+    "accession": "A0A067XRK9",
+    "name": "Xyloglucan endotransglucosylase protein 6 (XET protein 6) (EC 2.4.1.207) (DkXTH6) (Xyloglucan endotransglucosylase/hydrolase protein 6) (XTH protein 6)",
+    "ec": "2.4.1.207",
+    "path": "references\\AF-A0A067XRK9.cif"
+  },
+  {
+    "accession": "A0A067YMX8",
+    "name": "Xyloglucan endotransglucosylase protein 8 (XET protein 8) (EC 2.4.1.207) (DkXTH8) (Xyloglucan endotransglucosylase/hydrolase protein 8) (XTH protein 8)",
+    "ec": "2.4.1.207",
+    "path": "references\\AF-A0A067YMX8.cif"
+  },
+  {
+    "accession": "A0A068CNX1",
+    "name": "Vanillin synthase, chloroplastic (Ferulate hydratase/lyase) (GhVAN) (EC 4.1.2.65)",
+    "ec": "4.1.2.65",
+    "path": "references\\AF-A0A068CNX1.cif"
+  },
+  {
+    "accession": "A0A068J840",
+    "name": "UDP-glycosyltransferase 1 (UGTPg1) (EC 2.4.1.363)",
+    "ec": "2.4.1.363",
+    "path": "references\\AF-A0A068J840.cif"
+  },
+  {
+    "accession": "A0A072ULZ1",
+    "name": "Anaerobic nitrite reductase Glb1-2 (EC 1.7.2.-) (Non-symbiotic hemoglobin 1-2) (MtGlb1-2) (Phytoglobin 1.2) (Phytogb1.2)",
+    "ec": "1.7.2.-",
+    "path": "references\\AF-A0A072ULZ1.cif"
+  },
+  {
+    "accession": "A0A072UR65",
+    "name": "Class V chitinase CHIT5b (MtCHIT5b) (EC 3.2.1.14)",
+    "ec": "3.2.1.14",
+    "path": "references\\AF-A0A072UR65.cif"
+  },
+  {
+    "accession": "A0A072VDF2",
+    "name": "Cinnamoyl-CoA reductase 1 (Mt-CCR1) (EC 1.2.1.44) (Caffeoyl-CoA reductase) (EC 1.2.1.-) (Coumaroyl-CoA reductase) (Feruloyl-CoA reductase) (Sinapoyl-CoA reductase)",
+    "ec": "1.2.1.-; 1.2.1.44",
+    "path": "references\\AF-A0A072VDF2.cif"
+  },
+  {
+    "accession": "A0A075BSX9",
+    "name": "(S)-6-hydroxynicotine oxidase ((S)-6HN oxidase) (EC 1.5.3.5) (6-hydroxy-L-nicotine oxidase) (6-HLNO) (L-hydroxynicotine oxidase) (LHNO)",
+    "ec": "1.5.3.5",
+    "path": "references\\AF-A0A075BSX9.cif"
+  },
+  {
+    "accession": "A0A075D5I4",
+    "name": "Picrinine-N-methytransferase (RsPiNMT) (EC 2.1.1.-) (Gamma-tocopherol-like methyltransferase PiNMT) (RsTLMT)",
+    "ec": "2.1.1.-",
+    "path": "references\\AF-A0A075D5I4.cif"
+  },
+  {
+    "accession": "A0A075D657",
+    "name": "Picrinine-N-methytransferase (VmPiNMT) (EC 2.1.1.-) (Gamma-tocopherol-like methyltransferase PiNMT) (VmTLMT)",
+    "ec": "2.1.1.-",
+    "path": "references\\AF-A0A075D657.cif"
+  },
+  {
+    "accession": "A0A075F7E9",
+    "name": "G-type lectin S-receptor-like serine/threonine-protein kinase LECRK1 (OsLecRK1) (EC 2.7.11.1) (OsRLCK134)",
+    "ec": "2.7.11.1",
+    "path": "references\\AF-A0A075F7E9.cif"
+  },
+  {
+    "accession": "A0A075FBG7",
+    "name": "9,13-epoxylabda-14-ene synthase, chloroplastic (EC 4.2.3.189) (Manoyl oxide synthase) (EC 4.2.3.190) (Miltiradiene synthase) (EC 4.2.3.131)",
+    "ec": "4.2.3.131; 4.2.3.189; 4.2.3.190",
+    "path": "references\\AF-A0A075FBG7.cif"
+  },
+  {
+    "accession": "A0A075TJ05",
+    "name": "Ochratoxinase (OTase) (EC 3.4.17.-) (Amidohydrolase 2) (Amidase 2) (Carboxypeptidase Am2)",
+    "ec": "3.4.17.-",
+    "path": "references\\AF-A0A075TJ05.cif"
+  },
+  {
+    "accession": "A0A075TMP8",
+    "name": "Cytochrome P450 monooxygenase patI (EC 1.-.-.-) (Patulin biosynthesis cluster protein I) (m-hydroxybenzyl alcohol hydroxylase)",
+    "ec": "1.-.-.-",
+    "path": "references\\AF-A0A075TMP8.cif"
+  },
+  {
+    "accession": "A0A075TR33",
+    "name": "FAD-linked oxidoreductase patO (EC 1.-.-.-) (Patulin biosynthesis cluster protein O)",
+    "ec": "1.-.-.-",
+    "path": "references\\AF-A0A075TR33.cif"
+  },
+  {
+    "accession": "A0A075TRC0",
+    "name": "6-methylsalicylic acid synthase (6MSAS) (EC 2.3.1.165) (Non-reducing polyketide synthase patK) (Patulin biosynthesis cluster protein K)",
+    "ec": "2.3.1.165",
+    "path": "references\\AF-A0A075TRC0.cif"
+  },
+  {
+    "accession": "A0A075TRK9",
+    "name": "Patulin synthase (EC 1.1.-.-) (Dehydrogenase patE) (Patulin biosynthesis cluster protein E)",
+    "ec": "1.1.-.-",
+    "path": "references\\AF-A0A075TRK9.cif"
+  },
+  {
+    "accession": "A0A075TRL5",
+    "name": "Cytochrome P450 monooxygenase patH (EC 1.-.-.-) (Patulin biosynthesis cluster protein H) (m-cresol hydrolase)",
+    "ec": "1.-.-.-",
+    "path": "references\\AF-A0A075TRL5.cif"
+  },
+  {
+    "accession": "A0A076FFM5",
+    "name": "Flavonoid 8-hydroxylase 1, chloroplastic (ObF8H-1) (EC 1.14.15.-)",
+    "ec": "1.14.15.-",
+    "path": "references\\AF-A0A076FFM5.cif"
+  },
+  {
+    "accession": "A0A078CGE6",
+    "name": "MAP3K epsilon protein kinase 1 (BnM3KE1) (EC 2.7.11.1)",
+    "ec": "2.7.11.1",
+    "path": "references\\AF-A0A078CGE6.cif"
+  },
+  {
+    "accession": "A0A080WMA9",
+    "name": "Aspartate-semialdehyde dehydrogenase (EC 1.2.1.11) (TrASADH)",
+    "ec": "1.2.1.11",
+    "path": "references\\AF-A0A080WMA9.cif"
+  },
+  {
+    "accession": "A0A087X1C5",
+    "name": "Cytochrome P450 2D7 (EC 1.14.14.1)",
+    "ec": "1.14.14.1",
+    "path": "references\\AF-A0A087X1C5.cif"
+  },
+  {
+    "accession": "A0A089QRB9",
+    "name": "Mycolipanoate synthase (EC 2.3.1.252) (Mycocerosic acid synthase-like polyketide synthase) (MAS-like PKS) (Mycolipanoic/mycolipenic acids synthase-like polyketide synthase)",
+    "ec": "2.3.1.252",
+    "path": "references\\AF-A0A089QRB9.cif"
+  },
+  {
+    "accession": "A0A095AMW7",
+    "name": "Malolactic enzyme (MLE) (EC 4.1.1.101)",
+    "ec": "4.1.1.101",
+    "path": "references\\AF-A0A095AMW7.cif"
+  },
+  {
+    "accession": "A0A095C6S0",
+    "name": "D-amino-acid oxidase 2 (DAAO) (DAMOX) (DAO) (EC 1.4.3.3) (CgDAO2)",
+    "ec": "1.4.3.3",
+    "path": "references\\AF-A0A095C6S0.cif"
+  },
+  {
+    "accession": "A0A096P8D3",
+    "name": "Isocitrate dehydrogenase (NAD(+)), mitochondrial (OtIDH) (EC 1.1.1.41)",
+    "ec": "1.1.1.41",
+    "path": "references\\AF-A0A096P8D3.cif"
+  },
+  {
+    "accession": "A0A098D6U0",
+    "name": "Non-reducing polyketide synthase ZEA1 (EC 2.3.1.-) (Macrolactone megasynthetase) (Polyketide synthase 13) (PKS13) (Zearalenone biosynthesis polyketide synthase 1)",
+    "ec": "2.3.1.-",
+    "path": "references\\AF-A0A098D6U0.cif"
+  },
+  {
+    "accession": "A0A0A1H8I4",
+    "name": "Aconitate isomerase (AI) (EC 5.3.3.7)",
+    "ec": "5.3.3.7",
+    "path": "references\\AF-A0A0A1H8I4.cif"
+  },
+  {
+    "accession": "A0A0A1HA03",
+    "name": "UDP-glycosyltransferase 708C1 (EC 2.4.1.360) (C-glucosyltransferase a) (FeCGTa) (UDP-glucose:2-hydroxyflavanone C-glucosyltransferase)",
+    "ec": "2.4.1.360",
+    "path": "references\\AF-A0A0A1HA03.cif"
+  },
+  {
+    "accession": "A0A0A6ZFY4",
+    "name": "UDP-glucosyltransferase 29 (UGTPg29) (EC 2.4.1.365) (UDP-glucosyltransferase 94B1) (PgUGT94B1) (UDP-glucosyltransferase 94Q2) (PgUGT94Q2)",
+    "ec": "2.4.1.365",
+    "path": "references\\AF-A0A0A6ZFY4.cif"
+  },
+  {
+    "accession": "A0A0A7EPL0",
+    "name": "E4 SUMO-protein ligase PIAL1 (EC 2.3.2.-) (Protein EMBRYO DEFECTIVE 3001) (Protein INHIBITOR OF ACTIVATED STAT-LIKE 1)",
+    "ec": "2.3.2.-",
+    "path": "references\\AF-A0A0A7EPL0.cif"
+  },
+  {
+    "accession": "A0A0A7EQR3",
+    "name": "4-O-methyl-glucuronoyl methylesterase (EC 3.1.1.117) (Glucuronoyl esterase) (GE)",
+    "ec": "3.1.1.117",
+    "path": "references\\AF-A0A0A7EQR3.cif"
+  },
+  {
+    "accession": "A0A0A7GEY4",
+    "name": "Geranylgeranyl pyrophosphate synthase (GGPP synthase) (GGPPSase) (EC 2.5.1.-) (Dimethylallyltranstransferase) (EC 2.5.1.1) (Farnesyl diphosphate synthase) (Farnesyltranstransferase) (EC 2.5.1.29) (Geranylgeranyl diphosphate synthase) (Geranyltranstransferase) (EC 2.5.1.10)",
+    "ec": "2.5.1.-; 2.5.1.1; 2.5.1.10; 2.5.1.29",
+    "path": "references\\AF-A0A0A7GEY4.cif"
+  },
+  {
+    "accession": "A0A0A7HFE1",
+    "name": "CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1 (subtype III-A) (ssDNase Cas10) (EC 3.1.-.-) (Cyclic oligoadenylate synthase) (EC 2.7.7.-) (StCas10)",
+    "ec": "2.7.7.-; 3.1.-.-",
+    "path": "references\\AF-A0A0A7HFE1.cif"
+  },
+  {
+    "accession": "A0A0A7HFE6",
+    "name": "CRISPR system endoribonuclease Csm6' (EC 3.1.-.-) (CRISPR type III-A associated protein Csm6-2)",
+    "ec": "3.1.-.-",
+    "path": "references\\AF-A0A0A7HFE6.cif"
+  },
+  {
+    "accession": "A0A0A7HIF0",
+    "name": "CRISPR system Cms endoribonuclease Csm3 (Csm3 RNase) (EC 3.1.-.-) (CRISPR type III A-associated RAMP protein Csm3)",
+    "ec": "3.1.-.-",
+    "path": "references\\AF-A0A0A7HIF0.cif"
+  },
+  {
+    "accession": "A0A0A7HIX6",
+    "name": "CRISPR system endoribonuclease Csm6 (EC 3.1.-.-) (CRISPR type III-A associated protein Csm6-1)",
+    "ec": "3.1.-.-",
+    "path": "references\\AF-A0A0A7HIX6.cif"
+  },
+  {
+    "accession": "A0A0A8IDB7",
+    "name": "Pyrroloquinoline quinone-dependent pyranose dehydrogenase (PDH) (EC 1.1.99.-) (AA12 family sugar dehydrogenase) (Pyrroloquinoline quinone-dependent sugar dehydrogenase) (SDH)",
+    "ec": "1.1.99.-",
+    "path": "references\\AF-A0A0A8IDB7.cif"
+  },
+  {
+    "accession": "A0A0B0QJR1",
+    "name": "tRNA nuclease HepT (EC 3.1.27.-) (Toxin HEPN) (tRNA nuclease HEPN)",
+    "ec": "3.1.27.-",
+    "path": "references\\AF-A0A0B0QJR1.cif"
+  },
+  {
+    "accession": "A0A0B4K692",
+    "name": "Neprilysin-2 (EC 3.4.24.11) [Cleaved into: Neprilysin-2, soluble form]",
+    "ec": "3.4.24.11",
+    "path": "references\\AF-A0A0B4K692.cif"
+  },
+  {
+    "accession": "A0A0B4K7J2",
+    "name": "E3 SUMO-protein ligase RanBP2 (EC 2.3.2.-) (358 kDa nucleoporin) (Nuclear pore complex protein Nup358)",
+    "ec": "2.3.2.-",
+    "path": "references\\AF-A0A0B4K7J2.cif"
+  },
+  {
+    "accession": "A0A0B4U9L8",
+    "name": "Zinc metalloproteinase-disintegrin-like protein F1 (EC 3.4.24.-) (Fibrinogenase 1) (Metalloproteinase F1) (P-IIIa metalloproteinase F1) (Snake venom metalloproteinase) (SVMP) (VaF1)",
+    "ec": "3.4.24.-",
+    "path": "references\\AF-A0A0B4U9L8.cif"
+  },
+  {
+    "accession": "A0A0B5A051",
+    "name": "2-acylphloroglucinol 4-prenyltransferase (EC 2.5.1.136) (Aromatic prenyltransferase PT1L) (Humulus lupulus prenyltransferase-1-like) (HlPT1L)",
+    "ec": "2.5.1.136",
+    "path": "references\\AF-A0A0B5A051.cif"
+  },
+  {
+    "accession": "A0A0B5JC15",
+    "name": "Endo-1,4-beta-xylanase 11B (Xylanase 11B) (EC 3.2.1.8) (1,4-beta-D-xylan xylanohydrolase 11B)",
+    "ec": "3.2.1.8",
+    "path": "references\\AF-A0A0B5JC15.cif"
+  },
+  {
+    "accession": "A0A0B5L781",
+    "name": "O-methyltransferase mpaG' (EC 2.1.1.-) (Mycophenolic acid biosynthesis cluster protein G')",
+    "ec": "2.1.1.-",
+    "path": "references\\AF-A0A0B5L781.cif"
+  },
+  {
+    "accession": "A0A0B5LB55",
+    "name": "Type I acyl-CoA thioesterase mpaH' (EC 3.1.1.-) (Mycophenolic acid biosynthesis cluster protein H')",
+    "ec": "3.1.1.-",
+    "path": "references\\AF-A0A0B5LB55.cif"
+  },
+  {
+    "accession": "A0A0B6CGH9",
+    "name": "Oxoglutarate-dependent flavonoid 7-O-demethylase 1 (ObF7ODM1) (2-oxoglutarate-dependent dioxygenase 1) (ObDIOX1) (8-hydroxysalvigenin 7-O-demethylase) (EC 1.14.13.-) (Gardenin B 7-O-demethylase) (EC 1.14.13.-)",
+    "ec": "1.14.13.-",
+    "path": "references\\AF-A0A0B6CGH9.cif"
+  },
+  {
+    "accession": "A0A0B6VIJ5",
+    "name": "Isovitexin/isoorientin synthase UF6CGT1 (EC 2.4.1.-) (UDP-glycosyltransferase UF6CGT1) (Gt6CGT) (GtUF6CGT1)",
+    "ec": "2.4.1.-",
+    "path": "references\\AF-A0A0B6VIJ5.cif"
+  },
+  {
+    "accession": "A0A0C1EH92",
+    "name": "UDP-glycosyltransferase stmC (EC 2.4.1.-) (3-C-glucosyltransferase) (CGT) (Stromemycin biosynthesis cluster protein C)",
+    "ec": "2.4.1.-",
+    "path": "references\\AF-A0A0C1EH92.cif"
+  },
+  {
+    "accession": "A0A0C3RR82",
+    "name": "Methyltransferase/ribosomally synthesized type II borosin cyclic peptide precursor pgiMA1 (Type II borosin cyclic peptide biosynthesis cluster protein MA1) [Cleaved into: N-methyltransferase pgiM1 (EC 2.1.1.-); Ribosomally synthesized type II borosin core peptide pgiA1-I; Ribosomally synthesized type II borosin core peptide pgiA1-II; Ribosomally synthesized type II borosin core peptide pgiA1-III; Ribosomally synthesized type II borosin core peptide pgiA1-IV; Ribosomally synthesized type II borosin core peptide pgiA1-V; Ribosomally synthesized type II borosin core peptide pgiA1-VI; Ribosomally synthesized type II borosin core peptide pgiA1-VII; Ribosomally synthesized type II borosin core peptide pgiA1-VIII; Ribosomally synthesized type II borosin core peptide pgiA1-IX; Ribosomally synthesized type II borosin core peptide pgiA1-X; Ribosomally synthesized type II borosin core peptide pgiA1-XI; Ribosomally synthesized type II borosin core peptide pgiA1-XII]",
+    "ec": "2.1.1.-",
+    "path": "references\\AF-A0A0C3RR82.cif"
+  },
+  {
+    "accession": "A0A0C3VJP4",
+    "name": "Serine carboxypeptidase 1 (EC 3.4.16.-)",
+    "ec": "3.4.16.-",
+    "path": "references\\AF-A0A0C3VJP4.cif"
+  },
+  {
+    "accession": "A0A0C5CJR8",
+    "name": "Metallopeptidase AprA (EC 3.4.24.-) (Heat-resistant peptidase)",
+    "ec": "3.4.24.-",
+    "path": "references\\AF-A0A0C5CJR8.cif"
+  },
+  {
+    "accession": "A0A0C5Q4Y6",
+    "name": "Ferruginol synthase 1 (RoFS1) (EC 1.14.14.175) (11-oxomiltiradiene synthase) (EC 1.14.14.-) (Cytochrome P450 76AH22) (Ferruginol monooxygenase) (11-hydroxyferruginol synthase) (EC 1.14.14.60) (Miltiradiene oxidase)",
+    "ec": "1.14.14.-; 1.14.14.175; 1.14.14.60",
+    "path": "references\\AF-A0A0C5Q4Y6.cif"
+  },
+  {
+    "accession": "A0A0C5QRZ2",
+    "name": "Ferruginol synthase (SfFS) (EC 1.14.14.175) (11-oxomiltiradiene synthase) (EC 1.14.14.-) (Cytochrome P450 76AH24) (Ferruginol monooxygenase) (11-hydroxyferruginol synthase) (EC 1.14.14.60) (Miltiradiene oxidase)",
+    "ec": "1.14.14.-; 1.14.14.175; 1.14.14.60",
+    "path": "references\\AF-A0A0C5QRZ2.cif"
+  },
+  {
+    "accession": "A0A0C5XL88",
+    "name": "Prs ADP-ribosylating toxin (EC 2.4.2.-) (Mono-ADP-ribosyltransferase) (mART)",
+    "ec": "2.4.2.-",
+    "path": "references\\AF-A0A0C5XL88.cif"
+  },
+  {
+    "accession": "A0A0C6DRW4",
+    "name": "Dibenzothiophene monooxygenase (DBT monooxygenase) (DBT-MO) (EC 1.14.14.21)",
+    "ec": "1.14.14.21",
+    "path": "references\\AF-A0A0C6DRW4.cif"
+  },
+  {
+    "accession": "A0A0D1DWQ2",
+    "name": "Secreted chorismate mutase (EC 5.4.99.5)",
+    "ec": "5.4.99.5",
+    "path": "references\\AF-A0A0D1DWQ2.cif"
+  },
+  {
+    "accession": "A0A0D2Y5A7",
+    "name": "Dihydrolipoyllysine-residue acetyltransferase component of pyruvate dehydrogenase complex, mitochondrial (EC 2.3.1.12) (FoDLAT) (DLAT)",
+    "ec": "2.3.1.12",
+    "path": "references\\AF-A0A0D2Y5A7.cif"
+  },
+  {
+    "accession": "A0A0D3LQY6",
+    "name": "Aromatic amino acid aminotransferase 4 (Ab-ArAT4) (Phenylalanine:4-hydroxyphenylpyruvate aminotransferase) (EC 2.6.1.57) (EC 2.6.1.58) (EC 2.6.1.70)",
+    "ec": "2.6.1.57; 2.6.1.58; 2.6.1.70",
+    "path": "references\\AF-A0A0D3LQY6.cif"
+  },
+  {
+    "accession": "A0A0D4WV12",
+    "name": "Dermonecrotic toxin StSicTox-betaIB1i (EC 4.6.1.-) (Phospholipase D) (PLD) (Sphingomyelin phosphodiesterase D) (SMD) (SMase D) (Sphingomyelinase D)",
+    "ec": "4.6.1.-",
+    "path": "references\\AF-A0A0D4WV12.cif"
+  },
+  {
+    "accession": "A0A0E3JHZ7",
+    "name": "Beta-phenylalanine coenzyme A ligase ((3R)-beta-phenylalanine-CoA ligase) (Phenylalanoyl-CoA ligase) (EC 6.2.1.78) (4-coumarate-CoA ligase) (EC 6.2.1.12)",
+    "ec": "6.2.1.12; 6.2.1.78",
+    "path": "references\\AF-A0A0E3JHZ7.cif"
+  },
+  {
+    "accession": "A0A0E3JXD9",
+    "name": "D-amino-acid oxidase (DAAO) (DAMOX) (DAO) (EC 1.4.3.3)",
+    "ec": "1.4.3.3",
+    "path": "references\\AF-A0A0E3JXD9.cif"
+  },
+  {
+    "accession": "A0A0E3KBH3",
+    "name": "2-oxoacid:ferredoxin oxidoreductase subunit beta (OFOR) (EC 1.2.7.11)",
+    "ec": "1.2.7.11",
+    "path": "references\\AF-A0A0E3KBH3.cif"
+  },
+  {
+    "accession": "A0A0E3T3B5",
+    "name": "Aminoaldehyde dehydrogenase 2, peroxisomal (MdAMADH2) (EC 1.2.1.-) (Aminobutyraldehyde dehydrogenase AMADH2) (EC 1.2.1.19)",
+    "ec": "1.2.1.-; 1.2.1.19",
+    "path": "references\\AF-A0A0E3T3B5.cif"
+  },
+  {
+    "accession": "A0A0E3T552",
+    "name": "Aminoaldehyde dehydrogenase 1, peroxisomal (MdAMADH1) (EC 1.2.1.-) (Aminobutyraldehyde dehydrogenase AMADH1) (EC 1.2.1.19)",
+    "ec": "1.2.1.-; 1.2.1.19",
+    "path": "references\\AF-A0A0E3T552.cif"
+  },
+  {
+    "accession": "A0A0F5HNH9",
+    "name": "Ferritin-like protein (EC 1.16.3.1) (IMEF cargo protein)",
+    "ec": "1.16.3.1",
+    "path": "references\\AF-A0A0F5HNH9.cif"
+  },
+  {
+    "accession": "A0A0F6B5X4",
+    "name": "tRNA-acetylating toxin 3 (TacT3) (EC 2.3.1.-) (Toxin A6)",
+    "ec": "2.3.1.-",
+    "path": "references\\AF-A0A0F6B5X4.cif"
+  },
+  {
+    "accession": "A0A0F6B8D8",
+    "name": "tRNA-acetylating toxin 1 (TacT1) (EC 2.3.1.-) (Toxin T8) (tRNA-acetylating toxin) (TacT)",
+    "ec": "2.3.1.-",
+    "path": "references\\AF-A0A0F6B8D8.cif"
+  },
+  {
+    "accession": "A0A0F7G352",
+    "name": "Vanillin synthase, chloroplastic (Ferulate hydratase/lyase) (VpVAN) (EC 4.1.2.65)",
+    "ec": "4.1.2.65",
+    "path": "references\\AF-A0A0F7G352.cif"
+  },
+  {
+    "accession": "A0A0F7KYQ8",
+    "name": "Metallo-beta-lactamase VIM-1 (EC 3.5.2.6)",
+    "ec": "3.5.2.6",
+    "path": "references\\AF-A0A0F7KYQ8.cif"
+  },
+  {
+    "accession": "A0A0G2JXT6",
+    "name": "Phosphatidylinositol-3,5-bisphosphate 3-phosphatase MTMR6 (EC 3.1.3.95) (Myotubularin-related protein 6) (Phosphatidylinositol-3-phosphate phosphatase)",
+    "ec": "3.1.3.95",
+    "path": "references\\AF-A0A0G2JXT6.cif"
+  },
+  {
+    "accession": "A0A0G2K047",
+    "name": "Acyl-CoA synthetase short-chain family member 3, mitochondrial (EC 6.2.1.1) (Acetate--CoA ligase 3) (Acyl-CoA synthetase short-chain family member 3) (Propionate--CoA ligase) (EC 6.2.1.17)",
+    "ec": "6.2.1.1; 6.2.1.17",
+    "path": "references\\AF-A0A0G2K047.cif"
+  },
+  {
+    "accession": "A0A0G2K1Q8",
+    "name": "Phospholipid-transporting ATPase ABCA3 (EC 7.6.2.1) (ATP-binding cassette sub-family A member 3) (Xenobiotic-transporting ATPase ABCA3) (EC 7.6.2.2) [Cleaved into: 150 Kda mature form]",
+    "ec": "7.6.2.1; 7.6.2.2",
+    "path": "references\\AF-A0A0G2K1Q8.cif"
+  },
+  {
+    "accession": "A0A0G2K344",
+    "name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform (PI3-kinase subunit alpha) (PI3K-alpha) (PI3Kalpha) (PtdIns-3-kinase subunit alpha) (EC 2.7.1.137) (EC 2.7.1.153) (Phosphatidylinositol 4,5-bisphosphate 3-kinase 110 kDa catalytic subunit alpha) (PtdIns-3-kinase subunit p110-alpha) (p110alpha) (Phosphoinositide-3-kinase catalytic alpha polypeptide) (Serine/threonine protein kinase PIK3CA) (EC 2.7.11.1)",
+    "ec": "2.7.1.137; 2.7.1.153; 2.7.11.1",
+    "path": "references\\AF-A0A0G2K344.cif"
+  },
+  {
+    "accession": "A0A0G2Q9D6",
+    "name": "DNA gyrase subunit B (EC 5.6.2.2)",
+    "ec": "5.6.2.2",
+    "path": "references\\AF-A0A0G2Q9D6.cif"
+  },
+  {
+    "accession": "A0A0G2Q9F8",
+    "name": "DNA gyrase subunit A (EC 5.6.2.2)",
+    "ec": "5.6.2.2",
+    "path": "references\\AF-A0A0G2Q9F8.cif"
+  },
+  {
+    "accession": "A0A0G2QC33",
+    "name": "Cysteine protease ATG4B (EC 3.4.22.-) (Autophagy-related protein 4 homolog B)",
+    "ec": "3.4.22.-",
+    "path": "references\\AF-A0A0G2QC33.cif"
+  },
+  {
+    "accession": "A0A0G4P2K0",
+    "name": "Self-sufficient cytochrome P450 monooxygenase CYP505E4 (Bifunctional cytochrome P450/NADPH--P450 reductase CYP505E4) [Includes: Cytochrome P450 monooxygenase (EC 1.14.14.1); NADPH--cytochrome P450 reductase (EC 1.6.2.4)]",
+    "ec": "1.14.14.1; 1.6.2.4",
+    "path": "references\\AF-A0A0G4P2K0.cif"
+  },
+  {
+    "accession": "A0A0H2UNG0",
+    "name": "Pullulanase A (EC 3.2.1.41) (Alpha-dextrin endo-1,6-alpha-glucosidase) (Pullulan 6-glucanohydrolase)",
+    "ec": "3.2.1.41",
+    "path": "references\\AF-A0A0H2UNG0.cif"
+  },
+  {
+    "accession": "A0A0H2URG7",
+    "name": "UDP-N-acetylglucosamine--peptide N-acetylglucosaminyltransferase GtfA subunit (EC 2.4.1.-) (Glycosyltransferase GtfA) (O-linked N-acetyl-D-glucosamine (O-GlcNAc) transferase)",
+    "ec": "2.4.1.-",
+    "path": "references\\AF-A0A0H2URG7.cif"
+  },
+  {
+    "accession": "A0A0H2US87",
+    "name": "Arginine ADP-riboxanase OspC3 (EC 4.3.99.-)",
+    "ec": "4.3.99.-",
+    "path": "references\\AF-A0A0H2US87.cif"
+  },
+  {
+    "accession": "A0A0H2USC0",
+    "name": "E3 ubiquitin-protein ligase IpaH2.5 (EC 2.3.2.27) (Invasion plasmid antigen 2.5)",
+    "ec": "2.3.2.27",
+    "path": "references\\AF-A0A0H2USC0.cif"
+  },
+  {
+    "accession": "A0A0H2USG1",
+    "name": "E3 ubiquitin-protein ligase IpaH1.4 (EC 2.3.2.27) (Invasion plasmid antigen 1.4)",
+    "ec": "2.3.2.27",
+    "path": "references\\AF-A0A0H2USG1.cif"
+  },
+  {
+    "accession": "A0A0H2V871",
+    "name": "Apo-salmochelin esterase (EC 3.1.1.107) (Enterobactin hydrolase IroE)",
+    "ec": "3.1.1.107",
+    "path": "references\\AF-A0A0H2V871.cif"
+  },
+  {
+    "accession": "A0A0H2V8B5",
+    "name": "NAD(+) hydrolase TcpC (EC 3.2.2.6) (NADP(+) hydrolase TcpC) (EC 3.2.2.-) (TIR domain-containing protein in E.coli) (tcpC)",
+    "ec": "3.2.2.-; 3.2.2.6",
+    "path": "references\\AF-A0A0H2V8B5.cif"
+  },
+  {
+    "accession": "A0A0H2WWV6",
+    "name": "Poly(ribitol-phosphate) alpha-N-acetylglucosaminyltransferase (EC 2.4.1.70) (WTA GlcNAc-transferase)",
+    "ec": "2.4.1.70",
+    "path": "references\\AF-A0A0H2WWV6.cif"
+  },
+  {
+    "accession": "A0A0H2WZ38",
+    "name": "Lipid II isoglutaminyl synthase (glutamine-hydrolyzing) subunit GatD (EC 6.3.5.13) (Lipid II isoglutaminyl synthase glutaminase subunit) (EC 3.5.1.2)",
+    "ec": "3.5.1.2; 6.3.5.13",
+    "path": "references\\AF-A0A0H2WZ38.cif"
+  },
+  {
+    "accession": "A0A0H2X5R2",
+    "name": "Nicotinamide phosphoribosyltransferase (NAM phosphoribosyltransferase) (NAMPT) (EC 2.4.2.12)",
+    "ec": "2.4.2.12",
+    "path": "references\\AF-A0A0H2X5R2.cif"
+  },
+  {
+    "accession": "A0A0H2Z7X0",
+    "name": "Diguanylate cyclase TpbB (EC 2.7.7.65)",
+    "ec": "2.7.7.65",
+    "path": "references\\AF-A0A0H2Z7X0.cif"
+  },
+  {
+    "accession": "A0A0H2ZD27",
+    "name": "CFTR inhibitory factor (Cif) (Cystic fibrosis transmembrane conductance regulator inhibitory factor) (Epoxide hydrolase virulence factor) (EC 3.3.2.10) (Toxin Cif)",
+    "ec": "3.3.2.10",
+    "path": "references\\AF-A0A0H2ZD27.cif"
+  },
+  {
+    "accession": "A0A0H2ZFK2",
+    "name": "Dual specificity protein phosphatase TpbA (DUSP) (EC 3.1.3.16) (EC 3.1.3.48) (Dual specific tyrosine phosphatase) (Protein tyrosine phosphatase) (Tyrosine phosphatase related to biofilm formation)",
+    "ec": "3.1.3.16; 3.1.3.48",
+    "path": "references\\AF-A0A0H2ZFK2.cif"
+  },
+  {
+    "accession": "A0A0H2ZLQ1",
+    "name": "Endolytic murein transglycosylase (EC 4.2.2.29) (Peptidoglycan lytic transglycosylase) (Peptidoglycan polymerization terminase)",
+    "ec": "4.2.2.29",
+    "path": "references\\AF-A0A0H2ZLQ1.cif"
+  },
+  {
+    "accession": "A0A0H2ZMF9",
+    "name": "Penicillin-binding protein 2a (PBP2a) (Cell wall synthase PBP2a) [Includes: Penicillin-insensitive transglycosylase (EC 2.4.99.28) (Peptidoglycan TGase) (Peptidoglycan glycosyltransferase); Penicillin-sensitive transpeptidase (EC 3.4.16.4) (DD-transpeptidase)]",
+    "ec": "2.4.99.28; 3.4.16.4",
+    "path": "references\\AF-A0A0H2ZMF9.cif"
+  },
+  {
+    "accession": "A0A0H2ZNH9",
+    "name": "Sensor histidine protein kinase/phosphatase WalK (EC 2.7.13.3) (EC 3.9.1.-)",
+    "ec": "2.7.13.3; 3.9.1.-",
+    "path": "references\\AF-A0A0H2ZNH9.cif"
+  },
+  {
+    "accession": "A0A0H2ZQ76",
+    "name": "Peptidoglycan hydrolase PcsB (EC 3.2.1.-)",
+    "ec": "3.2.1.-",
+    "path": "references\\AF-A0A0H2ZQ76.cif"
+  },
+  {
+    "accession": "A0A0H2ZQL5",
+    "name": "Cell cycle regulator CcrZ (EC 2.7.1.15) (EC 2.7.1.229) (Cell cycle regulator protein interacting with FtsZ)",
+    "ec": "2.7.1.15; 2.7.1.229",
+    "path": "references\\AF-A0A0H2ZQL5.cif"
+  },
+  {
+    "accession": "A0A0H3AIG7",
+    "name": "Actin cross-linking toxin VgrG1 (EC 6.3.2.-)",
+    "ec": "6.3.2.-",
+    "path": "references\\AF-A0A0H3AIG7.cif"
+  },
+  {
+    "accession": "A0A0H3C8X0",
+    "name": "Bacterial ceramide synthase (EC 2.3.1.-)",
+    "ec": "2.3.1.-",
+    "path": "references\\AF-A0A0H3C8X0.cif"
+  },
+  {
+    "accession": "A0A0H3GGY3",
+    "name": "Cyclic-di-AMP phosphodiesterase PgpH (c-di-AMP phosphodiesterase) (EC 3.1.4.59)",
+    "ec": "3.1.4.59",
+    "path": "references\\AF-A0A0H3GGY3.cif"
+  },
+  {
+    "accession": "A0A0H3JN63",
+    "name": "Lipid II isoglutaminyl synthase (glutamine-hydrolyzing) subunit GatD (EC 6.3.5.13) (Lipid II isoglutaminyl synthase glutaminase subunit) (EC 3.5.1.2)",
+    "ec": "3.5.1.2; 6.3.5.13",
+    "path": "references\\AF-A0A0H3JN63.cif"
+  },
+  {
+    "accession": "A0A0H3JNB0",
+    "name": "Poly(ribitol-phosphate) beta-N-acetylglucosaminyltransferase TarP (EC 2.4.1.-) (WTA glycosyltransferase)",
+    "ec": "2.4.1.-",
+    "path": "references\\AF-A0A0H3JNB0.cif"
+  },
+  {
+    "accession": "A0A0H3JPC6",
+    "name": "Poly(ribitol-phosphate) beta-N-acetylglucosaminyltransferase TarS (EC 2.4.1.355) (Beta-O-GlcNAc transferase) (Beta-O-GlcNAc-WTA transferase) (WTA glycosyltransferase) (Wall teichoic acid beta-glycosyltransferase)",
+    "ec": "2.4.1.355",
+    "path": "references\\AF-A0A0H3JPC6.cif"
+  },
+  {
+    "accession": "A0A0H3JRU9",
+    "name": "Pyruvate carboxylase (EC 6.4.1.1)",
+    "ec": "6.4.1.1",
+    "path": "references\\AF-A0A0H3JRU9.cif"
+  },
+  {
+    "accession": "A0A0H3JUU7",
+    "name": "Lipid II isoglutaminyl synthase (glutamine-hydrolyzing) subunit MurT (EC 6.3.5.13)",
+    "ec": "6.3.5.13",
+    "path": "references\\AF-A0A0H3JUU7.cif"
+  },
+  {
+    "accession": "A0A0H3KB22",
+    "name": "7-carboxy-7-deazaguanine synthase (CDG synthase) (EC 4.3.99.3) (Queuosine biosynthesis protein QueE)",
+    "ec": "4.3.99.3",
+    "path": "references\\AF-A0A0H3KB22.cif"
+  },
+  {
+    "accession": "A0A0H3KZS3",
+    "name": "D-2-hydroxyglutarate dehydrogenase (D2HGDH) (EC 1.1.99.39)",
+    "ec": "1.1.99.39",
+    "path": "references\\AF-A0A0H3KZS3.cif"
+  },
+  {
+    "accession": "A0A0H3LKL4",
+    "name": "6-hydroxynicotinate 3-monooxygenase (6-HNA monooxygenase) (EC 1.14.13.114)",
+    "ec": "1.14.13.114",
+    "path": "references\\AF-A0A0H3LKL4.cif"
+  },
+  {
+    "accession": "A0A0H3M5A8",
+    "name": "Bifunctional apolipoprotein N-acyltransferase/polyprenol monophosphomannose synthase [Includes: Apolipoprotein N-acyltransferase (ALP N-acyltransferase) (EC 2.3.1.269); Polyprenol monophosphomannose synthase (PPM synthase) (Polyprenol-P-Man synthase) (Ppm1) (EC 2.4.1.-) (Dolichol-phosphate mannose synthase) (EC 2.4.1.83)]",
+    "ec": "2.3.1.269; 2.4.1.-; 2.4.1.83",
+    "path": "references\\AF-A0A0H3M5A8.cif"
+  }
+]

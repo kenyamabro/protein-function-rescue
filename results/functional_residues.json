@@ -1,0 +1,407 @@
+[
+  {
+    "reference": "A0A0H3KZS3",
+    "n_functional_residues": 6,
+    "n_position_conserved": 5,
+    "n_identity_conserved": 0,
+    "n_chemistry_conserved": 0,
+    "frac_position_conserved": 0.833,
+    "frac_identity_conserved": 0.0,
+    "tm_score": 0.9042,
+    "cutoff_A": 4.0,
+    "sites": [
+      {
+        "ref_residue": "R407",
+        "type": "Binding site",
+        "ligand": "(R)-2-hydroxyglutarate",
+        "description": "",
+        "candidate_residue": "G423",
+        "distance_A": 3.32,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "H505",
+        "type": "Binding site",
+        "ligand": "(R)-2-hydroxyglutarate",
+        "description": "",
+        "candidate_residue": "N146",
+        "distance_A": 1.89,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "C678",
+        "type": "Binding site",
+        "ligand": "[4Fe-4S] cluster",
+        "description": "",
+        "candidate_residue": "G20",
+        "distance_A": 2.51,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "C681",
+        "type": "Binding site",
+        "ligand": "[4Fe-4S] cluster",
+        "description": "",
+        "candidate_residue": null,
+        "distance_A": 9.19,
+        "position_conserved": false,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "C684",
+        "type": "Binding site",
+        "ligand": "[4Fe-4S] cluster",
+        "description": "",
+        "candidate_residue": "E83",
+        "distance_A": 3.82,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "C688",
+        "type": "Binding site",
+        "ligand": "[4Fe-4S] cluster",
+        "description": "",
+        "candidate_residue": "V82",
+        "distance_A": 3.99,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      }
+    ],
+    "accession": "P9WIT1",
+    "candidate_name": "Uncharacterized FAD-linked oxidoreductase Rv2280 (EC 1.-.-.-)",
+    "match_description": "D-2-hydroxyglutarate dehydrogenase (D2HGDH) (EC 1.1.99.39) (EC 1.1.99.39)"
+  },
+  {
+    "reference": "A0A009IHW8",
+    "n_functional_residues": 6,
+    "n_position_conserved": 0,
+    "n_identity_conserved": 0,
+    "n_chemistry_conserved": 0,
+    "frac_position_conserved": 0.0,
+    "frac_identity_conserved": 0.0,
+    "tm_score": 0.8618,
+    "cutoff_A": 4.0,
+    "sites": [
+      {
+        "ref_residue": "E208",
+        "type": "Active site",
+        "ligand": "",
+        "description": "",
+        "candidate_residue": null,
+        "distance_A": 42.09,
+        "position_conserved": false,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "S143",
+        "type": "Binding site",
+        "ligand": "NAD(+)",
+        "description": "",
+        "candidate_residue": null,
+        "distance_A": 54.57,
+        "position_conserved": false,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "K172",
+        "type": "Binding site",
+        "ligand": "NAD(+)",
+        "description": "",
+        "candidate_residue": null,
+        "distance_A": 52.88,
+        "position_conserved": false,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "K202",
+        "type": "Binding site",
+        "ligand": "NAD(+)",
+        "description": "",
+        "candidate_residue": null,
+        "distance_A": 46.05,
+        "position_conserved": false,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "K245",
+        "type": "Binding site",
+        "ligand": "NAD(+)",
+        "description": "",
+        "candidate_residue": null,
+        "distance_A": 36.79,
+        "position_conserved": false,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "W204",
+        "type": "Site",
+        "ligand": "",
+        "description": "Important for ADPR cyclization",
+        "candidate_residue": null,
+        "distance_A": 42.69,
+        "position_conserved": false,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      }
+    ],
+    "accession": "P9WJG7",
+    "candidate_name": "Uncharacterized membrane protein ArfB",
+    "match_description": "2' cyclic ADP-D-ribose synthase AbTIR (2'cADPR synthase AbTIR) (EC 3.2.2.-) (NAD(+) hydrolase AbTIR) (EC 3.2.2.6) (TIR domain-containing protein in A.baumannii) (AbTIR) (EC 3.2.2.-; 3.2.2.6)"
+  },
+  {
+    "reference": "A0A075TJ05",
+    "n_functional_residues": 8,
+    "n_position_conserved": 8,
+    "n_identity_conserved": 4,
+    "n_chemistry_conserved": 4,
+    "frac_position_conserved": 1.0,
+    "frac_identity_conserved": 0.5,
+    "tm_score": 0.7154,
+    "cutoff_A": 4.0,
+    "sites": [
+      {
+        "ref_residue": "K246",
+        "type": "Active site",
+        "ligand": "",
+        "description": "",
+        "candidate_residue": "G92",
+        "distance_A": 0.83,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "D378",
+        "type": "Active site",
+        "ligand": "",
+        "description": "",
+        "candidate_residue": "D208",
+        "distance_A": 1.05,
+        "position_conserved": true,
+        "identity_conserved": true,
+        "chemistry_conserved": true
+      },
+      {
+        "ref_residue": "H111",
+        "type": "Binding site",
+        "ligand": "Zn(2+)",
+        "description": "",
+        "candidate_residue": "H5",
+        "distance_A": 1.45,
+        "position_conserved": true,
+        "identity_conserved": true,
+        "chemistry_conserved": true
+      },
+      {
+        "ref_residue": "H113",
+        "type": "Binding site",
+        "ligand": "Zn(2+)",
+        "description": "",
+        "candidate_residue": "H7",
+        "distance_A": 1.41,
+        "position_conserved": true,
+        "identity_conserved": true,
+        "chemistry_conserved": true
+      },
+      {
+        "ref_residue": "K246",
+        "type": "Binding site",
+        "ligand": "Zn(2+)",
+        "description": "",
+        "candidate_residue": "G92",
+        "distance_A": 0.83,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "K246",
+        "type": "Binding site",
+        "ligand": "Zn(2+)",
+        "description": "",
+        "candidate_residue": "G92",
+        "distance_A": 0.83,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "H287",
+        "type": "Binding site",
+        "ligand": "Zn(2+)",
+        "description": "",
+        "candidate_residue": "H134",
+        "distance_A": 0.92,
+        "position_conserved": true,
+        "identity_conserved": true,
+        "chemistry_conserved": true
+      },
+      {
+        "ref_residue": "H307",
+        "type": "Binding site",
+        "ligand": "Zn(2+)",
+        "description": "",
+        "candidate_residue": "F160",
+        "distance_A": 1.89,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      }
+    ],
+    "accession": "O08343",
+    "candidate_name": "Uncharacterized metal-dependent hydrolase TatD (EC 3.1.-.-)",
+    "match_description": "Ochratoxinase (OTase) (EC 3.4.17.-) (Amidohydrolase 2) (Amidase 2) (Carboxypeptidase Am2) (EC 3.4.17.-)"
+  },
+  {
+    "reference": "A0A0D3LQY6",
+    "n_functional_residues": 11,
+    "n_position_conserved": 11,
+    "n_identity_conserved": 0,
+    "n_chemistry_conserved": 0,
+    "frac_position_conserved": 1.0,
+    "frac_identity_conserved": 0.0,
+    "tm_score": 0.6663,
+    "cutoff_A": 4.0,
+    "sites": [
+      {
+        "ref_residue": "G46",
+        "type": "Binding site",
+        "ligand": "2-oxoglutarate",
+        "description": "",
+        "candidate_residue": "A26",
+        "distance_A": 1.61,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "Y76",
+        "type": "Binding site",
+        "ligand": "pyridoxal 5'-phosphate",
+        "description": "",
+        "candidate_residue": "S48",
+        "distance_A": 3.46,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "F137",
+        "type": "Binding site",
+        "ligand": "2-oxoglutarate",
+        "description": "",
+        "candidate_residue": "D115",
+        "distance_A": 1.11,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "F137",
+        "type": "Binding site",
+        "ligand": "pyridoxal 5'-phosphate",
+        "description": "",
+        "candidate_residue": "D115",
+        "distance_A": 1.11,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "N187",
+        "type": "Binding site",
+        "ligand": "2-oxoglutarate",
+        "description": "",
+        "candidate_residue": "G168",
+        "distance_A": 1.57,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "N187",
+        "type": "Binding site",
+        "ligand": "pyridoxal 5'-phosphate",
+        "description": "",
+        "candidate_residue": "G168",
+        "distance_A": 1.57,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "Y218",
+        "type": "Binding site",
+        "ligand": "pyridoxal 5'-phosphate",
+        "description": "",
+        "candidate_residue": "A198",
+        "distance_A": 1.92,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "S245",
+        "type": "Binding site",
+        "ligand": "pyridoxal 5'-phosphate",
+        "description": "",
+        "candidate_residue": "N216",
+        "distance_A": 3.0,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "S247",
+        "type": "Binding site",
+        "ligand": "pyridoxal 5'-phosphate",
+        "description": "",
+        "candidate_residue": "H218",
+        "distance_A": 1.8,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "R256",
+        "type": "Binding site",
+        "ligand": "pyridoxal 5'-phosphate",
+        "description": "",
+        "candidate_residue": "P224",
+        "distance_A": 1.64,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      },
+      {
+        "ref_residue": "R387",
+        "type": "Binding site",
+        "ligand": "2-oxoglutarate",
+        "description": "",
+        "candidate_residue": "S331",
+        "distance_A": 2.89,
+        "position_conserved": true,
+        "identity_conserved": false,
+        "chemistry_conserved": false
+      }
+    ],
+    "accession": "P9WQ67",
+    "candidate_name": "Uncharacterized protein Rv3778c",
+    "match_description": "Aromatic amino acid aminotransferase 4 (Ab-ArAT4) (Phenylalanine:4-hydroxyphenylpyruvate aminotransferase) (EC 2.6.1.57) (EC 2.6.1.58) (EC 2.6.1.70) (EC 2.6.1.57; 2.6.1.58; 2.6.1.70)"
+  }
+]

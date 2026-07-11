@@ -1,0 +1,42 @@
+# Downloaded structures and archives (large, reproducible)
+data/
+*.tar
+tmp/
+
+# Foldseek target database (multi-GB, rebuild with `foldseek databases`)
+foldseek_db/
+
+# TM-align reference library: downloaded structures are a rebuildable cache,
+# but keep manifest.json so the exact reference set is reproducible.
+references/*.cif
+references/*.pdb
+
+# Benchmark: keep dataset.json, metrics.json, per_query.csv and figures;
+# ignore the downloaded structures and the large cached similarity matrices.
+benchmark/structures/
+benchmark/candidate_structures/
+benchmark/results/*.npy
+benchmark/results/tm_progress.txt
+benchmark/*.log
+
+# Pipeline outputs, except the tracked sample + functional-residue analysis
+results/*.json
+results/*.csv
+!results/sample_results.json
+!results/functional_residues.json
+
+# The web viewer's generated data, except the tracked sample
+web/data.js
+!web/sample_data.js
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Logs / OS cruft
+*.log
+Thumbs.db
+.DS_Store

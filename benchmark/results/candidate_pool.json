@@ -1,0 +1,242 @@
+[
+  {
+    "accession": "P9WQ67",
+    "structural_similarity": 0.6663,
+    "model_confidence": 0.964,
+    "pocket_quality": 0.968
+  },
+  {
+    "accession": "O08343",
+    "structural_similarity": 0.7154,
+    "model_confidence": 0.9709,
+    "pocket_quality": 0.968
+  },
+  {
+    "accession": "P9WIT1",
+    "structural_similarity": 0.7668,
+    "model_confidence": 0.955,
+    "pocket_quality": 0.966
+  },
+  {
+    "accession": "P9WME7",
+    "structural_similarity": 0.4514,
+    "model_confidence": 0.8317,
+    "pocket_quality": 0.935
+  },
+  {
+    "accession": "P9WGQ7",
+    "structural_similarity": 0.7209,
+    "model_confidence": 0.9686,
+    "pocket_quality": 0.963
+  },
+  {
+    "accession": "P9WGR7",
+    "structural_similarity": 0.696,
+    "model_confidence": 0.9328,
+    "pocket_quality": 0.965
+  },
+  {
+    "accession": "P9WL79",
+    "structural_similarity": 0.4777,
+    "model_confidence": 0.8797,
+    "pocket_quality": 0.96
+  },
+  {
+    "accession": "P9WLF9",
+    "structural_similarity": 0.4508,
+    "model_confidence": 0.3122,
+    "pocket_quality": 0.92
+  },
+  {
+    "accession": "P9WM83",
+    "structural_similarity": 0.4722,
+    "model_confidence": 0.7466,
+    "pocket_quality": 0.869
+  },
+  {
+    "accession": "P9WMV1",
+    "structural_similarity": 0.4604,
+    "model_confidence": 0.7454,
+    "pocket_quality": 0.959
+  },
+  {
+    "accession": "P0CG95",
+    "structural_similarity": 0.5156,
+    "model_confidence": 0.9138,
+    "pocket_quality": 0.958
+  },
+  {
+    "accession": "P9WGR5",
+    "structural_similarity": 0.723,
+    "model_confidence": 0.9637,
+    "pocket_quality": 0.964
+  },
+  {
+    "accession": "P9WK01",
+    "structural_similarity": 0.6622,
+    "model_confidence": 0.9016,
+    "pocket_quality": 0.968
+  },
+  {
+    "accession": "P9WKT3",
+    "structural_similarity": 0.7425,
+    "model_confidence": 0.837,
+    "pocket_quality": 0.961
+  },
+  {
+    "accession": "P9WLV5",
+    "structural_similarity": 0.6935,
+    "model_confidence": 0.9073,
+    "pocket_quality": 0.963
+  },
+  {
+    "accession": "P9WM07",
+    "structural_similarity": 0.5123,
+    "model_confidence": 0.8084,
+    "pocket_quality": 0.954
+  },
+  {
+    "accession": "P9WMW3",
+    "structural_similarity": 0.7257,
+    "model_confidence": 0.9438,
+    "pocket_quality": 0.97
+  },
+  {
+    "accession": "P9WQA7",
+    "structural_similarity": 0.5749,
+    "model_confidence": 0.9393,
+    "pocket_quality": 0.966
+  },
+  {
+    "accession": "P9WQM3",
+    "structural_similarity": 0.4841,
+    "model_confidence": 0.9024,
+    "pocket_quality": 0.969
+  },
+  {
+    "accession": "P9WLC7",
+    "structural_similarity": 0.5816,
+    "model_confidence": 0.9489,
+    "pocket_quality": 0.966
+  },
+  {
+    "accession": "P9WN07",
+    "structural_similarity": 0.8423,
+    "model_confidence": 0.9307,
+    "pocket_quality": 0.966
+  },
+  {
+    "accession": "P9WNH3",
+    "structural_similarity": 0.5523,
+    "model_confidence": 0.8892,
+    "pocket_quality": 0.965
+  },
+  {
+    "accession": "O06391",
+    "structural_similarity": 0.4523,
+    "model_confidence": 0.9121,
+    "pocket_quality": 0.96
+  },
+  {
+    "accession": "P0CG96",
+    "structural_similarity": 0.5303,
+    "model_confidence": 0.9145,
+    "pocket_quality": 0.901
+  },
+  {
+    "accession": "P9WGS1",
+    "structural_similarity": 0.5703,
+    "model_confidence": 0.8792,
+    "pocket_quality": 0.962
+  },
+  {
+    "accession": "P9WGS5",
+    "structural_similarity": 0.6957,
+    "model_confidence": 0.9499,
+    "pocket_quality": 0.977
+  },
+  {
+    "accession": "P9WL85",
+    "structural_similarity": 0.5517,
+    "model_confidence": 0.8445,
+    "pocket_quality": 0.959
+  },
+  {
+    "accession": "P9WGQ3",
+    "structural_similarity": 0.7106,
+    "model_confidence": 0.9422,
+    "pocket_quality": 0.97
+  },
+  {
+    "accession": "P9WGQ5",
+    "structural_similarity": 0.7028,
+    "model_confidence": 0.9646,
+    "pocket_quality": 0.96
+  },
+  {
+    "accession": "P9WGQ9",
+    "structural_similarity": 0.7322,
+    "model_confidence": 0.9675,
+    "pocket_quality": 0.963
+  },
+  {
+    "accession": "P9WGR3",
+    "structural_similarity": 0.7024,
+    "model_confidence": 0.955,
+    "pocket_quality": 0.964
+  },
+  {
+    "accession": "P9WGR9",
+    "structural_similarity": 0.7554,
+    "model_confidence": 0.9693,
+    "pocket_quality": 0.963
+  },
+  {
+    "accession": "P9WK03",
+    "structural_similarity": 0.7404,
+    "model_confidence": 0.9262,
+    "pocket_quality": 0.967
+  },
+  {
+    "accession": "P9WKI5",
+    "structural_similarity": 0.5478,
+    "model_confidence": 0.9489,
+    "pocket_quality": 0.967
+  },
+  {
+    "accession": "P9WLL1",
+    "structural_similarity": 0.4666,
+    "model_confidence": 0.616,
+    "pocket_quality": 0.931
+  },
+  {
+    "accession": "P9WLT5",
+    "structural_similarity": 0.4536,
+    "model_confidence": 0.8631,
+    "pocket_quality": 0.949
+  },
+  {
+    "accession": "P9WNY3",
+    "structural_similarity": 0.4633,
+    "model_confidence": 0.9494,
+    "pocket_quality": 0.963
+  },
+  {
+    "accession": "O69726",
+    "structural_similarity": 0.4604,
+    "model_confidence": 0.809,
+    "pocket_quality": 0.452
+  },
+  {
+    "accession": "P9WGS7",
+    "structural_similarity": 0.6793,
+    "model_confidence": 0.9675,
+    "pocket_quality": 0.975
+  },
+  {
+    "accession": "P9WGL7",
+    "structural_similarity": 0.6759,
+    "model_confidence": 0.8889,
+    "pocket_quality": 0.96
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "organism": "Mycobacterium tuberculosis (strain H37Rv)",
+  "proteome_id": "UP000001584",
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "accession": "P9WIT1",
+      "name": "Uncharacterized FAD-linked oxidoreductase Rv2280 (EC 1.-.-.-)",
+      "length": 459,
+      "mean_plddt": 95.5,
+      "originally_unannotated": true,
+      "best_structural_match": {
+        "target": "A0A0H3KZS3",
+        "tm_score": 0.9042,
+        "evalue": null,
+        "description": "D-2-hydroxyglutarate dehydrogenase (D2HGDH) (EC 1.1.99.39) (EC 1.1.99.39)"
+      },
+      "pocket": {
+        "n_pockets": 6,
+        "top_druggability": 0.966,
+        "method": "geometry"
+      },
+      "scores": {
+        "structural_similarity": 0.9042,
+        "model_confidence": 0.955,
+        "pocket_quality": 0.966,
+        "composite": 0.9329
+      },
+      "afdb_entry_url": "https://alphafold.ebi.ac.uk/entry/P9WIT1",
+      "structure_cif_url": "https://alphafold.ebi.ac.uk/files/AF-P9WIT1-F1-model_v6.cif",
+      "structure_pdb_url": "https://alphafold.ebi.ac.uk/files/AF-P9WIT1-F1-model_v6.pdb"
+    },
+    {
+      "accession": "P9WJG7",
+      "name": "Uncharacterized membrane protein ArfB",
+      "length": 50,
+      "mean_plddt": 79.95,
+      "originally_unannotated": true,
+      "best_structural_match": {
+        "target": "A0A009IHW8",
+        "tm_score": 0.8618,
+        "evalue": null,
+        "description": "2' cyclic ADP-D-ribose synthase AbTIR (2'cADPR synthase AbTIR) (EC 3.2.2.-) (NAD(+) hydrolase AbTIR) (EC 3.2.2.6) (TIR domain-containing protein in A.baumannii) (AbTIR) (EC 3.2.2.-; 3.2.2.6)"
+      },
+      "pocket": {
+        "n_pockets": 0,
+        "top_druggability": null,
+        "method": "geometry"
+      },
+      "scores": {
+        "structural_similarity": 0.8618,
+        "model_confidence": 0.7995,
+        "pocket_quality": null,
+        "composite": 0.844
+      },
+      "afdb_entry_url": "https://alphafold.ebi.ac.uk/entry/P9WJG7",
+      "structure_cif_url": "https://alphafold.ebi.ac.uk/files/AF-P9WJG7-F1-model_v6.cif",
+      "structure_pdb_url": "https://alphafold.ebi.ac.uk/files/AF-P9WJG7-F1-model_v6.pdb"
+    },
+    {
+      "accession": "O08343",
+      "name": "Uncharacterized metal-dependent hydrolase TatD (EC 3.1.-.-)",
+      "length": 264,
+      "mean_plddt": 97.09,
+      "originally_unannotated": true,
+      "best_structural_match": {
+        "target": "A0A075TJ05",
+        "tm_score": 0.7154,
+        "evalue": null,
+        "description": "Ochratoxinase (OTase) (EC 3.4.17.-) (Amidohydrolase 2) (Amidase 2) (Carboxypeptidase Am2) (EC 3.4.17.-)"
+      },
+      "pocket": {
+        "n_pockets": 4,
+        "top_druggability": 0.968,
+        "method": "geometry"
+      },
+      "scores": {
+        "structural_similarity": 0.7154,
+        "model_confidence": 0.9709,
+        "pocket_quality": 0.968,
+        "composite": 0.8423
+      },
+      "afdb_entry_url": "https://alphafold.ebi.ac.uk/entry/O08343",
+      "structure_cif_url": "https://alphafold.ebi.ac.uk/files/AF-O08343-F1-model_v6.cif",
+      "structure_pdb_url": "https://alphafold.ebi.ac.uk/files/AF-O08343-F1-model_v6.pdb"
+    },
+    {
+      "accession": "P9WQ67",
+      "name": "Uncharacterized protein Rv3778c",
+      "length": 398,
+      "mean_plddt": 96.4,
+      "originally_unannotated": true,
+      "best_structural_match": {
+        "target": "A0A0D3LQY6",
+        "tm_score": 0.6663,
+        "evalue": null,
+        "description": "Aromatic amino acid aminotransferase 4 (Ab-ArAT4) (Phenylalanine:4-hydroxyphenylpyruvate aminotransferase) (EC 2.6.1.57) (EC 2.6.1.58) (EC 2.6.1.70) (EC 2.6.1.57; 2.6.1.58; 2.6.1.70)"
+      },
+      "pocket": {
+        "n_pockets": 5,
+        "top_druggability": 0.968,
+        "method": "geometry"
+      },
+      "scores": {
+        "structural_similarity": 0.6663,
+        "model_confidence": 0.964,
+        "pocket_quality": 0.968,
+        "composite": 0.8164
+      },
+      "afdb_entry_url": "https://alphafold.ebi.ac.uk/entry/P9WQ67",
+      "structure_cif_url": "https://alphafold.ebi.ac.uk/files/AF-P9WQ67-F1-model_v6.cif",
+      "structure_pdb_url": "https://alphafold.ebi.ac.uk/files/AF-P9WQ67-F1-model_v6.pdb"
+    }
+  ]
+}

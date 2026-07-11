@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Protein Function Rescue</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Protein Function Rescue</h1>
+    <p class="subtitle">
+      Unannotated proteins whose AlphaFold structure matches a protein of
+      <strong>known</strong> function — ranked candidate function assignments.
+    </p>
+    <p id="meta" class="meta"></p>
+    <p id="sample-banner" class="sample-banner" hidden></p>
+    <p class="disclaimer">
+      Predicted structures are models, not experiments. Each match is a
+      <em>hypothesis</em> for follow-up, not proof of function.
+    </p>
+  </header>
+
+  <main>
+    <section class="left">
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Filter by accession, name or match…" />
+        <span id="count" class="count"></span>
+      </div>
+      <div class="table-wrap">
+        <table id="candidates">
+          <thead>
+            <tr>
+              <th data-key="accession">Accession</th>
+              <th data-key="name">Current annotation</th>
+              <th data-key="matchDescription">Best structural match</th>
+              <th data-key="tm" class="num">TM</th>
+              <th data-key="plddt" class="num">pLDDT</th>
+              <th data-key="drug" class="num">Pocket</th>
+              <th data-key="composite" class="num">Score</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="right">
+      <div id="viewer"></div>
+      <div id="detail" class="detail">
+        <p class="hint">Select a candidate to view its structure and evidence.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- sample_data.js ships with the repo; data.js (real pipeline output) overrides it if present. -->
+  <script src="sample_data.js"></script>
+  <script src="data.js" onerror="/* no real run yet — sample stays */"></script>
+  <script src="app.js"></script>
+</body>
+</html>
