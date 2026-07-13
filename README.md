@@ -149,6 +149,20 @@ extremophiles have the most unannotated proteins — i.e. the most potential fin
   proof.
 - Foldseek TM-scores and fpocket druggability are heuristics — treat the ranking as a triage tool.
 
+## Provenance and AI assistance
+
+This project was built with substantial help from a generative-AI assistant (Anthropic Claude), which
+helped design and implement the pipeline and benchmark, generate the figures, and draft the manuscript.
+The author reviews, verifies, and takes full responsibility for the code, analyses, and claims; the AI
+is a tool, not an author. See the "Use of generative AI" section of the manuscript for the formal
+disclosure, and cite via [CITATION.cff](CITATION.cff).
+
+## Citing
+
+If you use this software or its results, please cite it via [CITATION.cff](CITATION.cff) (GitHub shows a
+"Cite this repository" button). Connecting the repository to [Zenodo](https://zenodo.org) and cutting a
+release mints a citable DOI automatically from that file.
+
 ## License
 
 MIT — see [LICENSE](LICENSE). AlphaFold data is under the

@@ -1,0 +1,36 @@
+# Citation metadata (Citation File Format 1.2.0).
+# Zenodo reads this automatically when you connect the GitHub repo and publish a release.
+# ---- FILL IN before your first release: the fields marked TODO ----
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "Protein Function Rescue: structure-based rediscovery of hypothetical proteins from the AlphaFold Database"
+abstract: >-
+  A transparent, dependency-light pipeline that mines an AlphaFold Protein Structure Database proteome
+  for unannotated ("hypothetical"/"uncharacterized") proteins whose 3D structure matches a protein of
+  known function, characterises their binding pockets, verifies conserved catalytic residues, and ranks
+  the resulting candidate function assignments. It runs on commodity hardware (no GPU, no HPC) using
+  native TM-align and geometric pocket back-ends, with optional Foldseek/fpocket back-ends for scale.
+  Includes an interactive web viewer and a leave-one-out validation benchmark.
+type: software
+version: 0.1.0
+date-released: 2026-07-13   # TODO: set to your actual release date
+license: MIT
+authors:
+  # TODO: replace with your real name / affiliation / ORCID
+  - given-names: "First"
+    family-names: "Last"
+    # affiliation: "Your School or Institution"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/USERNAME/protein-function-rescue"   # TODO
+url: "https://github.com/USERNAME/protein-function-rescue"               # TODO
+keywords:
+  - AlphaFold
+  - structural bioinformatics
+  - protein function prediction
+  - hypothetical proteins
+  - TM-align
+  - binding-pocket detection
+  - Mycobacterium tuberculosis
+  - reproducibility
+# Note: generative-AI assistance (Anthropic Claude) is disclosed in the accompanying
+# manuscript ("Use of generative AI"); per COPE/ICMJE guidance an AI tool is not an author.

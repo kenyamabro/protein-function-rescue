@@ -535,6 +535,16 @@ manuscript. [Add supervisor/contributors as appropriate.]
 
 The author declares no competing interests.
 
+## Use of generative AI
+
+In preparing this work the author used Anthropic's Claude (Claude Opus 4 family) as a coding and writing
+assistant: to help design and implement the software pipeline and the validation benchmark, to generate
+the figures, and to draft and revise the text of this manuscript. After using this tool, the author
+reviewed, edited, and verified the content, and takes full responsibility for it — including all code,
+analyses, numerical results, and claims. No generative-AI system is listed as an author, consistent with
+COPE and ICMJE guidance that authorship requires accountability a non-human tool cannot hold. All
+citations were checked against the primary literature prior to submission.
+
 ## Acknowledgements
 
 This work uses data from the AlphaFold Protein Structure Database (Google DeepMind and EMBL-EBI) and
