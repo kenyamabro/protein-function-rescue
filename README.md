@@ -92,6 +92,37 @@ GitHub Pages by serving the `web/` folder.
 
 A **sample `web/data.js`** ships with the repo so the interface works before you run anything.
 
+## Reproducing the paper's pilot
+
+The manuscript's pilot (Section 3) uses a fixed set of 10 *M. tuberculosis* uncharacterized proteins,
+pinned in [`results/pilot_accessions.txt`](results/pilot_accessions.txt) (9 pass the pLDDT filter →
+4 candidates). To reproduce it exactly, keep only those structures in `data/structures/` and run
+`parse → annotate → search → pocket → rank` — the full `pipeline.run download` fetches the entire
+proteome instead. The canonical 4-candidate output is tracked in `results/sample_results.json`, and
+`results/results.json` is kept in sync with it.
+
+## Manuscript, figures, and slides
+
+The paper lives in [`paper/`](paper/): `protein_function_rescue.md`, the rendered `.docx`/`.pdf`, and a
+`.pptx` deck. Regenerate everything with:
+
+```bash
+python -m pip install -r paper/requirements-paper.txt   # pandoc, docx2pdf, playwright
+python -m playwright install chromium                   # one-time, for the Figure 2 screenshot
+
+python paper/make_figure1.py     # pipeline schematic (Figure 1)
+python paper/make_figure2.py     # screenshot of the live 3D web viewer (Figure 2)
+python paper/render.py           # Markdown -> DOCX (+ PDF if MS Word / a LaTeX engine is present)
+```
+
+**Figure 2 — the viewer screenshot.** `paper/make_figure2.py` generates a clean `web/data.js` from
+`results/sample_results.json`, serves `web/` on `127.0.0.1:8137`, opens it in headless Chromium with
+WebGL enabled (so 3Dmol.js renders the structure), waits for the AlphaFold model to load, and writes
+`paper/figures/fig2_viewer.png`. If the 3D panel comes out blank, increase the `time.sleep(...)` in that
+script or check your network (the viewer fetches the structure from AlphaFold DB). Benchmark figures
+(3–6) are written by `benchmark/run_benchmark.py` and `benchmark/weight_sensitivity.py`. The slide deck
+is built with `NODE_PATH=$(npm root -g) node paper/make_slides.js` (after `npm install -g pptxgenjs`).
+
 ## Running only part of the pipeline
 
 Each stage caches to `results/`, so you can re-run stages independently:
