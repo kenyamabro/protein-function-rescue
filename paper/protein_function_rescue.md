@@ -70,19 +70,36 @@ confidence estimate (pLDDT). Second, fast structural aligners and search tools s
 built on the TM-align algorithm and TM-score metric [6, 7], make all-versus-all structural comparison
 computationally tractable.
 
-Most published applications of these tools assume access to a Linux server, a GPU, or a multi-gigabyte
-structural database. Here we deliberately target the opposite regime: a single laptop, no GPU, no
-administrator privileges, and no compiled bioinformatics binaries. We show that a scientifically
-meaningful structure-based annotation workflow can be assembled entirely from the pre-computed
-AlphaFold DB plus pure-Python components, and we apply it to unannotated proteins of *Mycobacterium
-tuberculosis* (Mtb), the causative agent of tuberculosis and a World Health Organization priority
-pathogen whose genome remains rich in conserved hypothetical proteins.
+Beyond direct structural search, machine-learning methods now infer function directly from structure:
+DeepFRI [12], for example, predicts Gene Ontology terms and EC numbers from a graph-convolutional
+encoding of the fold. Such learned predictors are powerful but opaque, and — like the fast search
+tools — are typically deployed with GPUs, large pre-indexed structural databases, or complex software
+environments. Recent reviews and community assessments of AlphaFold's impact on function prediction
+[13, 14] make two points that frame the present work: the opportunity created by 200 million structures
+is enormous, yet structure alone is not sufficient — predictions remain hypotheses that require
+experimental validation, and the field is still evolving rather than solved.
 
-The contribution of this work is threefold: (1) a transparent, end-to-end pipeline that turns raw
-AlphaFold models into ranked, evidence-linked functional hypotheses; (2) a demonstration that the
-compute-heavy stages (structural search, pocket detection) can be replaced by laptop-friendly,
-dependency-free equivalents without sacrificing interpretability; and (3) an openly available software
-tool, including an interactive viewer, suitable for reproduction and extension.
+**Positioning and research question.** Existing work has established that AlphaFold structures and
+structural search can improve annotation, but published workflows typically depend on
+high-performance-computing infrastructure, large pre-indexed structural databases, or intricate software
+environments. We instead ask a different question: *can a transparent, dependency-light workflow achieve
+meaningful annotation performance on commodity hardware while remaining fully reproducible?* Concretely,
+we target a single laptop with no GPU, no administrator privileges, and no compiled bioinformatics
+binaries, assembling the entire workflow from the pre-computed AlphaFold DB plus pure-Python components,
+and we apply it to unannotated proteins of *Mycobacterium tuberculosis* (Mtb), a World Health
+Organization priority pathogen whose genome remains rich in conserved hypothetical proteins.
+
+Our contribution is fourfold: (1) an explicit demonstration that meaningful structure-based function
+annotation is achievable on commodity hardware, without HPC, GPUs, or large indexed databases; (2) a
+transparent, end-to-end pipeline that turns raw AlphaFold models into ranked, evidence-linked functional
+hypotheses, in which the compute-heavy stages (structural search, pocket detection) are replaced by
+laptop-friendly, fully interpretable equivalents; (3) a controlled validation quantifying recovery
+accuracy against a sequence baseline, with residue-level active-site verification and ranking-robustness
+analysis; and (4) an openly available, reproducible software tool with an interactive viewer. Our
+approach is deliberately **complementary** to the prior art: unlike learned predictors such as DeepFRI
+[12] it is fully interpretable — every assignment is traceable to a specific structural match and to
+conserved catalytic residues rather than a black-box inference — and unlike Foldseek [5] it trades raw
+search speed for transparency and accessibility on everyday hardware.
 
 ---
 
@@ -535,10 +552,12 @@ flag unannotated proteins) → search (TM-align vs. a reference library of known
 (LIGSITE-style cavity detection) → rank (composite score). The search and pocket stages each have a
 native laptop back-end (default) and an optional high-performance back-end (Foldseek, fpocket).
 
-**Figure 2. Web viewer.** Static browser interface showing the ranked candidate table (left) and, for a
-selected candidate, its AlphaFold structure coloured by pLDDT together with its best structural match,
-match confidence, pocket statistics, and per-component scores (right).
-*[Insert screenshot from the running viewer.]*
+![Web viewer](figures/fig2_viewer.png)
+
+**Figure 2. Web viewer.** Static browser interface showing the ranked candidate table (left) and, for
+the selected top candidate (P9WIT1), its AlphaFold structure coloured by pLDDT (blue = high confidence)
+together with its best structural match (D-2-hydroxyglutarate dehydrogenase, TM-score 0.90), match
+confidence, pocket statistics, and per-component scores (right).
 
 ![Leave-one-out function recovery](../benchmark/results/figures/fig_ec_accuracy.png)
 
@@ -605,8 +624,66 @@ the weight simplex (structural-similarity weight vs. pocket-quality weight); the
     15(6):359–363.
 11. Le Guilloux V, Schmidtke P, Tufféry P. Fpocket: an open source platform for ligand pocket detection.
     *BMC Bioinformatics* 2009; 10:168.
+12. Gligorijević V, Renfrew PD, Kosciolek T, *et al.* Structure-based protein function prediction using
+    graph convolutional networks. *Nature Communications* 2021; 12:3168.
+13. Thornton JM, Laskowski RA, Borkakoti N. AlphaFold heralds a data-driven revolution in biology and
+    medicine. *Nature Medicine* 2021; 27:1666–1669.
+14. Akdel M, Pires DEV, Pardo EP, *et al.* A structural biology community assessment of AlphaFold2
+    applications. *Nature Structural & Molecular Biology* 2022; 29:1056–1067.
 
 ---
 
 *Note on references:* citation details should be verified against the primary sources before any formal
 submission; author lists are abbreviated with "et al." where appropriate.
+
+---
+
+## Appendix A. How to reproduce
+
+Everything below runs on a commodity laptop (no GPU, no admin rights). Times are approximate on a
+consumer CPU.
+
+**Environment (~2 min).**
+```bash
+git clone <repository-url> && cd protein-function-rescue
+python -m pip install -r requirements.txt
+```
+
+**Reproduce the pilot (Section 3) and the interactive viewer (~5 min).**
+```bash
+python -m pipeline.run all            # download → parse → annotate → search → pocket → rank
+# open web/index.html in a browser (double-click) to explore the ranked candidates in 3D
+```
+`--limit N` restricts to the first N structures for a quick test. Outputs land in `results/`
+(`results.json`, `candidates.csv`) and `web/data.js`.
+
+**Reproduce the functional-residue verification (Section 3.6, Table 2, ~1 min).**
+```bash
+python -m pipeline.functional_residues        # writes results/functional_residues.json
+```
+
+**Reproduce the validation benchmark (Section 4, Figures 3–5; ~2–3 h, resumable).**
+```bash
+python benchmark/run_benchmark.py             # builds the labelled set, runs leave-one-out
+```
+Writes `benchmark/results/metrics.json`, `per_query.csv`, and the figures. The O(n²) TM-align sweep
+checkpoints periodically and resumes if interrupted.
+
+**Reproduce the weight-sensitivity analysis (Section 4.6, Figure 6; ~30 min).**
+```bash
+python benchmark/build_candidate_pool.py      # realistic candidate pool
+python benchmark/weight_sensitivity.py        # writes weight_sensitivity.json + figure
+```
+
+**Render this manuscript to DOCX/PDF.**
+```bash
+python paper/render.py                         # DOCX always; PDF if MS Word or a LaTeX engine is present
+```
+
+**Switch to the high-performance back-ends (optional, Linux/macOS).** Install Foldseek and fpocket
+(`docs/SETUP_TOOLS.md`), then set `structural_search.backend: foldseek` and `pocket.backend: fpocket`
+in `config.yaml`. **Change organism** by editing the `organism` block in `config.yaml` to any proteome
+listed on the AlphaFold DB FTP.
+
+Exact input identities are fixed by the tracked manifests (`references/manifest.json`,
+`benchmark/results/dataset.json`), so runs are reproducible up to upstream AlphaFold DB / UniProt updates.
