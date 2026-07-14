@@ -1,0 +1,590 @@
+{
+  "summary": {
+    "n_items": 40,
+    "pool": "realistic candidate pool",
+    "default_weights": {
+      "structural_similarity": 0.5,
+      "model_confidence": 0.2,
+      "pocket_quality": 0.3
+    },
+    "reasonable_neighbourhood": {
+      "n_weight_vectors": 61,
+      "kendall_tau": {
+        "median": 0.9769,
+        "min": 0.9487,
+        "p05": 0.9513,
+        "frac_above_0.9": 1.0
+      },
+      "top10_jaccard": {
+        "median": 1.0,
+        "min": 0.8182,
+        "p05": 0.8182
+      }
+    },
+    "full_simplex_stress_test": {
+      "n_weight_vectors": 171,
+      "kendall_tau": {
+        "median": 0.9128,
+        "min": 0.6538,
+        "p05": 0.6833,
+        "frac_above_0.9": 0.5146
+      },
+      "top10_jaccard": {
+        "median": 0.8182,
+        "min": 0.4286,
+        "p05": 0.4286
+      }
+    }
+  },
+  "reasonable_grid": [
+    {
+      "w": [
+        0.4,
+        0.2,
+        0.4
+      ],
+      "kendall_tau": 0.9718,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.4,
+        0.225,
+        0.375
+      ],
+      "kendall_tau": 0.9513,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.4,
+        0.25,
+        0.35
+      ],
+      "kendall_tau": 0.9513,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.4,
+        0.275,
+        0.325
+      ],
+      "kendall_tau": 0.9487,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.4,
+        0.3,
+        0.3
+      ],
+      "kendall_tau": 0.9487,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.425,
+        0.175,
+        0.4
+      ],
+      "kendall_tau": 0.9744,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.425,
+        0.2,
+        0.375
+      ],
+      "kendall_tau": 0.9769,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.425,
+        0.225,
+        0.35
+      ],
+      "kendall_tau": 0.9795,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.425,
+        0.25,
+        0.325
+      ],
+      "kendall_tau": 0.9615,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.425,
+        0.275,
+        0.3
+      ],
+      "kendall_tau": 0.9615,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.425,
+        0.3,
+        0.275
+      ],
+      "kendall_tau": 0.9538,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.45,
+        0.15,
+        0.4
+      ],
+      "kendall_tau": 0.9821,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.45,
+        0.175,
+        0.375
+      ],
+      "kendall_tau": 0.9897,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.45,
+        0.2,
+        0.35
+      ],
+      "kendall_tau": 0.9846,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.45,
+        0.225,
+        0.325
+      ],
+      "kendall_tau": 0.9846,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.45,
+        0.25,
+        0.3
+      ],
+      "kendall_tau": 0.9718,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.45,
+        0.275,
+        0.275
+      ],
+      "kendall_tau": 0.9641,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.45,
+        0.3,
+        0.25
+      ],
+      "kendall_tau": 0.9615,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.475,
+        0.125,
+        0.4
+      ],
+      "kendall_tau": 0.9667,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.475,
+        0.15,
+        0.375
+      ],
+      "kendall_tau": 0.9769,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.475,
+        0.175,
+        0.35
+      ],
+      "kendall_tau": 0.9923,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.475,
+        0.2,
+        0.325
+      ],
+      "kendall_tau": 0.9923,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.475,
+        0.225,
+        0.3
+      ],
+      "kendall_tau": 0.9872,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.475,
+        0.25,
+        0.275
+      ],
+      "kendall_tau": 0.9769,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.475,
+        0.275,
+        0.25
+      ],
+      "kendall_tau": 0.9641,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.475,
+        0.3,
+        0.225
+      ],
+      "kendall_tau": 0.9615,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.5,
+        0.1,
+        0.4
+      ],
+      "kendall_tau": 0.9564,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.5,
+        0.125,
+        0.375
+      ],
+      "kendall_tau": 0.9615,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.5,
+        0.15,
+        0.35
+      ],
+      "kendall_tau": 0.9795,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.5,
+        0.175,
+        0.325
+      ],
+      "kendall_tau": 0.9974,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.5,
+        0.2,
+        0.3
+      ],
+      "kendall_tau": 1.0,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.5,
+        0.225,
+        0.275
+      ],
+      "kendall_tau": 0.9897,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "kendall_tau": 0.9846,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.5,
+        0.275,
+        0.225
+      ],
+      "kendall_tau": 0.9667,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "kendall_tau": 0.9615,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.525,
+        0.1,
+        0.375
+      ],
+      "kendall_tau": 0.959,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.525,
+        0.125,
+        0.35
+      ],
+      "kendall_tau": 0.9641,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.525,
+        0.15,
+        0.325
+      ],
+      "kendall_tau": 0.9821,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.525,
+        0.175,
+        0.3
+      ],
+      "kendall_tau": 0.9949,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.525,
+        0.2,
+        0.275
+      ],
+      "kendall_tau": 1.0,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.525,
+        0.225,
+        0.25
+      ],
+      "kendall_tau": 0.9974,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.525,
+        0.25,
+        0.225
+      ],
+      "kendall_tau": 0.9846,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.525,
+        0.275,
+        0.2
+      ],
+      "kendall_tau": 0.9718,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.55,
+        0.1,
+        0.35
+      ],
+      "kendall_tau": 0.959,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.55,
+        0.125,
+        0.325
+      ],
+      "kendall_tau": 0.9692,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.55,
+        0.15,
+        0.3
+      ],
+      "kendall_tau": 0.9795,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.55,
+        0.175,
+        0.275
+      ],
+      "kendall_tau": 0.9897,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.55,
+        0.2,
+        0.25
+      ],
+      "kendall_tau": 1.0,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.55,
+        0.225,
+        0.225
+      ],
+      "kendall_tau": 0.9974,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.55,
+        0.25,
+        0.2
+      ],
+      "kendall_tau": 0.9897,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.575,
+        0.1,
+        0.325
+      ],
+      "kendall_tau": 0.9615,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.575,
+        0.125,
+        0.3
+      ],
+      "kendall_tau": 0.9718,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.575,
+        0.15,
+        0.275
+      ],
+      "kendall_tau": 0.9769,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.575,
+        0.175,
+        0.25
+      ],
+      "kendall_tau": 0.9846,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.575,
+        0.2,
+        0.225
+      ],
+      "kendall_tau": 0.9949,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.575,
+        0.225,
+        0.2
+      ],
+      "kendall_tau": 0.9974,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.6,
+        0.1,
+        0.3
+      ],
+      "kendall_tau": 0.9615,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.6,
+        0.125,
+        0.275
+      ],
+      "kendall_tau": 0.9692,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.6,
+        0.15,
+        0.25
+      ],
+      "kendall_tau": 0.9769,
+      "top10_jaccard": 0.8182
+    },
+    {
+      "w": [
+        0.6,
+        0.175,
+        0.225
+      ],
+      "kendall_tau": 0.9821,
+      "top10_jaccard": 1.0
+    },
+    {
+      "w": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "kendall_tau": 0.9923,
+      "top10_jaccard": 1.0
+    }
+  ]
+}

@@ -139,12 +139,20 @@ def run_tmalign(config: dict[str, Any]) -> dict[str, dict[str, Any]]:
                 res = tm_align(qc, ref["coords"], qs, ref["seq"])
             except Exception:
                 continue
-            # Higher of the two length-normalisations = best mutual fold match.
-            tm = max(res.tm_norm_chain1, res.tm_norm_chain2)
+            # Keep both length normalisations. Ranking by the larger score is
+            # deliberately domain-sensitive, so consumers need the two values
+            # and lengths to recognize short-to-long/partial matches.
+            tm_query = float(res.tm_norm_chain1)
+            tm_reference = float(res.tm_norm_chain2)
+            tm = max(tm_query, tm_reference)
             if top is None or tm > top["tm_score"]:
                 top = {
                     "target": ref["accession"],
                     "tm_score": round(float(tm), 4),
+                    "tm_score_query": round(tm_query, 4),
+                    "tm_score_reference": round(tm_reference, 4),
+                    "query_length": len(qs),
+                    "reference_length": len(ref["seq"]),
                     "rmsd": round(float(res.rmsd), 3),
                     "evalue": None,  # TM-align has no e-value; kept for schema parity
                     "description": ref["name"]

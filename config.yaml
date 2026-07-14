@@ -73,4 +73,4 @@ ranking:
   weights:
     structural_similarity: 0.5      # confidence of the match to a KNOWN fold (TM-score)
     model_confidence: 0.2           # mean pLDDT of the AlphaFold model
-    pocket_quality: 0.3             # fpocket druggability of the best cavity
+    pocket_quality: 0.3             # native cavity score, or fpocket druggability with that backend

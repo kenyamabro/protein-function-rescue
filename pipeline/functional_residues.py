@@ -7,13 +7,10 @@ whether the reference protein's *annotated functional residues* — catalytic
 structurally conserved in the candidate.
 
 Method: superpose the candidate onto the reference using the TM-align rotation/
-translation, map each annotated reference residue to its nearest candidate Ca,
-and report whether a candidate residue occupies that position (within a distance
-cutoff) and whether its identity is conserved. A high fraction of conserved
-active-site/binding residues is much stronger evidence than fold alone.
-
-Assumes AlphaFold models (single chain, residues numbered 1..L contiguously),
-which holds for AlphaFold DB entries.
+translation, follow TM-align's explicit residue correspondence, and report
+whether each aligned candidate-reference Ca pair lies within a distance cutoff
+and whether its identity is conserved. Residue numbers are read from the
+structures rather than inferred from array positions.
 """
 
 from __future__ import annotations
@@ -27,7 +24,7 @@ import requests
 from tmtools import tm_align
 
 from . import download as download_mod
-from .structio import load_ca
+from .structio import load_ca, load_ca_with_ids
 
 UNIPROT_ENTRY = "https://rest.uniprot.org/uniprotkb/{acc}.json"
 
@@ -102,8 +99,8 @@ def verify_match(
     cutoff: float = 4.0,
 ) -> dict[str, Any]:
     """Check conservation of the reference's functional residues in the candidate."""
-    qc, qs = load_ca(candidate_path)          # candidate (query)
-    rc, rs = load_ca(reference_path)           # reference (known function)
+    qc, qs, q_ids = load_ca_with_ids(candidate_path)  # candidate (query)
+    rc, rs, r_ids = load_ca_with_ids(reference_path)  # reference (known function)
     if len(qs) < 10 or len(rs) < 10:
         return {"error": "structure too short", "reference": reference_acc}
 
@@ -117,19 +114,34 @@ def verify_match(
 
     cand_t, aln = _best_superposition(qc, rc, qs, rs)
 
+    # TM-align returns gapped aligned sequences. Convert those columns into an
+    # explicit reference-index -> candidate-index map; a nearby but unaligned
+    # residue is not evidence that a functional site is conserved.
+    aligned_indices: dict[int, int] = {}
+    q_idx = r_idx = 0
+    for q_char, r_char in zip(aln.seqxA, aln.seqyA):
+        q_here = q_idx if q_char != "-" else None
+        r_here = r_idx if r_char != "-" else None
+        if q_char != "-":
+            q_idx += 1
+        if r_char != "-":
+            r_idx += 1
+        if q_here is not None and r_here is not None:
+            aligned_indices[r_here] = q_here
+
+    ref_index_by_id = {num: idx for idx, num in enumerate(r_ids)}
+
     per_site = []
     n_aligned = n_identical = n_similar = 0
     for s in sites:
-        idx_r = s["num"] - 1
-        if idx_r < 0 or idx_r >= len(rc):
+        idx_r = ref_index_by_id.get(s["num"])
+        if idx_r is None:
             continue
-        ref_xyz = rc[idx_r]
-        d = np.linalg.norm(cand_t - ref_xyz, axis=1)
-        j = int(d.argmin())
-        dist = float(d[j])
-        aligned = dist <= cutoff
+        j = aligned_indices.get(idx_r)
+        dist = float(np.linalg.norm(cand_t[j] - rc[idx_r])) if j is not None else float("inf")
+        aligned = j is not None and dist <= cutoff
         ref_res = rs[idx_r]
-        cand_res = qs[j] if aligned else "-"
+        cand_res = qs[j] if j is not None else "-"
         identical = aligned and cand_res == ref_res
         similar = aligned and _same_group(cand_res, ref_res)
         n_aligned += aligned
@@ -140,8 +152,8 @@ def verify_match(
             "type": s["type"],
             "ligand": s["ligand"],
             "description": s["description"],
-            "candidate_residue": (f"{cand_res}{j + 1}" if aligned else None),
-            "distance_A": round(dist, 2),
+            "candidate_residue": (f"{cand_res}{q_ids[j]}" if j is not None else None),
+            "distance_A": (round(dist, 2) if np.isfinite(dist) else None),
             "position_conserved": aligned,
             "identity_conserved": identical,
             "chemistry_conserved": similar,
@@ -221,7 +233,7 @@ if __name__ == "__main__":
         print(f"{s['accession']} -> {s['reference']}  "
               f"({s['match_description'][:50]})")
         print(f"   functional residues: {s['n_functional_residues']}  "
-              f"position-conserved: {s['n_position_conserved']} "
+              f"position-compatible: {s['n_position_conserved']} "
               f"({s['frac_position_conserved']*100:.0f}%)  "
               f"identity-conserved: {s['n_identity_conserved']} "
               f"({s['frac_identity_conserved']*100:.0f}%)")

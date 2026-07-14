@@ -5,7 +5,7 @@
 **Correspondence:** [email]
 
 **Manuscript type:** Methods / proof-of-concept (pre-print draft)
-**Date:** 2026-07-09
+**Date:** 2026-07-13
 
 ---
 
@@ -28,15 +28,17 @@ the best hits' putative binding cavities with a geometric (LIGSITE-style) pocket
 workflow runs on a commodity laptop with no GPU and no compiled dependencies, and ships with a static
 web viewer for inspecting each candidate in 3D. In a pilot on nine unannotated *Mycobacterium
 tuberculosis* proteins searched against a 119-protein reference library, four proteins matched a known
-fold at TM-score ≥ 0.5. The strongest candidate, an "uncharacterized FAD-linked oxidoreductase"
-(UniProt P9WIT1), matched a D-2-hydroxyglutarate dehydrogenase at TM-score 0.90 — a match consistent
-with, and refining, its previously inferred enzyme class. On an independent benchmark of 227 enzymes
+fold or domain at a query-normalised TM-score ≥ 0.5. Three larger proteins yielded fold-level hypotheses;
+the cleanest whole-chain match was the uncharacterized P9WQ67 against an aromatic amino-acid
+aminotransferase (query/reference-normalised TM-scores 0.67/0.63), although catalytic-residue identity
+was not conserved and reaction transfer remains unproven. A 50-residue fourth hit was identified as a
+short-fragment false positive. On an independent benchmark of 227 enzymes
 across 29 families and six EC classes, leave-one-out recovery assigned the exact four-level EC number
-correctly in 96.5 % of cases; this matched a simple pairwise sequence-identity baseline overall (which
-reached 93.8 % at the exact-reaction level) and demonstrated clear advantages for several remote-homology
-cases, recovering correct functions in the sub-30 %-identity "twilight zone" (including metallo-
-β-lactamases and a lipase and catalase at low identity) where pairwise sequence comparison is
-unreliable; at the default TM-score threshold of 0.5 precision was 0.982.
+correctly in 96.5 % of cases, versus 93.8 % for a deliberately simple symmetric pairwise-identity
+baseline at the exact-reaction level. No paired significance analysis was performed. Twenty-four of
+219 correct structural calls had <30 % identity to their structural hit; these are low-identity
+recoveries, not necessarily 24 cases where structure defeated the sequence baseline. At the default
+TM-score threshold of 0.5, precision was 0.982.
 
 **Conclusions.** Structure-based triage recovers specific, testable functional hypotheses for proteins
 that sequence-based annotation leaves blank, and can be performed at classroom/laptop scale. The method
@@ -72,34 +74,32 @@ computationally tractable.
 
 Beyond direct structural search, machine-learning methods now infer function directly from structure:
 DeepFRI [12], for example, predicts Gene Ontology terms and EC numbers from a graph-convolutional
-encoding of the fold. Such learned predictors are powerful but opaque, and — like the fast search
-tools — are typically deployed with GPUs, large pre-indexed structural databases, or complex software
-environments. Recent reviews and community assessments of AlphaFold's impact on function prediction
+encoding of the fold. Such learned predictors and fast search tools provide complementary capabilities,
+often through local installations, pre-indexed resources, or hosted web services. Recent reviews and
+community assessments of AlphaFold's impact on function prediction
 [13, 14] make two points that frame the present work: the opportunity created by 200 million structures
 is enormous, yet structure alone is not sufficient — predictions remain hypotheses that require
 experimental validation, and the field is still evolving rather than solved.
 
 **Positioning and research question.** Existing work has established that AlphaFold structures and
-structural search can improve annotation, but published workflows typically depend on
-high-performance-computing infrastructure, large pre-indexed structural databases, or intricate software
-environments. We instead ask a different question: *can a transparent, dependency-light workflow achieve
+structural search can improve annotation. We ask a narrower implementation question: *can a transparent,
+Windows-compatible teaching workflow achieve
 meaningful annotation performance on commodity hardware while remaining fully reproducible?* Concretely,
 we target a single laptop with no GPU, no administrator privileges, and no compiled bioinformatics
 binaries, assembling the entire workflow from the pre-computed AlphaFold DB plus pure-Python components,
 and we apply it to unannotated proteins of *Mycobacterium tuberculosis* (Mtb), a World Health
 Organization priority pathogen whose genome remains rich in conserved hypothetical proteins.
 
-Our contribution is fourfold: (1) an explicit demonstration that meaningful structure-based function
-annotation is achievable on commodity hardware, without HPC, GPUs, or large indexed databases; (2) a
+Our contribution is fourfold: (1) an explicit demonstration of fold-level triage on commodity hardware,
+without a local GPU or compiled command-line bioinformatics executable; (2) a
 transparent, end-to-end pipeline that turns raw AlphaFold models into ranked, evidence-linked functional
 hypotheses, in which the compute-heavy stages (structural search, pocket detection) are replaced by
 laptop-friendly, fully interpretable equivalents; (3) a controlled validation quantifying recovery
 accuracy against a sequence baseline, with residue-level active-site verification and ranking-robustness
 analysis; and (4) an openly available, reproducible software tool with an interactive viewer. Our
 approach is deliberately **complementary** to the prior art: unlike learned predictors such as DeepFRI
-[12] it is fully interpretable — every assignment is traceable to a specific structural match and to
-conserved catalytic residues rather than a black-box inference — and unlike Foldseek [5] it trades raw
-search speed for transparency and accessibility on everyday hardware.
+[12], each assignment is traceable to a specific structural match and a coarse residue-site check; and
+compared with Foldseek [5] it trades database scale and speed for a small, inspectable reference set.
 
 ---
 
@@ -151,9 +151,11 @@ Each query structure was aligned to every reference using TM-align [6] via the *
 bindings, operating on Cα coordinates and sequence extracted with *gemmi*. TM-align returns a TM-score
 [7], a length-normalised measure of fold similarity in the range 0–1, where values > 0.5 generally
 indicate the same fold and values near 0.2 correspond to unrelated structures. Because TM-score can be
-normalised by the length of either chain, we recorded the larger of the two normalisations as the
-match score, so that a strong match to a smaller known domain is not penalised. For each query, the
-reference with the highest TM-score was retained if it met a configurable threshold (default 0.5).
+normalised by the length of either chain, we retained the larger value as a domain-sensitive screening
+score but recorded both normalisations, both lengths, and RMSD. A high query-normalised but low
+reference-normalised score indicates a partial/domain match and is not evidence that the complete
+proteins share a function. For each query, the reference with the highest screening score was retained
+if it met a configurable threshold (default 0.5).
 
 TM-align performs an exhaustive, exact pairwise alignment; it is therefore slower than heuristic tools
 but requires no database construction and no compiled dependencies. As an alternative back-end, the
@@ -207,12 +209,13 @@ under the EMBL-EBI terms and are for theoretical modelling only.
 Global fold similarity is necessary but not sufficient evidence for shared function, so we added an
 optional residue-level verification step. For a candidate–reference match we retrieved the reference's
 annotated functional residues from UniProt (active-site, binding-site and metal-binding features),
-superposed the candidate onto the reference with the TM-align rotation/translation, and mapped each
-annotated reference residue to its nearest candidate Cα. A reference functional residue was scored as
-*position-conserved* if a candidate Cα lay within 4 Å of it after superposition, and additionally
-*identity-conserved* if that candidate residue was the same amino acid. The fraction of catalytic and
-metal/ligand-binding residues that are position- and identity-conserved gives residue-level evidence
-that complements the global score (implemented in `pipeline/functional_residues.py`).
+superposed the candidate onto the reference with the TM-align rotation/translation, and followed
+TM-align's explicit residue correspondence. A reference functional residue was scored as
+*position-compatible* if its aligned candidate Cα lay within 4 Å after superposition, and additionally
+*identity-conserved* if that candidate residue was the same amino acid. The fractions of
+position-compatible, identical, and chemically conservative aligned sites provide a coarse check that
+complements the global score; they do not establish side-chain geometry or catalytic equivalence
+(implemented in `pipeline/functional_residues.py`).
 
 ### 2.10 Weight-sensitivity analysis
 
@@ -236,49 +239,42 @@ straightforward but was outside the scope of this demonstration (see Limitations
 
 ### 3.2 Candidate function assignments
 
-Four of the nine queries (44 %) produced a structural match at TM-score ≥ 0.5 (Table 1). The remaining
-five had no reference above threshold and were not assigned a candidate function, as expected for a
-small, general-purpose reference library.
+Four of the nine queries (44 %) produced a domain-sensitive screening hit at TM-score ≥ 0.5 (Table 1).
+Because this threshold uses the larger length normalisation, these are fold/domain matches rather than
+automatic function assignments. The remaining five had no reference above threshold.
 
-**Table 1. Ranked candidate function assignments for the pilot set.** TM-score from TM-align; pLDDT is
-the mean AlphaFold confidence; cavity score is the geometric pocket estimate (Section 2.6); composite as
-in Section 2.7. Matches are hypotheses, not experimental assignments.
+**Table 1. Ranked structural-screening hits for the pilot set.** TM-score Q/R gives query- and
+reference-length normalisations; pLDDT is mean AlphaFold confidence; the cavity score is the native
+geometric estimate. Matches are hypotheses, not experimental assignments.
 
-| Rank | Query (UniProt) | Current annotation | Length (aa) | Mean pLDDT | Best structural match (reference) | TM-score | Pockets | Cavity score | Composite |
-|-----:|-----------------|--------------------|------------:|-----------:|-----------------------------------|---------:|--------:|-------------:|----------:|
-| 1 | P9WIT1 | Uncharacterized FAD-linked oxidoreductase Rv2280 (EC 1.-.-.-) | 459 | 95.5 | D-2-hydroxyglutarate dehydrogenase (EC 1.1.99.39) | 0.904 | 6 | 0.966 | 0.933 |
-| 2 | P9WJG7 | Uncharacterized membrane protein ArfB | 50 | 80.0 | 2′-cyclic-ADP-D-ribose synthase / TIR-domain NAD⁺ hydrolase (EC 3.2.2.-) | 0.862 | 0 | — | 0.844 |
-| 3 | O08343 | Uncharacterized metal-dependent hydrolase TatD (EC 3.1.-.-) | 264 | 97.1 | Ochratoxinase / amidohydrolase 2 (EC 3.4.17.-) | 0.715 | 4 | 0.968 | 0.842 |
-| 4 | P9WQ67 | Uncharacterized protein Rv3778c | 398 | 96.4 | Aromatic amino-acid aminotransferase (EC 2.6.1.57/58/70) | 0.666 | 5 | 0.968 | 0.816 |
+| Rank | Query | Length Q/R | Mean pLDDT | Best structural match | TM-score Q/R | RMSD (Å) | Cavity score | Interpretation |
+|-----:|-------|------------|-----------:|-----------------------|--------------|---------:|-------------:|----------------|
+| 1 | P9WIT1 | 459/1022 | 95.5 | D-2-hydroxyglutarate dehydrogenase | 0.904/0.421 | 2.647 | 0.966 | Oxidoreductase-related domain; specific reaction unsupported |
+| 2 | P9WJG7 | 50/269 | 80.0 | TIR-domain NAD⁺ hydrolase | 0.862/0.180 | 1.138 | — | Short-fragment false positive |
+| 3 | O08343 | 264/480 | 97.1 | Ochratoxinase / amidohydrolase 2 | 0.715/0.423 | 3.461 | 0.968 | Metallo-hydrolase architecture; substrate specificity unsupported |
+| 4 | P9WQ67 | 398/423 | 96.4 | Aromatic amino-acid aminotransferase | 0.666/0.633 | 4.014 | 0.968 | Aminotransferase-fold hypothesis; catalytic identity unsupported |
 
-### 3.3 Consistency of the top assignments
+### 3.3 Interpretation of the structural hits
 
-Three of the four assignments are internally consistent with, and refine, prior sequence-based
-inference:
-
-- **P9WIT1** was already inferred by UniProt to be an oxidoreductase (EC class 1) but with no defined
-  sub-subclass (EC 1.-.-.-). Its top structural match, a D-2-hydroxyglutarate dehydrogenase
-  (EC 1.1.99.39), lies within the same top-level enzyme class and proposes a specific reaction — a
-  concrete, testable refinement supported by a high TM-score (0.90) and a high-confidence model
-  (pLDDT 95.5).
-- **O08343** is annotated as a metal-dependent hydrolase of the TatD family (EC 3.1.-.-); its match to
-  an amidohydrolase-superfamily enzyme (EC 3.4.17.-) is structurally coherent (both are metal-dependent
-  hydrolases built on the TIM-barrel amidohydrolase fold), reinforcing the hydrolase assignment while
-  suggesting a possible peptidase/amidase activity worth testing.
-- **P9WQ67 (Rv3778c)** carried no enzyme-class inference at all ("Uncharacterized protein"). Its match
-  to a PLP-dependent aromatic amino-acid aminotransferase (EC 2.6.1) is therefore a genuinely *de novo*
-  functional hypothesis — the case in which structure-based rescue adds the most information.
-
-The second-ranked hit, **P9WJG7**, illustrates an important caveat rather than a confident result: at
-only 50 residues its TM-score (0.86) is computed over few aligned positions and is intrinsically less
-reliable, and no enclosed pocket was detected. It is retained here as a transparent example of a
-low-confidence match that a user should discount.
+- **P9WIT1** is already annotated broadly as an FAD-linked oxidoreductase (EC 1.-.-.-). Its match is
+  compatible with an oxidoreductase-related domain, but the reference is more than twice as long and
+  the reference-normalised score is 0.421. The evidence does not refine P9WIT1 to
+  D-2-hydroxyglutarate dehydrogenase.
+- **O08343** is already a TatD-family metal-dependent hydrolase. The match and metal-site-compatible
+  residues support that broad architecture, but do not establish ochratoxinase, peptidase, or amidase
+  substrate specificity.
+- **P9WQ67 (Rv3778c)** provides the cleanest whole-chain fold match because both TM-score
+  normalisations exceed 0.5. It is therefore an aminotransferase-fold hypothesis, pending direct
+  verification of PLP-binding and catalytic residues.
+- **P9WJG7** is only 50 residues. Its query-normalised score is 0.862 but its reference-normalised score
+  is 0.180, and no functional sites align. It is a false positive caused by permissive short-fragment
+  normalisation and is retained only as a documented failure mode.
 
 ### 3.4 Pocket analysis
 
 The geometric detector identified enclosed cavities in the three larger high-scoring proteins
 (4–6 pockets; cavity scores 0.966–0.968), consistent with globular enzymes possessing defined active
-sites, and correctly reported no enclosed pocket for the 50-residue membrane peptide P9WJG7. Because the
+sites, and reported no enclosed pocket for the 50-residue membrane peptide P9WJG7. Because the
 cavity score is an unsupervised geometric measure, we use it only as a supporting signal in the
 composite ranking and for visual inspection, not as a standalone druggability claim.
 
@@ -288,41 +284,34 @@ The pipeline produced machine-readable outputs (JSON, CSV) and a static web inte
 ranked candidates and renders each AlphaFold model in 3D, coloured by pLDDT, with its structural match,
 match confidence, pocket statistics, and per-component scores (Figure 2). The complete pilot — download,
 parsing, annotation, 9 × 119 TM-align comparisons, pocket detection, and ranking — ran on a consumer
-laptop without a GPU; the structural-search stage dominated runtime at roughly one minute per query
-against the 119-protein library.
+laptop without a GPU; the structural-search stage took 18 min 37 s in the verification run. Runtime
+was strongly length-dependent, with the 1,327-residue P9WN15 query dominating the run.
 
 ### 3.6 Functional-residue verification of the candidates
 
 Global fold similarity alone leaves open whether the *active site* is shared. We therefore tested, for
 each pilot candidate, whether the matched reference's annotated catalytic and binding residues are
-structurally conserved (Section 2.9; Table 2). This sharpens the picture from the global scores.
+compatible under the explicit TM-align correspondence (Section 2.9; Table 2).
 
-The metal-dependent hydrolase candidate **O08343** is the strongest case: all eight annotated functional
-residues of the matched amidohydrolase are position-conserved, and the two zinc-coordinating histidines
-(His111→His5, His113→His7) together with a catalytic aspartate (Asp378→Asp208) are conserved in identity
-as well as position — a direct structural signature of a metal-dependent hydrolase active site. The
-oxidoreductase (**P9WIT1**) and aminotransferase (**P9WQ67**) candidates retain the active-site
-*geometry* (83 % and 100 % of functional residues position-conserved) but with diverged residue
-identities, indicating a shared fold and binding-pocket architecture rather than an identical catalytic
-complement — a deliberately more cautious level of support (for P9WIT1 the reference's [4Fe-4S]-cluster
-cysteines are notably *not* conserved, suggesting a related oxidoreductase lacking that exact cofactor).
-Critically, the short 50-residue candidate **P9WJG7**, whose global match we had already flagged as
-unreliable, shows *no* functional-residue conservation (0/6; all reference active-site residues 36–55 Å
-away after superposition), independently confirming that its high TM-score is spurious. Residue-level
-verification thus both strengthens the confident assignments and automatically down-weights the
-questionable one.
+**O08343** is the only strong residue-level case: all eight annotated reference sites have aligned Cα
+pairs within 4 Å, and four identities are retained. Reference H111/H113/D378 correspond to candidate
+H5/H7/D208; those candidate sites are already annotated by UniProt by similarity, so this supports
+metal-site compatibility rather than discovering a new reaction. **P9WIT1** has no aligned functional
+site within 4 Å; two aligned identities lie outside the distance cutoff and the reference Fe-S cysteines
+fall outside the matched region. **P9WQ67** has 9/11 position-compatible sites but no identities or
+conservative substitutions, so its catalytic machinery is unverified. **P9WJG7** has no aligned
+functional sites. The check is a coarse Cα proxy and does not test side-chain coordination geometry.
 
-**Table 2. Functional-residue conservation for the pilot candidates.** Annotated active-site,
-binding-site and metal-binding residues of the matched reference, checked for structural conservation in
-the candidate after TM-align superposition (position-conserved: candidate Cα within 4 Å; identity: same
-amino acid).
+**Table 2. Functional-site compatibility for the pilot hits.** Sites use TM-align's residue
+correspondence; position-compatible means the aligned Cα pair is within 4 Å. Identity is counted only
+for position-compatible pairs.
 
-| Candidate | Matched enzyme | Functional residues | Position-conserved | Identity-conserved | Notable conserved residues |
-|-----------|----------------|--------------------:|-------------------:|-------------------:|-----------------------------|
-| O08343 | Amidohydrolase (Zn) | 8 | 8 (100 %) | 4 (50 %) | Zn-His111, Zn-His113, catalytic Asp378 |
-| P9WQ67 | PLP aminotransferase | 11 | 11 (100 %) | 0 | PLP / 2-oxoglutarate site geometry |
-| P9WIT1 | D-2-hydroxyglutarate dehydrogenase | 6 | 5 (83 %) | 0 | substrate-site geometry (4Fe-4S Cys not conserved) |
-| P9WJG7 | TIR-domain NAD⁺ hydrolase | 6 | 0 | 0 | none (spurious 50-residue match) |
+| Candidate | Matched enzyme | Sites | Position-compatible | Identity-conserved | Interpretation |
+|-----------|----------------|------:|--------------------:|-------------------:|----------------|
+| O08343 | Amidohydrolase (Zn) | 8 | 8 (100 %) | 4 (50 %) | Candidate H5/H7/D208 support metal-site compatibility |
+| P9WQ67 | PLP aminotransferase | 11 | 9 (82 %) | 0 | Fold hypothesis; catalytic identity unsupported |
+| P9WIT1 | D-2-hydroxyglutarate dehydrogenase | 6 | 0 | 0 | Reference functional sites not supported by aligned geometry |
+| P9WJG7 | TIR-domain NAD⁺ hydrolase | 6 | 0 | 0 | Short-fragment false positive |
 
 ---
 
@@ -342,7 +331,8 @@ returning fewer than three usable members were dropped automatically — and len
 For every protein we performed leave-one-out prediction: its annotation was
 hidden and its function was predicted from the EC number of its single best hit among all *other*
 proteins, computed two ways — (i) by TM-align structural similarity (the pipeline's method) and (ii) by
-a sequence baseline (local pairwise identity, BLOSUM62). Predictions were scored by EC agreement at each
+a sequence baseline (the mean identity from local BLOSUM62 alignments in both sequence orders, making
+the pairwise score symmetric). Predictions were scored by EC agreement at each
 level (1 = class … 4 = exact reaction). This isolates the effect of the comparison method, since both
 operate on the identical set. Full code and the exact accession list are in `benchmark/`.
 
@@ -351,23 +341,19 @@ operate on the identical set. Full code and the exact accession list are in `ben
 Structure-based recovery assigned the **exact four-level EC number** correctly for **219/227 proteins
 (96.5 %)**, and was stable across EC levels 1–4 (Figure 3). The simple pairwise sequence-identity
 baseline was identical at the coarsest level (class, level 1: 96.5 %) but lower at finer levels, falling
-to **93.8 % for the exact reaction** (level 4) — so structure was slightly better at pinpointing the
-specific reaction, while the two methods were comparable overall. We make no claim of a large overall
-improvement on easy cases, and note that a stronger sequence method (profile/HMM search; Section 6)
-would likely close even this small gap. The meaningful difference appears elsewhere (Section 4.3).
+to **93.8 % for the exact reaction** (level 4). This is a 2.7-percentage-point observed difference;
+no paired confidence interval or significance test was performed, so we do not claim statistical
+superiority or equivalence. A stronger sequence method (profile/HMM search; Section 6) could narrow or
+reverse the difference.
 
-### 4.3 The value of structure: recovery in the twilight zone
+### 4.3 Correct structural calls at low pairwise identity
 
-The methods diverge precisely where they should. Among the 219 correct structural recoveries, **24
-(11 %) occurred at below 30 % sequence identity to the matched protein** (Figure 4) — the regime in
-which sequence homology becomes unreliable [2]. These include metallo-β-lactamases (VIM-1/NDM-1,
-~24 % identity), a glutathione S-transferase (~12 %), an aspartate aminotransferase (~13 %), and — most
-strikingly — a triacylglycerol lipase, an alanine racemase and a dye-decolorizing peroxidase recovered
-correctly at **3–5 % identity**. In **five** of these low-identity cases the sequence baseline's top hit
-was incorrect while the structural top hit was correct (the lipase, the racemase, the peroxidase, the
-glutathione S-transferase and the aminotransferase) — direct examples of structure succeeding where a
-pairwise sequence comparison fails. Across the whole benchmark there was **no case** in which the
-sequence baseline recovered the correct function (to ≥ 3 EC levels) and structure did not.
+Among the 219 correct structural recoveries, **24 (11 %) had below 30 % sequence identity to the
+structural hit** (Figure 4), including several examples at very low identity. This establishes that the
+structural nearest neighbour can recover the labelled EC family despite little pairwise identity to
+that neighbour. It does not mean that all 24 are unique wins over the sequence baseline, whose nearest
+hit may be a different protein. Accordingly, Figure 4 is interpreted as a low-identity structural-call
+analysis rather than a general comparison with modern sequence methods.
 
 ### 4.4 Calibration of the TM-score threshold
 
@@ -412,10 +398,10 @@ structural similarity and model confidence regardless.)
 ### 4.7 Summary
 
 On a labelled benchmark of 227 enzymes across 29 families and six classes the pipeline recovers exact
-enzyme function in 96.5 % of leave-one-out tests. It matched a simple pairwise sequence-identity
-baseline overall, was slightly better at pinpointing the exact reaction, and demonstrated clear
-advantages for several remote-homology cases in the low-identity twilight zone where pairwise sequence
-comparison is unreliable — while its calibrated threshold keeps precision high (0.982 at TM ≥ 0.5) and
+enzyme function in 96.5 % of leave-one-out tests, versus 93.8 % for the simple pairwise-identity
+baseline at the exact-reaction level. The observed difference was not tested for statistical
+significance. Twenty-four correct structural calls had low identity to their structural neighbour,
+while the calibrated threshold keeps precision high (0.982 at TM ≥ 0.5) and
 its failures are dominated by the well-understood fold-degeneracy of the EC system, most of which the
 threshold turns into abstentions rather than errors. These are quantitative results the pilot alone could not provide; we
 emphasise that the sequence comparator here is a deliberately simple pairwise baseline, not a
@@ -432,18 +418,18 @@ computer. By consuming pre-computed AlphaFold models rather than predicting stru
 collapses to that of pairwise structural alignment, which TM-align performs exactly and without any
 database-building step.
 
-The pilot results are encouraging in a specific, limited sense: the method recovered fold-level matches
-that are *coherent with independent evidence* (the EC-class agreement for P9WIT1 and O08343) and, in one
-case (P9WQ67), generated a functional hypothesis where sequence analysis had produced none. This is
-precisely the behaviour expected of a useful triage tool — it should confirm and sharpen weak prior
-signals and occasionally surface entirely new ones.
+The pilot results are useful in a specific, limited sense: P9WIT1 and O08343 produced domain/fold
+matches coherent with their existing broad enzyme-class annotations, while P9WQ67 produced an
+aminotransferase-fold hypothesis where the current record contains no enzyme class. None of these
+results establishes a specific reaction, and the P9WJG7 result documents a short-fragment false positive.
 
 The design also makes the speed/scale trade-off explicit and pedagogically useful. TM-align's
 exhaustive, exact alignment is ideal for a curated reference set on a laptop but does not scale to
 searching millions of targets; Foldseek's *k*-mer-based structural search was engineered precisely for
 that regime [5]. Because both are exposed as interchangeable back-ends, a user can prototype on a laptop
 and later scale the identical analysis to a whole-proteome, whole-PDB search on a Linux server by
-changing one configuration value. The pocket stage mirrors this: a transparent geometric detector for
+changing one configuration value, although the two search methods are not scientifically equivalent.
+The pocket stage mirrors this: a transparent geometric detector for
 laptop use, or the trained fpocket tool [11] where available.
 
 Compared with sequence-based annotation transfer, the structural approach's advantage is its reach into
@@ -473,10 +459,14 @@ Several limitations bound the interpretation of these results:
    sequence method; a comprehensive evaluation should also compare against profile/HMM search
    (HMMER/InterProScan), the Foldseek back-end, and learned function predictors (e.g. DeepFRI),
    which was beyond the scope of this laptop-based study.
+   Some proteins carry multiple legitimate EC numbers, whereas the benchmark assigns the single family
+   EC under which each entry was fetched; apparent errors can therefore include valid secondary functions.
 4. **Reference-library bias.** Coverage and ranking depend on which characterised proteins are in the
    reference set; a small or skewed library will miss functions it does not contain.
-5. **Score reliability at short length.** TM-score is less reliable for very short proteins (illustrated
-   by the 50-residue P9WJG7); length and pLDDT should be weighed alongside TM-score.
+5. **Length normalisation and partial matches.** Ranking by the larger TM-score normalisation is
+   deliberately permissive for domain matches and can inflate short-to-long comparisons (illustrated by
+   the 50-residue P9WJG7). Both normalisations, both lengths, and coverage must be inspected before
+   function transfer.
 6. **Geometric cavity score.** The pocket score is an unsupervised geometric estimate, not a validated
    druggability prediction, and should not be interpreted as the latter. It also has limited dynamic
    range across well-folded proteins (most globular enzymes score similarly), so it contributes only
@@ -484,8 +474,8 @@ Several limitations bound the interpretation of these results:
 7. **Fold ≠ function.** Structural similarity can arise without functional identity, as the benchmark's
    TIM-barrel false positive shows. The functional-residue verification of Sections 2.9/3.6 mitigates
    this by checking catalytic and metal/ligand-binding residues, and is provided as a standard step;
-   however, we have not yet benchmarked its accuracy systematically, and the Cα-distance mapping it uses
-   is a coarse proxy for full active-site comparison.
+   however, we have not yet benchmarked its accuracy systematically, and aligned Cα proximity is a coarse
+   proxy that does not test side-chain geometry or catalytic equivalence.
 
 ---
 
@@ -494,12 +484,13 @@ Several limitations bound the interpretation of these results:
 We have described and released *Protein Function Rescue*, a reproducible, laptop-scale pipeline that
 converts pre-computed AlphaFold structures into ranked, evidence-linked functional hypotheses for
 proteins that sequence-based methods leave unannotated, together with an interactive viewer. A pilot on
-*M. tuberculosis* recovered four fold-level candidate assignments, three consistent with prior
-enzyme-class inference and one a *de novo* hypothesis. A controlled leave-one-out benchmark then
+*M. tuberculosis* recovered three larger fold/domain hypotheses and one short-fragment false positive.
+The cleanest whole-chain result, P9WQ67, remains an aminotransferase-fold hypothesis rather than a
+reaction assignment. A controlled leave-one-out benchmark then
 quantified the approach on 227 enzymes across 29 families and six classes: 96.5 % exact-EC recovery,
-matching a simple pairwise sequence-identity baseline overall (and exceeding it at the exact-reaction
-level) while showing clear advantages for several remote-homology cases in the low-identity twilight
-zone, with a well-calibrated confidence threshold (precision 0.982 at TM ≥ 0.5).
+versus 93.8 % for a deliberately simple symmetric pairwise-identity baseline at the exact-reaction
+level; no paired significance analysis was performed. Twenty-four correct structural calls had <30 %
+identity to their structural hit, and the threshold gave precision 0.982 at TM ≥ 0.5.
 
 Natural extensions include: (i) a whole-proteome run with the Foldseek back-end against the full PDB and
 Swiss-Prot; (ii) a larger, harder benchmark (e.g. CATH/SCOPe superfamilies, time-split characterised
@@ -566,7 +557,8 @@ native laptop back-end (default) and an optional high-performance back-end (Fold
 
 **Figure 2. Web viewer.** Static browser interface showing the ranked candidate table (left) and, for
 the selected top candidate (P9WIT1), its AlphaFold structure coloured by pLDDT (blue = high confidence)
-together with its best structural match (D-2-hydroxyglutarate dehydrogenase, TM-score 0.90), match
+together with its best structural match (D-2-hydroxyglutarate dehydrogenase; query/reference-normalised
+TM-scores 0.90/0.42), match
 confidence, pocket statistics, and per-component scores (right).
 
 ![Leave-one-out function recovery](../benchmark/results/figures/fig_ec_accuracy.png)
@@ -577,14 +569,14 @@ sequence-identity baseline, over 227 enzymes in 29 EC families. Structure recove
 (level 4) for 96.5 % of proteins, versus 93.8 % for sequence; the two methods are tied at the class
 level (level 1).
 
-![Structure recovers function below the sequence twilight zone](../benchmark/results/figures/fig_tm_vs_identity.png)
+![Correct structural calls can have low pairwise identity](../benchmark/results/figures/fig_tm_vs_identity.png)
 
-**Figure 4. Structure recovers function below the sequence twilight zone
+**Figure 4. Correct structural calls can have low pairwise identity
 (`benchmark/results/figures/fig_tm_vs_identity.png`).** Each point is one protein's best structural hit,
-plotted as TM-score against the sequence identity to that hit, coloured by whether the hit's EC number
-is correct (≥3 levels). The dashed line marks 30 % identity, below which sequence homology is
-unreliable; 24 correct recoveries (green) lie to its left, including matches at ~24 % (metallo-
-β-lactamases) and 3–5 % (a lipase, an alanine racemase and a peroxidase) identity. The high-TM incorrect
+plotted as TM-score against the sequence identity to that structural hit, coloured by whether the hit's
+EC number is correct (≥3 levels). The dashed line marks 30 % identity; 24 correct structural calls
+(green) lie to its left. These are low-identity structural recoveries, not necessarily cases where the
+sequence baseline failed because its nearest hit may differ. The high-TM incorrect
 points (red) are the four fold-degeneracy false positives (e.g. the nucleoside-phosphorylase↔isomerase
 pair at TM ≈ 0.74).
 
@@ -631,7 +623,7 @@ the weight simplex (structural-similarity weight vs. pocket-quality weight); the
    Research* 2023; 51(D1):D523–D531.
 10. Hendlich M, Rippmann F, Barnickel G. LIGSITE: automatic and efficient detection of potential small
     molecule-binding sites in proteins. *Journal of Molecular Graphics and Modelling* 1997;
-    15(6):359–363.
+    15(6):359–363, 389.
 11. Le Guilloux V, Schmidtke P, Tufféry P. Fpocket: an open source platform for ligand pocket detection.
     *BMC Bioinformatics* 2009; 10:168.
 12. Gligorijević V, Renfrew PD, Kosciolek T, *et al.* Structure-based protein function prediction using
@@ -643,8 +635,8 @@ the weight simplex (structural-similarity weight vs. pocket-quality weight); the
 
 ---
 
-*Note on references:* citation details should be verified against the primary sources before any formal
-submission; author lists are abbreviated with "et al." where appropriate.
+*Note on references:* citation details were checked against primary records on 13 July 2026; author lists
+are abbreviated with “et al.” where appropriate.
 
 ---
 
@@ -659,7 +651,7 @@ git clone <repository-url> && cd protein-function-rescue
 python -m pip install -r requirements.txt
 ```
 
-**Reproduce the pilot (Section 3) and the interactive viewer (~5 min).**
+**Reproduce the pilot (Section 3) and the interactive viewer (~19 min in the verification run).**
 ```bash
 python -m pipeline.run all            # download → parse → annotate → search → pocket → rank
 # open web/index.html in a browser (double-click) to explore the ranked candidates in 3D

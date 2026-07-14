@@ -215,8 +215,8 @@ def structural_matrix(dataset: list[dict]) -> np.ndarray:
     return tm
 
 
-def _identity(aligner: PairwiseAligner, a: str, b: str) -> float:
-    """Local % identity, normalised by the shorter sequence."""
+def _directed_identity(aligner: PairwiseAligner, a: str, b: str) -> float:
+    """One directed local-alignment identity calculation."""
     try:
         aln = aligner.align(a, b)[0]
     except Exception:
@@ -227,6 +227,19 @@ def _identity(aligner: PairwiseAligner, a: str, b: str) -> float:
             if x == y:
                 idn += 1
     return 100.0 * idn / max(1, min(len(a), len(b)))
+
+
+def _identity(aligner: PairwiseAligner, a: str, b: str) -> float:
+    """Symmetric local % identity, normalised by the shorter sequence.
+
+    Local alignment can select a different tied optimum when the arguments are
+    reversed. Averaging both directions makes the pairwise matrix independent
+    of dataset ordering while retaining the original accessible baseline.
+    """
+    return 0.5 * (
+        _directed_identity(aligner, a, b)
+        + _directed_identity(aligner, b, a)
+    )
 
 
 def sequence_matrix(dataset: list[dict]) -> np.ndarray:
@@ -367,8 +380,8 @@ def make_figures(rows, summary):
     ax.axhline(0.5, ls=":", c="gray", lw=1)
     ax.set_xlabel("Sequence identity to structural hit (%)")
     ax.set_ylabel("TM-score to structural hit")
-    ax.set_title("Structure recovers function below the sequence twilight zone")
-    ax.text(2, 0.96, "sequence-undetectable\n(<30% id)", fontsize=8, color="gray")
+    ax.set_title("Correct structural calls can have low pairwise identity")
+    ax.text(2, 0.96, "low identity to\nstructural hit (<30%)", fontsize=8, color="gray")
     from matplotlib.lines import Line2D
     ax.legend(handles=[
         Line2D([0], [0], marker="o", ls="", mfc="#1a9850", mec="k", label="correct (≥3 EC levels)"),

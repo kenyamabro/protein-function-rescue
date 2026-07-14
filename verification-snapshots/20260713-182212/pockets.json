@@ -1,0 +1,25 @@
+{
+  "O08343": {
+    "n_pockets": 4,
+    "top_druggability": 0.968,
+    "top_volume_A3": 4739.9,
+    "method": "geometry"
+  },
+  "P9WIT1": {
+    "n_pockets": 6,
+    "top_druggability": 0.966,
+    "top_volume_A3": 11282.1,
+    "method": "geometry"
+  },
+  "P9WJG7": {
+    "n_pockets": 0,
+    "top_druggability": null,
+    "method": "geometry"
+  },
+  "P9WQ67": {
+    "n_pockets": 5,
+    "top_druggability": 0.968,
+    "top_volume_A3": 8014.5,
+    "method": "geometry"
+  }
+}

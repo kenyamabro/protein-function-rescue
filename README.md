@@ -4,9 +4,9 @@
 
 Every sequenced genome contains proteins annotated only as *"uncharacterized"*, *"hypothetical"*,
 or *"domain of unknown function (DUF)"*. Their amino-acid sequence matched nothing known, so no
-biological function was ever assigned. But **structure is conserved long after sequence similarity
-fades** — a protein can be a near-perfect 3D match to a well-studied enzyme while looking like noise
-at the sequence level.
+biological function was ever assigned. But **structure is often conserved after sequence similarity
+fades**: a protein can share a fold or domain with a well-studied enzyme while showing little pairwise
+sequence identity.
 
 This project mines a whole organism's [AlphaFold DB](https://alphafold.ebi.ac.uk/) proteome, finds
 unannotated proteins whose *shape* strongly matches a protein of **known** function, characterises
@@ -52,9 +52,10 @@ Windows with no external binaries** — while keeping the faster Linux tools ava
 | search | **TM-align** (`tmtools`) vs. an auto-built reference library of known enzymes | **Foldseek** vs. PDB/Swiss-Prot |
 | pocket | **LIGSITE-style** geometric detector (NumPy/SciPy)  | **fpocket**         |
 
-TM-align is the gold-standard structural aligner that *defines* the TM-score Foldseek reports, so the
-native path is scientifically equivalent for a curated reference set; Foldseek's advantage is speed and
-searching millions of targets. Switch with `structural_search.backend: foldseek` / `pocket.backend: fpocket`.
+TM-align provides exact global pairwise alignments for the curated reference set. Foldseek instead uses
+its 3Di representation, prefilters, and local alignment machinery to search very large databases; the
+backends are complementary but not methodologically equivalent. Switch with
+`structural_search.backend: foldseek` / `pocket.backend: fpocket`.
 
 ## Quick start (native backends — no external tools)
 
@@ -74,7 +75,8 @@ binaries. The first `search` run auto-downloads a small reference library of kno
 `references/` (cached afterwards). The heavy analysis runs **once, offline**; the result is a static site.
 
 **Performance note.** TM-align is *exhaustive* (every query vs. every reference), so it's thorough but
-not fast: budget roughly a minute per candidate against a 120-protein library. Keep runs quick by using
+not fast, and runtime grows sharply with protein length. In the pinned pilot, nine queries against 119
+references took about 19 minutes on one tested laptop; a 1,327-residue query dominated the run. Keep runs quick by using
 `--limit`, lowering `structural_search.reference_count`, or — for a whole proteome — switching to the
 Foldseek backend. (This is exactly the speed/scale trade-off Foldseek was built to solve.)
 
@@ -147,7 +149,8 @@ extremophiles have the most unannotated proteins — i.e. the most potential fin
 - Predicted structures are **models**, not experiments. Low-pLDDT regions are unreliable.
 - A structural match suggests a *possible* function; it is a hypothesis for wet-lab follow-up, not
   proof.
-- Foldseek TM-scores and fpocket druggability are heuristics — treat the ranking as a triage tool.
+- TM-scores, the native geometric cavity score, and fpocket druggability (when that backend is used)
+  are different heuristics; treat the ranking as a triage tool.
 
 ## Provenance and AI assistance
 

@@ -140,7 +140,11 @@
       <div class="row"><span class="k">Best structural match</span>
         <span class="v">${escapeHtml(m.description)} <span class="pill">${escapeHtml(m.target)}</span></span></div>
       <div class="row"><span class="k">Match confidence</span>
-        <span class="v">TM-score ${m.tm_score}${evaluePart}</span></div>
+        <span class="v">TM-score ${m.tm_score}${
+          m.tm_score_query != null && m.tm_score_reference != null
+            ? ` (query ${m.tm_score_query}; reference ${m.tm_score_reference})`
+            : ""
+        }${evaluePart}</span></div>
       <div class="row"><span class="k">Binding pocket</span>
         <span class="v">${p.n_pockets} pocket(s)${
       p.top_druggability != null ? ` · top ${pocketLabel} ${p.top_druggability}` : ""

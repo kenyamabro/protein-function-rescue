@@ -42,6 +42,30 @@ def load_ca(path: str | Path) -> tuple[np.ndarray, str]:
     return np.asarray(coords, dtype=float), "".join(seq)
 
 
+def load_ca_with_ids(path: str | Path) -> tuple[np.ndarray, str, list[int]]:
+    """Return CA coordinates, sequence, and the structure's residue numbers.
+
+    AlphaFold DB models normally use one chain numbered contiguously from 1,
+    but callers that map annotated sites must not silently assume that layout.
+    """
+    st = gemmi.read_structure(str(path))
+    coords: list[list[float]] = []
+    seq: list[str] = []
+    residue_ids: list[int] = []
+    if len(st) == 0:
+        return np.zeros((0, 3)), "", []
+    for chain in st[0]:
+        for res in chain:
+            for atom in res:
+                if atom.name == "CA":
+                    p = atom.pos
+                    coords.append([p.x, p.y, p.z])
+                    seq.append(one_letter(res.name))
+                    residue_ids.append(int(res.seqid.num))
+                    break
+    return np.asarray(coords, dtype=float), "".join(seq), residue_ids
+
+
 def load_atoms(path: str | Path) -> tuple[np.ndarray, np.ndarray]:
     """Return (all heavy-atom coordinates [M,3], their vdW radii [M])."""
     st = gemmi.read_structure(str(path))

@@ -3,7 +3,7 @@
 Combines three normalised signals into one composite score:
   * structural_similarity — Foldseek TM-score to a known fold (0-1)
   * model_confidence      — mean pLDDT / 100 (0-1)
-  * pocket_quality        — fpocket druggability of the best cavity (0-1)
+  * pocket_quality        — native cavity score, or fpocket druggability (0-1)
 
 Missing components (e.g. no fpocket) are dropped and the remaining weights are
 renormalised. Writes results/results.json, results/candidates.csv and web/data.js.
@@ -73,6 +73,11 @@ def build_candidates(
                 "best_structural_match": {
                     "target": hit["target"],
                     "tm_score": hit["tm_score"],
+                    "tm_score_query": hit.get("tm_score_query"),
+                    "tm_score_reference": hit.get("tm_score_reference"),
+                    "query_length": hit.get("query_length", p.get("length")),
+                    "reference_length": hit.get("reference_length"),
+                    "rmsd": hit.get("rmsd"),
                     "evalue": hit["evalue"],
                     "description": hit["description"],
                 },
