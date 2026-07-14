@@ -21,8 +21,8 @@ authors:
     family-names: "Last"
     # affiliation: "Your School or Institution"
     # orcid: "https://orcid.org/0000-0000-0000-0000"
-repository-code: "https://github.com/USERNAME/protein-function-rescue"   # TODO
-url: "https://github.com/USERNAME/protein-function-rescue"               # TODO
+repository-code: "https://github.com/kenyamabro/protein-function-rescue"
+url: "https://github.com/kenyamabro/protein-function-rescue"
 keywords:
   - AlphaFold
   - structural bioinformatics
@@ -32,5 +32,5 @@ keywords:
   - binding-pocket detection
   - Mycobacterium tuberculosis
   - reproducibility
-# Note: generative-AI assistance (Anthropic Claude) is disclosed in the accompanying
-# manuscript ("Use of generative AI"); per COPE/ICMJE guidance an AI tool is not an author.
+# Note: generative-AI assistance (Anthropic Claude and OpenAI Codex) is disclosed in
+# the accompanying manuscript Methods; these tools are not authors.

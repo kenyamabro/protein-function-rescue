@@ -15,6 +15,15 @@
       "4": 0.938
     }
   },
+  "paired_exact_ec_comparison": {
+    "test": "exact McNemar (two-sided)",
+    "both_correct": 213,
+    "structure_only_correct": 6,
+    "sequence_only_correct": 0,
+    "both_wrong": 8,
+    "accuracy_difference_percentage_points": 2.643,
+    "p_value": 0.03125
+  },
   "twilight_zone": {
     "identity_cutoff_pct": 30.0,
     "n_correct_level3": 219,

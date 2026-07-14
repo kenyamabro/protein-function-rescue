@@ -4,8 +4,9 @@
 **Affiliation:** ¹[School / Programme], [City, Country]
 **Correspondence:** [email]
 
-**Manuscript type:** Methods / proof-of-concept (pre-print draft)
-**Date:** 2026-07-13
+**Target journal:** BMC Bioinformatics
+**Article type:** Research Article (computational method and software)
+**Date:** 2026-07-14
 
 ---
 
@@ -35,7 +36,10 @@ was not conserved and reaction transfer remains unproven. A 50-residue fourth hi
 short-fragment false positive. On an independent benchmark of 227 enzymes
 across 29 families and six EC classes, leave-one-out recovery assigned the exact four-level EC number
 correctly in 96.5 % of cases, versus 93.8 % for a deliberately simple symmetric pairwise-identity
-baseline at the exact-reaction level. No paired significance analysis was performed. Twenty-four of
+baseline at the exact-reaction level. In a two-sided exact McNemar test, structure was correct and
+sequence was wrong for six queries, the reverse occurred for none, and the paired difference was
+statistically significant (P = 0.03125). This comparison is against a deliberately simple pairwise-
+identity baseline and does not establish superiority over profile-HMM or learned methods. Twenty-four of
 219 correct structural calls had <30 % identity to their structural hit; these are low-identity
 recoveries, not necessarily 24 cases where structure defeated the sequence baseline. At the default
 TM-score threshold of 0.5, precision was 0.982.
@@ -49,7 +53,7 @@ TM-align; binding-pocket detection; *Mycobacterium tuberculosis*; remote homolog
 
 ---
 
-## 1. Introduction
+## Background
 
 The gap between the number of known protein *sequences* and the number of proteins with an experimentally
 established *function* continues to widen. A large fraction of every proteome — often 25–50 % — consists
@@ -224,6 +228,27 @@ proteins and re-ranked them under every weight vector on the three-component sim
 ≥ 0.05, in 0.05 steps), measuring the Kendall rank correlation and top-10 overlap of each ranking
 against the default-weight ranking (`benchmark/weight_sensitivity.py`).
 
+### 2.11 Statistical analysis
+
+Because structural and sequence predictions were made for the same 227 proteins, exact-reaction
+accuracy was compared with a two-sided exact McNemar test on the discordant paired outcomes. The test
+and its 2 x 2 counts are generated from `benchmark/results/per_query.csv` by
+`benchmark/run_benchmark.py` and stored in `benchmark/results/metrics.json`. The significance level was
+0.05. This was the single paired test corresponding to the manuscript's headline exact-EC comparison;
+the other EC-level accuracies and calibration summaries are descriptive, and no multiple-testing
+adjustment was applied.
+
+### 2.12 Generative-AI assistance
+
+Anthropic Claude (Claude Opus 4 family) assisted with initial software design and implementation,
+benchmark construction, figure generation, and manuscript drafting. OpenAI Codex (GPT-5-based) was
+subsequently used to audit citations and claims, rerun and correct analyses, revise code and text, add
+tests and the paired statistical analysis, and regenerate and visually inspect the manuscript
+artifacts. No generative-AI system was used as an author or to generate scientific images. The human
+author reviewed the source code, reran the reported analyses, checked the citations against primary
+records, edited the manuscript, and retains responsibility for the accuracy, originality, and
+integrity of the work.
+
 ---
 
 ## 3. Results
@@ -237,11 +262,12 @@ leaving nine high-confidence queries (mean pLDDT range 75.7–97.1). These were 
 and is meant to demonstrate the method and software end-to-end; whole-proteome application is
 straightforward but was outside the scope of this demonstration (see Limitations).
 
-### 3.2 Candidate function assignments
+### 3.2 Candidate structural hypotheses
 
 Four of the nine queries (44 %) produced a domain-sensitive screening hit at TM-score ≥ 0.5 (Table 1).
-Because this threshold uses the larger length normalisation, these are fold/domain matches rather than
-automatic function assignments. The remaining five had no reference above threshold.
+Because this threshold uses the larger length normalisation, these are structural hypotheses rather
+than experimental or reaction-level function assignments. The remaining five had no reference above
+threshold.
 
 **Table 1. Ranked structural-screening hits for the pilot set.** TM-score Q/R gives query- and
 reference-length normalisations; pLDDT is mean AlphaFold confidence; the cavity score is the native
@@ -341,10 +367,11 @@ operate on the identical set. Full code and the exact accession list are in `ben
 Structure-based recovery assigned the **exact four-level EC number** correctly for **219/227 proteins
 (96.5 %)**, and was stable across EC levels 1–4 (Figure 3). The simple pairwise sequence-identity
 baseline was identical at the coarsest level (class, level 1: 96.5 %) but lower at finer levels, falling
-to **93.8 % for the exact reaction** (level 4). This is a 2.7-percentage-point observed difference;
-no paired confidence interval or significance test was performed, so we do not claim statistical
-superiority or equivalence. A stronger sequence method (profile/HMM search; Section 6) could narrow or
-reverse the difference.
+to **93.8 % for the exact reaction** (level 4). Of the paired outcomes, both methods were correct for
+213 proteins, structure alone was correct for six, sequence alone was correct for none, and both were
+wrong for eight. The 2.64-percentage-point difference was significant by a two-sided exact McNemar test
+(P = 0.03125). This establishes a difference only against this deliberately simple pairwise-identity
+baseline on this benchmark; it does not establish superiority over profile-HMM or learned methods.
 
 ### 4.3 Correct structural calls at low pairwise identity
 
@@ -399,8 +426,8 @@ structural similarity and model confidence regardless.)
 
 On a labelled benchmark of 227 enzymes across 29 families and six classes the pipeline recovers exact
 enzyme function in 96.5 % of leave-one-out tests, versus 93.8 % for the simple pairwise-identity
-baseline at the exact-reaction level. The observed difference was not tested for statistical
-significance. Twenty-four correct structural calls had low identity to their structural neighbour,
+baseline at the exact-reaction level; the paired exact McNemar P value was 0.03125 (six discordant
+structure-only successes and no sequence-only successes). Twenty-four correct structural calls had low identity to their structural neighbour,
 while the calibrated threshold keeps precision high (0.982 at TM ≥ 0.5) and
 its failures are dominated by the well-understood fold-degeneracy of the EC system, most of which the
 threshold turns into abstentions rather than errors. These are quantitative results the pilot alone could not provide; we
@@ -489,7 +516,9 @@ The cleanest whole-chain result, P9WQ67, remains an aminotransferase-fold hypoth
 reaction assignment. A controlled leave-one-out benchmark then
 quantified the approach on 227 enzymes across 29 families and six classes: 96.5 % exact-EC recovery,
 versus 93.8 % for a deliberately simple symmetric pairwise-identity baseline at the exact-reaction
-level; no paired significance analysis was performed. Twenty-four correct structural calls had <30 %
+level. The two-sided exact McNemar P value was 0.03125 (six structure-only successes and no
+sequence-only successes), but this result applies only to the deliberately simple pairwise baseline.
+Twenty-four correct structural calls had <30 %
 identity to their structural hit, and the threshold gave precision 0.982 at TM ≥ 0.5.
 
 Natural extensions include: (i) a whole-proteome run with the Foldseek back-end against the full PDB and
@@ -501,14 +530,27 @@ for experimental validation in collaboration with a wet laboratory.
 
 ---
 
-## Data and code availability
+## Declarations
+
+### Ethics approval and consent to participate
+
+Not applicable. The study used public protein structures and annotations and involved no human
+participants, human data, human tissue, animals, or client-owned animals.
+
+### Consent for publication
+
+Not applicable. The manuscript contains no individual person's data.
+
+### Availability of data and materials
 
 All source code, configuration, the pilot outputs (ranked candidate list as JSON/CSV, the
 reference-library manifest, and the functional-residue verification), and the complete validation
 benchmark (dataset accession list, per-query predictions, metrics, the weight-sensitivity and
 candidate-pool analyses, and all figure-generating code under `benchmark/`) are available in the project
-repository. Input structures are freely available from the AlphaFold Protein Structure Database
-(https://alphafold.ebi.ac.uk) and protein annotations from UniProt (https://www.uniprot.org). The
+repository at https://github.com/kenyamabro/protein-function-rescue. A persistent archived software DOI
+must be added here after creating the submission release in Zenodo. Input structures are freely
+available from the AlphaFold Protein Structure Database (https://alphafold.ebi.ac.uk) and protein
+annotations from UniProt (https://www.uniprot.org). The
 reference-library and benchmark manifests list the exact UniProt accessions used, enabling exact
 reproduction.
 
@@ -517,29 +559,32 @@ NumPy ≥ 1.24; SciPy 1.18; Biopython 1.87; Matplotlib 3.x. Default parameters: 
 TM-score threshold 0.5; reference count 120; grid spacing 1.2 Å; PSP threshold 5/7; composite weights
 (0.5, 0.2, 0.3). Benchmark: 227 enzymes, 29 EC families, classes 1–6, length 80–520 residues.
 
-## Author contributions
+**Software metadata:** Project name: Protein Function Rescue; project home page:
+https://github.com/kenyamabro/protein-function-rescue; archived version: pending Zenodo DOI; operating
+systems: Windows, Linux and macOS; programming language: Python 3.12; license: MIT; no restrictions on
+academic or non-academic use beyond the license and upstream database terms.
 
-[Student Name] designed the study, implemented the pipeline, performed the analysis, and wrote the
-manuscript. [Add supervisor/contributors as appropriate.]
-
-## Competing interests
+### Competing interests
 
 The author declares no competing interests.
 
-## Use of generative AI
+### Funding
 
-In preparing this work the author used Anthropic's Claude (Claude Opus 4 family) as a coding and writing
-assistant: to help design and implement the software pipeline and the validation benchmark, to generate
-the figures, and to draft and revise the text of this manuscript. After using this tool, the author
-reviewed, edited, and verified the content, and takes full responsibility for it — including all code,
-analyses, numerical results, and claims. No generative-AI system is listed as an author, consistent with
-COPE and ICMJE guidance that authorship requires accountability a non-human tool cannot hold. All
-citations were checked against the primary literature prior to submission.
+[State all funding sources and the funders' roles, or replace this text with: "The author received no
+specific funding for this work."]
 
-## Acknowledgements
+### Authors' contributions
+
+[Student Name] designed the study, implemented the pipeline, performed the analysis, and wrote the
+manuscript. [Add each qualifying coauthor or supervisor by initials and contribution; remove this
+instruction before submission.] The final author list must read and approve the submitted manuscript.
+
+### Acknowledgements
 
 This work uses data from the AlphaFold Protein Structure Database (Google DeepMind and EMBL-EBI) and
-UniProt. [Add mentors, institutions, funding as appropriate.]
+UniProt. [Name non-author contributors only after obtaining their permission, or replace this bracketed
+text with "Not applicable."] Generative-AI assistance is documented in the Methods section as required
+by the target journal.
 
 ---
 

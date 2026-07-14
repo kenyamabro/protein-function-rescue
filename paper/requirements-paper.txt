@@ -1,6 +1,7 @@
 # Tools for generating figures and rendering the manuscript (not needed to run
 # the pipeline itself). Install with:  python -m pip install -r paper/requirements-paper.txt
 pypandoc-binary>=1.13   # bundles the pandoc binary (Markdown -> DOCX)
+python-docx>=1.2        # applies BMC submission spacing, line numbers and page numbers
 docx2pdf>=0.1.8         # DOCX -> PDF via MS Word (Windows/macOS); optional
 playwright>=1.40        # headless Chromium for the Figure 2 viewer screenshot
 # after installing playwright:  python -m playwright install chromium

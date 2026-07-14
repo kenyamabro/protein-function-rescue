@@ -154,11 +154,11 @@ extremophiles have the most unannotated proteins — i.e. the most potential fin
 
 ## Provenance and AI assistance
 
-This project was built with substantial help from a generative-AI assistant (Anthropic Claude), which
-helped design and implement the pipeline and benchmark, generate the figures, and draft the manuscript.
-The author reviews, verifies, and takes full responsibility for the code, analyses, and claims; the AI
-is a tool, not an author. See the "Use of generative AI" section of the manuscript for the formal
-disclosure, and cite via [CITATION.cff](CITATION.cff).
+This project was built with assistance from Anthropic Claude (initial design, implementation,
+benchmark, figures and drafting) and OpenAI Codex (independent verification, corrections, testing,
+paired statistical analysis and manuscript revision). The human author reviews, verifies, and takes
+full responsibility for the code, analyses and claims; neither AI system is an author. See the
+generative-AI disclosure in the manuscript Methods and cite via [CITATION.cff](CITATION.cff).
 
 ## Citing
 

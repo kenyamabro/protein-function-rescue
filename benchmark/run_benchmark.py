@@ -314,6 +314,20 @@ def summarise(rows):
         acc["structure"][lvl] = round(sum(r["struct_agree"] >= lvl for r in rows) / n, 3)
         acc["sequence"][lvl] = round(sum(r["seq_agree"] >= lvl for r in rows) / n, 3)
 
+    # Paired exact-reaction comparison. McNemar's exact test uses only
+    # discordant queries and is appropriate because both methods are evaluated
+    # on the same 227 proteins.
+    from scipy.stats import binomtest
+    struct4 = [r["struct_agree"] >= 4 for r in rows]
+    seq4 = [r["seq_agree"] >= 4 for r in rows]
+    both_correct = sum(s and q for s, q in zip(struct4, seq4))
+    struct_only = sum(s and not q for s, q in zip(struct4, seq4))
+    seq_only = sum(not s and q for s, q in zip(struct4, seq4))
+    both_wrong = sum(not s and not q for s, q in zip(struct4, seq4))
+    discordant = struct_only + seq_only
+    mcnemar_p = (binomtest(struct_only, discordant, 0.5, alternative="two-sided").pvalue
+                 if discordant else 1.0)
+
     # Twilight zone: correct (>=3-level) structural recoveries at low identity.
     correct3 = [r for r in rows if r["struct_agree"] >= 3]
     twilight = [r for r in correct3 if r["struct_hit_identity"] < TWILIGHT_IDENTITY]
@@ -336,6 +350,16 @@ def summarise(rows):
         "n_proteins": n,
         "n_families": len({r["true_ec"] for r in rows}),
         "topN_accuracy_by_ec_level": acc,
+        "paired_exact_ec_comparison": {
+            "test": "exact McNemar (two-sided)",
+            "both_correct": both_correct,
+            "structure_only_correct": struct_only,
+            "sequence_only_correct": seq_only,
+            "both_wrong": both_wrong,
+            "accuracy_difference_percentage_points": round(
+                100 * (sum(struct4) - sum(seq4)) / n, 3),
+            "p_value": mcnemar_p,
+        },
         "twilight_zone": {
             "identity_cutoff_pct": TWILIGHT_IDENTITY,
             "n_correct_level3": len(correct3),
